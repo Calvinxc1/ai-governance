@@ -1,0 +1,12 @@
+id: correspondence_voice
+status: draft
+scope: desktop_orchestrators
+summary: Person-to-person message voice layered on baseline style rules.
+rules:
+  - Apply baseline style rules first, including Jason's punctuation screen when Jason will send the text.
+  - Preserve Jason's intended relationship, stance, and level of warmth.
+  - Keep person-to-person messages direct, humane, and specific.
+  - Do not over-smooth conflict, uncertainty, or boundaries out of the message.
+  - Do not invent commitments, feelings, availability, or facts for Jason.
+  - When the audience or relationship is unclear, ask before drafting a high-risk message.
+
