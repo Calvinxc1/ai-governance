@@ -12,10 +12,4 @@ Layout:
 - `.governance/processes/`: meta-governance and operating processes.
 - `.governance/overrides/`: temporary exception log and its schema.
 
-Kind branches add `.governance/branch-descriptor.yaml`. Trunk does not carry that descriptor, so trunk merge-downs do not overwrite kind orientation.
-
-Current draft status:
-
-- The files in the normal root and `.governance/` paths are the trunk draft.
-- `.governance/draft-kind-branches/` holds proposed kind-branch overlays for Jason's ratification before real branch creation.
-
+Kind branches add `.governance/branch-descriptor.yaml` and `.governance/kind-routes.yaml`. Trunk does not carry those files, so trunk merge-downs do not overwrite kind orientation or kind-specific routing.
