@@ -1,5 +1,5 @@
 id: branch_descriptor
-status: draft
+status: active
 branch: desktop-orchestrator
 kind: desktop_orchestrator
 parent:

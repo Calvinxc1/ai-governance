@@ -1,5 +1,5 @@
 id: kind_routes
-status: draft
+status: active
 kind: desktop_orchestrator
 default_load:
   - .governance/branch-descriptor.yaml
