@@ -1,5 +1,5 @@
 id: kind_routes
-status: draft
+status: active
 kind: coding_agent
 default_load:
   - .governance/branch-descriptor.yaml
@@ -14,4 +14,3 @@ routes:
     - .governance/policies/commit-push-discipline.yaml
   code_review:
     - .governance/policies/code-review.yaml
-

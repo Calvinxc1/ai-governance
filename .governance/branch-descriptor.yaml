@@ -1,5 +1,5 @@
 id: branch_descriptor
-status: draft
+status: active
 branch: coding-agent
 kind: coding_agent
 parent:
@@ -20,4 +20,3 @@ orientation:
       - why it may generalize
       - proposed target level
       - proposed wording
-
