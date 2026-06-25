@@ -1,0 +1,17 @@
+id: kind_routes
+status: active
+kind: desktop_orchestrator
+default_load:
+  - lab-governance/branch-descriptor.yaml
+routes:
+  planning_session:
+    - lab-governance/policies/desktop-role.yaml
+  correspondence_session:
+    - lab-governance/policies/correspondence-voice.yaml
+  creative_session:
+    - lab-governance/policies/creative-canon.yaml
+  wellbeing_sensitive_session:
+    - lab-governance/policies/active-wellbeing.yaml
+  substantive_orchestration:
+    - lab-governance/policies/desktop-role.yaml
+
