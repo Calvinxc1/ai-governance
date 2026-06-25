@@ -6,9 +6,11 @@ required_fields:
   - canonical_agent_name
   - agent_kind
   - active_governance_branch
-  - target_governance_commit
-  - current_governance_commit
-  - generalized_governance_commit
+  - target_active_canon_version
+  - current_active_canon_version
+  - target_generalized_canon_version
+  - current_generalized_canon_version
+  - canon_version_log_ref
   - source_repository_or_path
   - status
   - last_confirmed_date
@@ -25,9 +27,11 @@ field_definitions:
   canonical_agent_name: Stable canonical name for the agent.
   agent_kind: Governance kind the agent consumes.
   active_governance_branch: Branch the agent should use for its active governance copy.
-  target_governance_commit: Intended governance commit for the agent.
-  current_governance_commit: Governance commit the agent is currently confirmed to run.
-  generalized_governance_commit: Generalized lab-governance commit the agent is confirmed to carry, when separately tracked.
+  target_active_canon_version: Intended active branch or kind canon_version for the agent.
+  current_active_canon_version: Active branch or kind canon_version the agent is currently confirmed to run.
+  target_generalized_canon_version: Intended trunk-general canon_version for the agent.
+  current_generalized_canon_version: Trunk-general canon_version the agent is currently confirmed to run.
+  canon_version_log_ref: Reference into canon-version-log for audit provenance, or null when unknown.
   source_repository_or_path: Repository, branch, path, or URI for the agent governance source.
   status: One of current, behind, drifted, unknown, or retired.
   last_confirmed_date: Date this row was last confirmed, YYYY-MM-DD, or null when unknown.
@@ -37,9 +41,11 @@ field_definitions:
 null_allowed:
   - agent_kind
   - active_governance_branch
-  - target_governance_commit
-  - current_governance_commit
-  - generalized_governance_commit
+  - target_active_canon_version
+  - current_active_canon_version
+  - target_generalized_canon_version
+  - current_generalized_canon_version
+  - canon_version_log_ref
   - source_repository_or_path
   - last_confirmed_date
   - confirmed_by
@@ -48,5 +54,9 @@ validation_rules:
   - Each row must contain exactly the required fields.
   - status must be one of status_enum.
   - Use null instead of invented data when a value is not attested.
-  - If status is current, current_governance_commit and target_governance_commit should match unless notes explain the exception.
+  - Drift detection keys on canon_version labels, not whole-repo commit SHA.
+  - A major-level gap between current and target canon_version flips status to behind or drifted and routes to Jason through the active human liaison.
+  - Minor-level and patch-level gaps are visible version differences but do not by themselves raise an alarm status.
+  - If status is current, current and target major versions should match for both active and generalized canon_version labels unless notes explain the exception.
+  - Commit SHA references are provenance only and must point into canon-version-log rather than drive drift status.
   - A mismatch between this registry and an agent self-stamp is drift and must be routed to Jason through the active human liaison.

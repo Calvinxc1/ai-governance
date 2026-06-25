@@ -4,9 +4,11 @@ agents:
   - canonical_agent_name: Personal
     agent_kind: desktop_orchestrator
     active_governance_branch: desktop-orchestrator
-    target_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
-    current_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
-    generalized_governance_commit: null
+    target_active_canon_version: desktop-orchestrator/1.0.0
+    current_active_canon_version: desktop-orchestrator/1.0.0
+    target_generalized_canon_version: trunk/1.0.0
+    current_generalized_canon_version: trunk/1.0.0
+    canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#desktop-orchestrator
     status: current
     last_confirmed_date: 2026-06-25
@@ -16,9 +18,11 @@ agents:
   - canonical_agent_name: Academics
     agent_kind: desktop_orchestrator
     active_governance_branch: desktop-orchestrator
-    target_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
-    current_governance_commit: null
-    generalized_governance_commit: null
+    target_active_canon_version: desktop-orchestrator/1.0.0
+    current_active_canon_version: null
+    target_generalized_canon_version: trunk/1.0.0
+    current_generalized_canon_version: null
+    canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#desktop-orchestrator
     status: unknown
     last_confirmed_date: null
@@ -28,9 +32,11 @@ agents:
   - canonical_agent_name: Coding Agent
     agent_kind: coding_agent
     active_governance_branch: coding-agent
-    target_governance_commit: 6a3592ed9c3d092c13e5658fc81eea58f7bc9b82
-    current_governance_commit: 6a3592ed9c3d092c13e5658fc81eea58f7bc9b82
-    generalized_governance_commit: 6a3592ed9c3d092c13e5658fc81eea58f7bc9b82
+    target_active_canon_version: coding-agent/1.0.0
+    current_active_canon_version: coding-agent/1.0.0
+    target_generalized_canon_version: trunk/1.0.0
+    current_generalized_canon_version: trunk/1.0.0
+    canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#coding-agent
     status: current
     last_confirmed_date: 2026-06-25
@@ -40,9 +46,11 @@ agents:
   - canonical_agent_name: Career
     agent_kind: null
     active_governance_branch: null
-    target_governance_commit: null
-    current_governance_commit: null
-    generalized_governance_commit: null
+    target_active_canon_version: null
+    current_active_canon_version: null
+    target_generalized_canon_version: null
+    current_generalized_canon_version: null
+    canon_version_log_ref: null
     source_repository_or_path: null
     status: unknown
     last_confirmed_date: null
@@ -52,9 +60,11 @@ agents:
   - canonical_agent_name: Homelab
     agent_kind: null
     active_governance_branch: null
-    target_governance_commit: null
-    current_governance_commit: null
-    generalized_governance_commit: null
+    target_active_canon_version: null
+    current_active_canon_version: null
+    target_generalized_canon_version: null
+    current_generalized_canon_version: null
+    canon_version_log_ref: null
     source_repository_or_path: null
     status: unknown
     last_confirmed_date: null
@@ -64,9 +74,11 @@ agents:
   - canonical_agent_name: RPG
     agent_kind: null
     active_governance_branch: null
-    target_governance_commit: null
-    current_governance_commit: null
-    generalized_governance_commit: null
+    target_active_canon_version: null
+    current_active_canon_version: null
+    target_generalized_canon_version: null
+    current_generalized_canon_version: null
+    canon_version_log_ref: null
     source_repository_or_path: null
     status: unknown
     last_confirmed_date: null
