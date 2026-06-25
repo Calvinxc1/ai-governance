@@ -1,15 +1,12 @@
-# Governance Layout
+# Repo-Local Governance Copy
 
-This repository is the authoritative draft source for Jason's AI agent governance.
+This directory is this repository's active local governance copy.
 
-The trunk branch carries the general contract for every agent kind. Kind branches carry complete branch-local pictures after trunk is merged down into them. Core content is intentionally duplicated across kind branches so an agent can read one branch and have the complete contract.
+Agents working in this repository load and follow this directory the same way they would use `.governance/` in any other repository. `AGENTS.md` points here for the active local policy contract.
 
-Layout:
+This directory intentionally duplicates governance rules that may also appear in `lab-governance/`. Drift is allowed when it is visible and intentional:
 
-- `AGENTS.md`: thin entrypoint with precedence, always-load policy, and routing pointer.
-- `.governance/task-map.yaml`: task or session routing to the additional policy files that should be loaded.
-- `.governance/policies/`: standing domain policies in YAML.
-- `.governance/processes/`: meta-governance and operating processes.
-- `.governance/overrides/`: temporary exception log and its schema.
+- `.governance/` governs this repository's work.
+- `lab-governance/` is the generalized rule set maintained here for propagation to other agents and repositories.
 
-Kind branches add `.governance/branch-descriptor.yaml` and `.governance/kind-routes.yaml`. Trunk does not carry those files, so trunk merge-downs do not overwrite kind orientation or kind-specific routing.
+Use `local/` for explicit repo-local deviations from the generalized rule set. Use `records/` for repo-local alignment notes or operational metadata. If a local rule should become general lab governance, promote it through an explicit `lab-governance/` policy or process change.
