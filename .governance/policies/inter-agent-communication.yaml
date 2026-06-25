@@ -48,15 +48,20 @@ rules:
   - Reference bulky material by path, link, or issue reference and summarize it.
   - Keep an await outstanding while a live task room is active and the agent is a participant.
   - Do not tell peers to stop listening while the room remains active.
+  - Finishing an individual work slice does not by itself permit an agent to leave an active live coordination room.
+  - A participant may leave before room closeout only after posting an explicit handoff that names completed work, open follow-ups, remaining owner, and last cursor when applicable.
   - For a long pause, post a suspension notice naming the resume trigger, the resume owner, and the last cursor.
   - Resume self-serve by rejoining with the saved cursor.
   - Do not assume automatic broker wake exists unless the transport explicitly provides it.
   - Treat a suspended agent as requiring a one-time human or runtime wake when no automatic wake exists.
   - Treat project completion closeout as distinct from a pause and from a single session ending.
+  - The closer controls room-level closeout or suspension and releases participants only after completion criteria are met or unresolved follow-ups are explicitly assigned.
   - On full task or project completion, the closer posts a final summary, confirms and names the durable record, updates work trackers when applicable and within connector scope, and has participants leave and shut down connectors.
   - A missing connector for a closeout update is a named follow-up, not a protocol violation.
   - Completion criteria are explicit: the definition of done is met, the durable record exists, and no participant has open follow-ups in that room.
+  - Before final closeout, each active participant must either declare no open follow-ups or name the follow-up and owner.
   - If completion criteria are not met, suspend rather than close out.
+  - Do not leave a live coordination room in a state where remaining participants cannot tell whether the room is active, suspended, or closed.
   - Treat tokens as a shared cost in live agent communication.
   - Prefer the cheapest faithful representation of a message.
   - Batch a coherent thought into one post instead of several.

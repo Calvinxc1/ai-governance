@@ -2,16 +2,20 @@ id: policy_maintenance
 status: draft
 when: [policy_edit]
 rules:
-  - When governance structure changes, update AGENTS.md and affected .governance files in the same change.
+  - When governance structure changes, update AGENTS.md, README.md, and affected governance files in the same change.
   - Keep policy in policies, process rules in processes, and temporary exception records in overrides.
+  - Keep active repo-local governance policy, process, routing, and override files under .governance.
+  - Keep the generalized lab-wide governance copy under lab-governance.
+  - Treat drift between .governance and lab-governance as allowed only when it is visible and intentional.
+  - Record repo-local deviations from lab-governance under .governance/local.
+  - During governance alignment work, classify differences between .governance and lab-governance as path-only, documentation-only, local exception, or candidate general policy change.
   - Prefer updating an existing domain file over creating a new one unless the policy surface is materially distinct.
   - Keep file names stable and descriptive.
   - Update path references in the same change when files move.
-  - Keep .governance/README.md aligned with the actual structure.
+  - Keep README.md, .governance/README.md, and lab-governance/README.md aligned with the actual structure.
   - When changing operative wording, review nearby files for duplicated or conflicting rules.
   - AGENTS.md remains the entrypoint and index, not the full policy body.
   - Branch descriptors remain separate from AGENTS.md.
   - A kind branch descriptor is not present on trunk.
   - Agents do not push branches into this repository.
   - Generalizable changes travel upward as Gitea issues, not pull requests or upward merges.
-
