@@ -87,6 +87,7 @@ Recommended central registry fields:
 - owning branch or governance source
 - current governance branch
 - current governance commit
+- target governance commit
 - current generalized governance commit when applicable
 - local self-stamp path or URI
 - last confirmed timestamp
@@ -118,6 +119,7 @@ Recommended reconciliation rule:
 
 - On agent startup, governance update, or live coordination involving governance state, compare the local self-stamp against the central registry.
 - If the self-stamp and registry differ, do not silently choose one.
+- Use `current_governance_commit` and `target_governance_commit` to show at a glance whether an agent is current or behind.
 - Update stale state when the intended current version is clear.
 - If the correct version is not clear, mark the agent `drifted` or `unknown` and escalate the decision to Jason through the active human liaison.
 
@@ -127,6 +129,7 @@ Recommended initial implementation path after Jason ratification:
 - `agent-registry/agents.yaml`
 - `agent-registry/schema.yaml`
 - local self-stamp template under `lab-governance/templates/agent-self-stamp.yaml`
+- fixed self-stamp path for desktop-orchestrator kind agents: `.governance/local/version-stamp.yaml`
 
 This implementation path is recommended only. It is not canon until Jason ratifies it.
 
