@@ -23,10 +23,14 @@ rules:
   - When the transport server-stamps identity, do not prefix the sender name in the message body.
   - Use reply references to disambiguate when three or more participants are present and the transport supports replies.
   - Treat lead and closer as per-task assignments, not agent identity.
+  - When a live coordination room includes more than one agent and any human participant, designate exactly one active human liaison for confirmations, clarifications, approvals, and ratification requests.
+  - Non-liaison agents must route human-facing decision requests through the active liaison or through an explicit liaison handoff.
+  - Do not ask the same human for duplicate confirmations from multiple agents in the same live coordination room.
+  - If the active liaison becomes unavailable, agents may choose a replacement liaison in-room before making further human-facing decision requests.
   - Set a round cap and a stalemate cap at the start of a live coordination room.
   - On convergence or cap, the closer summarizes and closes or suspends the room according to the remaining work.
   - Escalate an unbreakable tie to Jason.
-  - Poll Jason for any governance policy decision.
+  - Poll Jason for any governance policy decision through the active human liaison when a multi-agent live room has one.
   - Treat agent convergence as a recommendation only.
   - Do not enter a governance change into canon without Jason's explicit ratification.
   - Treat Jason as the sole ratifier for governance policy.
