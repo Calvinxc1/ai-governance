@@ -1,0 +1,17 @@
+id: kind_routes
+status: active
+kind: coding_agent
+default_load:
+  - lab-governance/branch-descriptor.yaml
+routes:
+  discussion_or_planning:
+    - lab-governance/policies/plan-mode.yaml
+  substantive_work:
+    - lab-governance/policies/code-skepticism.yaml
+    - lab-governance/policies/documentation-drift.yaml
+  git_work:
+    - lab-governance/policies/gitflow.yaml
+    - lab-governance/policies/commit-push-discipline.yaml
+  code_review:
+    - lab-governance/policies/code-review.yaml
+
