@@ -1,0 +1,45 @@
+id: local_deviations
+status: draft
+scope: ai_governance_repo
+summary: Explicit local deviations from the generalized lab-governance rule set.
+deviations:
+  - id: governance-repo-dual-tree-maintenance
+    status: draft
+    local_scope: this_repository
+    generalized_reference:
+      - lab-governance/README.md
+      - lab-governance/processes/policy-maintenance.yaml
+    local_files:
+      - .governance/README.md
+      - .governance/processes/policy-maintenance.yaml
+      - README.md
+    rationale: This repository maintains both its active local governance copy and the generalized governance rule set that may propagate to other repositories.
+    local_rule: Agents may edit both .governance and lab-governance in the same task when the task is explicitly about governance maintenance or alignment.
+    non_generalized_reason: Ordinary repositories should normally treat .governance as their active local governance source and should not maintain a separate generalized lab-governance tree.
+    review_requirement: When either tree changes, state whether the change is local-only, generalized-only, or intentionally duplicated.
+  - id: governance-repo-visible-drift
+    status: draft
+    local_scope: this_repository
+    generalized_reference:
+      - lab-governance/processes/policy-maintenance.yaml
+    local_files:
+      - .governance/processes/policy-maintenance.yaml
+      - .governance/local/deviations.yaml
+      - .governance/records/
+    rationale: This repository is expected to compare local operating rules against candidate generalized rules and may intentionally hold differences during policy development.
+    local_rule: Drift between .governance and lab-governance is allowed only when the drift is visible, intentional, and recorded or summarized in local governance materials.
+    non_generalized_reason: Downstream repositories should not infer permission to diverge from their received governance without an explicit local deviation record.
+    review_requirement: During governance alignment work, compare the two trees and identify whether observed drift is path-only, documentation-only, local exception, or candidate general policy change.
+  - id: governance-repo-branch-distribution
+    status: draft
+    local_scope: this_repository
+    generalized_reference:
+      - lab-governance/README.md
+      - lab-governance/processes/policy-maintenance.yaml
+    local_files:
+      - .governance/processes/policy-maintenance.yaml
+      - .governance/records/
+    rationale: This repository uses trunk and kind branches to maintain complete governance pictures for different agent kinds.
+    local_rule: After Jason ratifies a governance structure or rule change on trunk, agents may distribute it to the repository's kind branches when explicitly authorized.
+    non_generalized_reason: Ordinary repositories are not expected to maintain governance propagation branches.
+    review_requirement: Branch distribution must preserve each branch's local governance entrypoint and separately maintain any generalized lab-governance copy required by that branch.
