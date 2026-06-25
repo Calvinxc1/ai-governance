@@ -1,0 +1,11 @@
+id: canon_version_log
+status: active
+summary: Audit map from canon_version labels to the commits that introduced the versioned canon surface.
+versions:
+  - canon_version: trunk/1.0.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: e645b7a51a5857561e953e451adbb5d0023656b9
+    date: 2026-06-25
+    bump: major
+    summary: Initial explicit canon_version baseline for the trunk general governance contract.
