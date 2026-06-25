@@ -9,3 +9,19 @@ versions:
     date: 2026-06-25
     bump: major
     summary: Initial explicit canon_version baseline for the trunk general governance contract.
+  - canon_version: coding-agent/1.0.0
+    scope: coding-agent
+    branch: coding-agent
+    introduced_by_commit: 7435c1183caa6742284c8bdc5837ee31d3771ada
+    parent_canon_version: trunk/1.0.0
+    date: 2026-06-25
+    bump: major
+    summary: Initial explicit canon_version baseline for the coding-agent governance contract.
+  - canon_version: desktop-orchestrator/1.0.0
+    scope: desktop-orchestrator
+    branch: desktop-orchestrator
+    introduced_by_commit: 3182700f3df79a50e5476fe62c61aa73f491214a
+    parent_canon_version: trunk/1.0.0
+    date: 2026-06-25
+    bump: major
+    summary: Initial explicit canon_version baseline for the desktop-orchestrator governance contract.
