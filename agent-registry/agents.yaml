@@ -7,14 +7,14 @@ agents:
     target_active_canon_version: desktop-orchestrator/1.0.0
     current_active_canon_version: desktop-orchestrator/1.0.0
     target_generalized_canon_version: trunk/2.0.0
-    current_generalized_canon_version: trunk/1.0.0
+    current_generalized_canon_version: trunk/2.0.0
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#desktop-orchestrator
-    status: behind
+    status: current
     last_confirmed_date: 2026-06-25
     confirmed_by: Jason
     self_stamp_path: .governance/local/version-stamp.yaml
-    notes: Personal was current at trunk/1.0.0; target moved to trunk/2.0.0 after Jason ratified the Althing presence protocol patch.
+    notes: Personal adopted trunk/2.0.0 from desktop-orchestrator@3b49fb37 and re-cut its local self-stamp on 2026-06-25.
   - canonical_agent_name: Academics
     agent_kind: desktop_orchestrator
     active_governance_branch: desktop-orchestrator
