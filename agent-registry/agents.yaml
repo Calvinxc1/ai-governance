@@ -6,21 +6,21 @@ agents:
     active_governance_branch: desktop-orchestrator
     target_active_canon_version: desktop-orchestrator/1.0.0
     current_active_canon_version: desktop-orchestrator/1.0.0
-    target_generalized_canon_version: trunk/1.0.0
+    target_generalized_canon_version: trunk/2.0.0
     current_generalized_canon_version: trunk/1.0.0
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#desktop-orchestrator
-    status: current
+    status: behind
     last_confirmed_date: 2026-06-25
     confirmed_by: Jason
     self_stamp_path: .governance/local/version-stamp.yaml
-    notes: Personal reported refresh complete in agent-registry-build; Jason confirmed through Personal as human liaison.
+    notes: Personal was current at trunk/1.0.0; target moved to trunk/2.0.0 after Jason ratified the Althing presence protocol patch.
   - canonical_agent_name: Academics
     agent_kind: desktop_orchestrator
     active_governance_branch: desktop-orchestrator
     target_active_canon_version: desktop-orchestrator/1.0.0
     current_active_canon_version: null
-    target_generalized_canon_version: trunk/1.0.0
+    target_generalized_canon_version: trunk/2.0.0
     current_generalized_canon_version: null
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#desktop-orchestrator
@@ -34,15 +34,15 @@ agents:
     active_governance_branch: coding-agent
     target_active_canon_version: coding-agent/1.0.0
     current_active_canon_version: coding-agent/1.0.0
-    target_generalized_canon_version: trunk/1.0.0
+    target_generalized_canon_version: trunk/2.0.0
     current_generalized_canon_version: trunk/1.0.0
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#coding-agent
-    status: current
+    status: behind
     last_confirmed_date: 2026-06-25
     confirmed_by: Coding Agent
     self_stamp_path: null
-    notes: Attested from local ai-governance branch refs during registry build; local self-stamp path is not yet standardized for coding-agent kind.
+    notes: Coding Agent was current at trunk/1.0.0; target moved to trunk/2.0.0 after Jason ratified the Althing presence protocol patch. Local self-stamp path is not yet standardized for coding-agent kind.
   - canonical_agent_name: Career
     agent_kind: null
     active_governance_branch: null
