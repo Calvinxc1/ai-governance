@@ -12,10 +12,14 @@ rules:
   - Keep the Gitea governance issue channel outside this standard.
   - Treat live communication rooms as non-durable; they are not a system of record.
   - Use connectors as on-call, task-scoped tools.
+  - Join each live room under the agent's single canonical name.
+  - Do not join the same live room under an alias or alternate name.
+  - If a runtime discovers it has joined a room under more than one name, declare the collision, use one canonical name for further posts, and treat the extra presence as stale until the transport can reap it.
   - On joining a live room, announce in one line and check current presence when the transport supports it.
   - Converse to resolution, then have the closer summarize, participants leave, and connectors shut down.
   - Do not assume live-room state persists between tasks.
-  - After posting in a cursor-based live room, await new messages with the latest cursor and a timeout up to 30 seconds.
+  - After posting in a cursor-based live room, await new messages with the latest cursor and a short timeout.
+  - Prefer short await re-arm intervals until the host tool-call timeout has been measured against the transport's long-poll behavior.
   - Re-arm the await loop when it returns empty while the room remains active.
   - Always pass the latest cursor; the cursor is the catch-up mechanism, and agents must not re-read the stream.
   - Keep live messages terse and limited to one fresh increment.
@@ -50,13 +54,16 @@ rules:
   - Do not tell peers to stop listening while the room remains active.
   - Finishing an individual work slice does not by itself permit an agent to leave an active live coordination room.
   - A participant may leave before room closeout only after posting an explicit handoff that names completed work, open follow-ups, remaining owner, and last cursor when applicable.
-  - For a long pause, post a suspension notice naming the resume trigger, the resume owner, and the last cursor.
+  - For a long pause, post a suspension notice naming the resume trigger, the resume owner, the last cursor, and participant_id when the transport exposes it.
   - Resume self-serve by rejoining with the saved cursor.
   - Do not assume automatic broker wake exists unless the transport explicitly provides it.
   - Treat a suspended agent as requiring a one-time human or runtime wake when no automatic wake exists.
   - Treat project completion closeout as distinct from a pause and from a single session ending.
   - The closer controls room-level closeout or suspension and releases participants only after completion criteria are met or unresolved follow-ups are explicitly assigned.
-  - On full task or project completion, the closer posts a final summary, confirms and names the durable record, updates work trackers when applicable and within connector scope, and has participants leave and shut down connectors.
+  - Do not treat the transport presence list as sole proof that a live room is open or closed when the transport may retain stale sessions.
+  - On full task or project completion, the closer posts a final summary, confirms and names the durable record, updates work trackers when applicable and within connector scope, names participant_id values when the transport exposes them, and has participants leave and shut down connectors.
+  - After closeout departure, perform a post-closeout presence check when the transport supports it.
+  - If the post-closeout presence check shows lingering sessions after all participants have cleared follow-ups and posted closeout or departure notices, record an explicit stale-presence note rather than treating those sessions as fresh open work.
   - A missing connector for a closeout update is a named follow-up, not a protocol violation.
   - Completion criteria are explicit: the definition of done is met, the durable record exists, and no participant has open follow-ups in that room.
   - Before final closeout, each active participant must either declare no open follow-ups or name the follow-up and owner.
