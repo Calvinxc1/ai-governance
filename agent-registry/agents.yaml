@@ -1,0 +1,75 @@
+schema: agent_registry_schema
+last_updated: 2026-06-25
+agents:
+  - canonical_agent_name: Personal
+    agent_kind: desktop_orchestrator
+    active_governance_branch: desktop-orchestrator
+    target_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
+    current_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
+    generalized_governance_commit: null
+    source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#desktop-orchestrator
+    status: current
+    last_confirmed_date: 2026-06-25
+    confirmed_by: Jason
+    self_stamp_path: .governance/local/version-stamp.yaml
+    notes: Personal reported refresh complete in agent-registry-build; Jason confirmed through Personal as human liaison.
+  - canonical_agent_name: Academics
+    agent_kind: desktop_orchestrator
+    active_governance_branch: desktop-orchestrator
+    target_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
+    current_governance_commit: null
+    generalized_governance_commit: null
+    source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#desktop-orchestrator
+    status: unknown
+    last_confirmed_date: null
+    confirmed_by: null
+    self_stamp_path: .governance/local/version-stamp.yaml
+    notes: Desktop-orchestrator kind agent not yet bootstrapped; seed prompt ready per Personal.
+  - canonical_agent_name: Coding Agent
+    agent_kind: coding_agent
+    active_governance_branch: coding-agent
+    target_governance_commit: 6a3592ed9c3d092c13e5658fc81eea58f7bc9b82
+    current_governance_commit: 6a3592ed9c3d092c13e5658fc81eea58f7bc9b82
+    generalized_governance_commit: 6a3592ed9c3d092c13e5658fc81eea58f7bc9b82
+    source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#coding-agent
+    status: current
+    last_confirmed_date: 2026-06-25
+    confirmed_by: Coding Agent
+    self_stamp_path: null
+    notes: Attested from local ai-governance branch refs during registry build; local self-stamp path is not yet standardized for coding-agent kind.
+  - canonical_agent_name: Career
+    agent_kind: null
+    active_governance_branch: null
+    target_governance_commit: null
+    current_governance_commit: null
+    generalized_governance_commit: null
+    source_repository_or_path: null
+    status: unknown
+    last_confirmed_date: null
+    confirmed_by: null
+    self_stamp_path: null
+    notes: Named by Personal as an agent needing reconciliation; no governance pin attested in this task.
+  - canonical_agent_name: Homelab
+    agent_kind: null
+    active_governance_branch: null
+    target_governance_commit: null
+    current_governance_commit: null
+    generalized_governance_commit: null
+    source_repository_or_path: null
+    status: unknown
+    last_confirmed_date: null
+    confirmed_by: null
+    self_stamp_path: null
+    notes: Named by Personal as an agent needing reconciliation; no governance pin attested in this task.
+  - canonical_agent_name: RPG
+    agent_kind: null
+    active_governance_branch: null
+    target_governance_commit: null
+    current_governance_commit: null
+    generalized_governance_commit: null
+    source_repository_or_path: null
+    status: unknown
+    last_confirmed_date: null
+    confirmed_by: null
+    self_stamp_path: null
+    notes: Named by Personal as an agent needing reconciliation; no governance pin attested in this task.

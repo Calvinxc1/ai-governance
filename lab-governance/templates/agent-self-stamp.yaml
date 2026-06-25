@@ -1,0 +1,9 @@
+canonical_agent_name: null
+agent_kind: null
+active_governance_branch: null
+active_governance_commit: null
+generalized_governance_commit: null
+source_repository_or_path: null
+self_stamp_timestamp: null
+agent_declared_status: unknown
+notes: Replace null values with the agent's locally attested governance state.
