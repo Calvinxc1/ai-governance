@@ -11,6 +11,8 @@ The central registry and local self-stamps serve different purposes. The registr
 
 A mismatch between the registry and a self-stamp is governance drift. Do not silently reconcile drift by choosing whichever value is newer or more convenient. Mark the row `drifted`, `behind`, or `unknown` as appropriate, then escalate the decision to Jason through the active human liaison.
 
+At the start of a new conversation, agents use the registry and local self-stamp for the minimal version check required by execution control: if current equals target, continue silently; if current is behind target, report only current version, target version, and whether to update before proceeding.
+
 ## Files
 
 - `schema.yaml`: registry schema, required fields, and status enum.
