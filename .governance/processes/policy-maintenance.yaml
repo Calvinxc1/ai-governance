@@ -18,4 +18,7 @@ rules:
   - Branch descriptors remain separate from AGENTS.md.
   - A kind branch descriptor is not present on trunk.
   - Agents do not push branches into this repository.
+  - When committing and pushing work on a branch that has governed downstream kind or sub-branches, propagate the work to the appropriate downstream branches before calling the work complete unless Jason explicitly scopes the change as branch-local.
+  - If propagation is skipped, record the branch-local reason and the affected downstream branches as an explicit follow-up.
+  - Report the source commit, propagated branch commits, and validation for each propagated branch.
   - Generalizable changes travel upward as Gitea issues, not pull requests or upward merges.
