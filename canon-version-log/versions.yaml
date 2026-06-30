@@ -33,3 +33,11 @@ versions:
     date: 2026-06-25
     bump: major
     summary: Adds ratified Althing stale-presence protocol rules requiring canonical-name joins, stale-presence-aware closeout, participant_id notes, and short await re-arm guidance.
+  - canon_version: trunk/2.1.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: 56f5bedd743f1988749ac268c0799280e194c036
+    previous_canon_version: trunk/2.0.0
+    date: 2026-06-30
+    bump: minor
+    summary: Adds ratified inter-agent coordination updates for pre-connect canonical-name settlement, default liaison selection, active keepalive and dismissal discipline, slower-backend liveness allowance, labeled multipart transfer, branch propagation discipline, and minimal startup governance version checks.
