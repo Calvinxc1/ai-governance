@@ -36,7 +36,7 @@ versions:
   - canon_version: trunk/2.1.0
     scope: trunk
     branch: trunk
-    introduced_by_commit: 56f5bedd743f1988749ac268c0799280e194c036
+    introduced_by_commit: 6cf887729f5934218f16d834f142198b8e873d7c
     previous_canon_version: trunk/2.0.0
     date: 2026-06-30
     bump: minor
