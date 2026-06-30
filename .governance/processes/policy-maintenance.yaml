@@ -16,6 +16,8 @@ rules:
   - When changing operative wording, review nearby files for duplicated or conflicting rules.
   - When changing governance policy files that alter the ratified governance contract, bump the relevant canon_version using the repository's semantic-version-style model in the same change.
   - Use a patch bump for clarifications or narrow corrections, a minor bump for additive behavioral rules, and a major bump for contract-breaking or broad governance model changes.
+  - Treat only the explicit canon_version label specified in the repository as the governance version.
+  - Do not use commit SHA, branch tip, merge status, file timestamp, or deployment state as a substitute for canon_version.
   - Do not bump canon_version for repo-local process, deviation, record, registry, or bookkeeping changes unless they alter the ratified governance contract consumed by agents.
   - When a canon_version is bumped, update branch descriptors, canon-version-log, and affected registry target versions in the same change.
   - AGENTS.md remains the entrypoint and index, not the full policy body.

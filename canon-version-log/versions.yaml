@@ -1,6 +1,6 @@
 id: canon_version_log
 status: active
-summary: Audit map from canon_version labels to the commits that introduced the versioned canon surface.
+summary: Audit map from canon_version labels to the commits that introduced the versioned canon surface; commit SHA values are provenance only and are not governance versions.
 versions:
   - canon_version: trunk/1.0.0
     scope: trunk
