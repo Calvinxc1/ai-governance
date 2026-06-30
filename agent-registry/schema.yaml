@@ -62,9 +62,10 @@ validation_rules:
   - status must be one of status_enum.
   - Use active when the row is a lifecycle activation record requested by Jason rather than a version-drift state.
   - Use null instead of invented data when a value is not attested.
-  - Drift detection keys on canon_version labels, not whole-repo commit SHA.
+  - Drift detection keys on explicit canon_version labels only.
+  - Commit SHA, branch tip, merge status, file timestamp, and deployment state are not governance versions.
   - A major-level gap between current and target canon_version flips status to behind or drifted and routes to Jason through the active human liaison.
   - Minor-level and patch-level gaps are visible version differences but do not by themselves raise an alarm status.
   - If status is current, current and target major versions should match for both active and generalized canon_version labels unless notes explain the exception.
-  - Commit SHA references are provenance unless Jason explicitly directs a commit pin; drift detection still keys on canon_version labels unless Jason directs otherwise.
+  - Commit SHA references are provenance only, not indicators of governance version.
   - A mismatch between this registry and an agent self-stamp is drift and must be routed to Jason through the active human liaison.
