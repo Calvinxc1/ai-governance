@@ -73,3 +73,11 @@ versions:
     date: 2026-07-02
     bump: minor
     summary: Adds explicit governance maintenance validation requirements for YAML syntax, conflict markers, route coverage, branch descriptors, canon-version logs, registry targets, ratified placement status, and propagation reporting.
+  - canon_version: trunk/2.6.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: 4ed3d436c544ed9038aeb8cabfcfccb5f2f6900a
+    previous_canon_version: trunk/2.5.0
+    date: 2026-07-02
+    bump: minor
+    summary: Clarifies that detailed validation reporting for lab-governance maintenance is a repo-local maintainer obligation, not a generalized downstream lab-governance requirement.
