@@ -4,6 +4,8 @@ This directory records explicit local deviations between this repository's activ
 
 Use this directory when the repository's purpose requires local behavior that should not automatically propagate to other repositories or agents.
 
+Files committed under this local governance directory are ratified by existence. Do not store draft local-governance proposals here; keep proposals outside the active local governance tree until Jason ratifies them.
+
 Local deviations must be:
 
 - explicit
