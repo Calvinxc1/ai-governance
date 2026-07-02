@@ -25,6 +25,13 @@ rules:
   - Do not use commit SHA, branch tip, merge status, file timestamp, or deployment state as a substitute for canon_version.
   - Do not bump canon_version for repo-local process, deviation, record, registry, or bookkeeping changes unless they alter the ratified governance contract consumed by agents.
   - When a canon_version is bumped, update branch descriptors, canon-version-log, and affected registry target versions in the same change.
+  - Validate YAML syntax for every changed YAML governance file before committing.
+  - Scan changed governance files for merge conflict markers before committing.
+  - Validate task-map and kind-route references so every routed file exists and every active policy file is reachable through an intended route or documented as intentionally unrouted.
+  - Validate branch descriptors after every canon-version or propagation change, including active branch identity, active canon_version, and parent canon_version on kind branches.
+  - Validate canon-version-log entries when canon_version changes, including previous_canon_version, parent_canon_version when applicable, bump level, date, summary, and introduced_by_commit provenance.
+  - Validate agent-registry target versions when a governance version target changes.
+  - Validate that active policy and process files under .governance and lab-governance use ratified placement semantics rather than draft status.
   - AGENTS.md remains the entrypoint and index, not the full policy body.
   - Branch descriptors remain separate from AGENTS.md.
   - A kind branch descriptor is not present on trunk.
@@ -33,5 +40,5 @@ rules:
   - When trunk governance policy changes, propagate the update into each governed child policy branch, including coding-agent and desktop-orchestrator, unless Jason explicitly scopes the change as trunk-local.
   - Child policy propagation must include the changed governance files, any required branch descriptor or parent canon-version references, and validation for each child branch.
   - If propagation is skipped, record the branch-local reason and the affected downstream branches as an explicit follow-up.
-  - Report the source commit, propagated branch commits, and validation for each propagated branch.
+  - Report the source commit, propagated branch commits, branch status, and validation results for each propagated branch.
   - Generalizable changes travel upward as Gitea issues, not pull requests or upward merges.
