@@ -41,3 +41,12 @@ versions:
     date: 2026-06-30
     bump: minor
     summary: Adds ratified inter-agent coordination updates for pre-connect canonical-name settlement, default liaison selection, active keepalive and dismissal discipline, slower-backend liveness allowance, labeled multipart transfer, branch propagation discipline, and minimal startup governance version checks.
+  - canon_version: desktop-orchestrator/1.1.0
+    scope: desktop-orchestrator
+    branch: desktop-orchestrator
+    introduced_by_commit: pending
+    previous_canon_version: desktop-orchestrator/1.0.0
+    parent_canon_version: trunk/2.1.0
+    date: 2026-07-02
+    bump: minor
+    summary: Adds ratified desktop-orchestrator co-work sync policy for Seafile-backed portability, aggressive local Git history, optional private Gitea durability, guarded Git initialization, conflict handling, and coding-agent boundary protection.

@@ -14,4 +14,8 @@ routes:
     - .governance/policies/active-wellbeing.yaml
   substantive_orchestration:
     - .governance/policies/desktop-role.yaml
-
+  co_work_sync:
+    - .governance/policies/desktop-role.yaml
+    - .governance/policies/safety-transparency.yaml
+    - .governance/policies/workflow-auditability.yaml
+    - .governance/policies/co-work-sync.yaml

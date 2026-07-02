@@ -7,6 +7,10 @@ rules:
   - Keep lab-wide governance policy, process, routing, and override files under lab-governance.
   - Keep active repo-local governance policy, process, routing, and override files under .governance.
   - Treat drift between .governance and lab-governance as allowed only when it is visible and intentional.
+  - Before adding, moving, or versioning a governance policy change, evaluate the narrowest existing scope that can correctly own the change.
+  - Prefer the narrowest existing applicable scope, including repo-local deviation, active local governance, kind branch, or trunk-general governance.
+  - Use trunk only when the rule is intended to apply across agent kinds or when Jason explicitly ratifies trunk scope.
+  - Policy-change reportback must state the selected scope, why narrower existing scopes were insufficient or sufficient, and whether the change affects trunk, a kind branch, repo-local governance, or generalized lab governance.
   - Prefer updating an existing domain file over creating a new one unless the policy surface is materially distinct.
   - Keep file names stable and descriptive.
   - Update path references in the same change when files move.

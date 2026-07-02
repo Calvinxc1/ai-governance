@@ -1,12 +1,12 @@
 schema: agent_registry_schema
-last_updated: 2026-06-30
+last_updated: 2026-07-02
 agents:
   - canonical_agent_name: Personal
     agent_kind: desktop_orchestrator
     active_governance_branch: desktop-orchestrator
     current_governance_commit: null
     target_governance_commit: null
-    target_active_canon_version: desktop-orchestrator/1.0.0
+    target_active_canon_version: desktop-orchestrator/1.1.0
     current_active_canon_version: desktop-orchestrator/1.0.0
     target_generalized_canon_version: trunk/2.1.0
     current_generalized_canon_version: trunk/2.0.0
@@ -16,13 +16,13 @@ agents:
     last_confirmed_date: 2026-06-25
     confirmed_by: Jason
     self_stamp_path: .governance/local/version-stamp.yaml
-    notes: Personal adopted trunk/2.0.0 from desktop-orchestrator@3b49fb37 and re-cut its local self-stamp on 2026-06-25. On 2026-06-30, Personal demoted schooling and Argo research files to pointers after Education confirmed receipt as source of truth; see .governance/records/2026-06-29-education-research-handoff.md. Target generalized canon moved to trunk/2.1.0 after Jason ratified inter-agent coordination and startup version-check updates.
+    notes: Personal adopted trunk/2.0.0 from desktop-orchestrator@3b49fb37 and re-cut its local self-stamp on 2026-06-25. On 2026-06-30, Personal demoted schooling and Argo research files to pointers after Education confirmed receipt as source of truth; see .governance/records/2026-06-29-education-research-handoff.md. Target generalized canon moved to trunk/2.1.0 after Jason ratified inter-agent coordination and startup version-check updates. Target active canon moved to desktop-orchestrator/1.1.0 after Jason ratified co-work sync policy for desktop orchestrators.
   - canonical_agent_name: Education
     agent_kind: desktop_orchestrator
     active_governance_branch: desktop-orchestrator
     current_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
     target_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
-    target_active_canon_version: desktop-orchestrator/1.0.0
+    target_active_canon_version: desktop-orchestrator/1.1.0
     current_active_canon_version: desktop-orchestrator/1.0.0
     target_generalized_canon_version: trunk/2.1.0
     current_generalized_canon_version: trunk/2.0.0
@@ -32,7 +32,7 @@ agents:
     last_confirmed_date: 2026-06-29
     confirmed_by: Jason
     self_stamp_path: .governance/local/version-stamp.yaml
-    notes: Education supersedes the prior working name Academics. Seeded from origin/desktop-orchestrator@1517e56f27bcc7642a5559752dbc40cb89ae8ee1 per Jason's 2026-06-29 instruction and the 2026-06-25 governance-sync recommendation; the moving origin/desktop-orchestrator ref was observed at 3b49fb37687c4410785bfe00649138b431101d72 during stamping. On 2026-06-30, Education became source of truth for schooling and Argo research substance transferred from Personal and Career; see .governance/records/2026-06-29-education-research-handoff.md. Target generalized canon moved to trunk/2.1.0 after Jason ratified inter-agent coordination and startup version-check updates.
+    notes: Education supersedes the prior working name Academics. Seeded from origin/desktop-orchestrator@1517e56f27bcc7642a5559752dbc40cb89ae8ee1 per Jason's 2026-06-29 instruction and the 2026-06-25 governance-sync recommendation; the moving origin/desktop-orchestrator ref was observed at 3b49fb37687c4410785bfe00649138b431101d72 during stamping. On 2026-06-30, Education became source of truth for schooling and Argo research substance transferred from Personal and Career; see .governance/records/2026-06-29-education-research-handoff.md. Target generalized canon moved to trunk/2.1.0 after Jason ratified inter-agent coordination and startup version-check updates. Target active canon moved to desktop-orchestrator/1.1.0 after Jason ratified co-work sync policy for desktop orchestrators.
   - canonical_agent_name: Coding Agent
     agent_kind: coding_agent
     active_governance_branch: coding-agent
