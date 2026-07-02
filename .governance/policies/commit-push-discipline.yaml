@@ -1,5 +1,5 @@
 id: commit_push_discipline
-status: draft
+status: ratified
 scope: coding_agents
 summary: Explicit permission required for commits and pushes.
 rules:

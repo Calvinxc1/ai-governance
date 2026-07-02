@@ -1,5 +1,5 @@
 id: gitflow
-status: draft
+status: ratified
 scope: coding_agents
 summary: Branch roles, commit style, changelog discipline, and CI/CD trigger expectations.
 branch_roles:

@@ -1,5 +1,5 @@
 id: documentation_drift
-status: draft
+status: ratified
 scope: coding_agents
 summary: Check relevant docs on substantive code changes without creating gratuitous churn.
 rules:

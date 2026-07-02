@@ -1,5 +1,5 @@
 id: plan_mode
-status: draft
+status: ratified
 scope: coding_agents
 summary: Plan mode exit discipline before file modification.
 rules:

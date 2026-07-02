@@ -1,5 +1,5 @@
 id: knowledge_model
-status: draft
+status: ratified
 scope: all_agents
 summary: Durable knowledge location and memory boundaries.
 rules:
