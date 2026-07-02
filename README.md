@@ -12,3 +12,7 @@ The two trees intentionally duplicate governance rules. Drift between them is al
 Agents should start with `AGENTS.md`, then load local policy through `.governance/task-map.yaml` and any branch-local `.governance/kind-routes.yaml` file. When the task is to maintain the generalized rule set, compare the local copy against `lab-governance/` and update the appropriate tree explicitly.
 
 General policy intended for lab propagation belongs in `lab-governance/`. Local governance needed for this repo's agents belongs in `.governance/`.
+
+For new agent setup, use `lab-governance/governance-init.md`. A seed prompt for pointing a new agent at that guide lives at `lab-governance/templates/governance-init-seed-prompt.md`.
+
+For governed-agent updates, use the canonical prompt at `lab-governance/templates/governed-agent-update-prompt.md`. That prompt is the agent-facing source of truth for local governance update mechanics, self-stamp updates, reconciliation feedback, and registry-loop attestation.

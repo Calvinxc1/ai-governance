@@ -50,3 +50,11 @@ versions:
     date: 2026-07-02
     bump: minor
     summary: Adds ratified desktop-orchestrator co-work sync policy for Seafile-backed portability, aggressive local Git history, optional private Gitea durability, guarded Git initialization, conflict handling, and coding-agent boundary protection.
+  - canon_version: trunk/2.2.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: 927bd7ae6c5eed1e9f71cdd6611fbe028d97986f
+    previous_canon_version: trunk/2.1.0
+    date: 2026-07-02
+    bump: minor
+    summary: Adds canonical governed-agent update prompt and process requiring local self-stamp updates, live reconciliation feedback, and registry-loop attestations for all governed agents.

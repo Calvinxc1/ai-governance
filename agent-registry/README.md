@@ -18,6 +18,7 @@ At the start of a new conversation, agents use the registry and local self-stamp
 - `schema.yaml`: registry schema, required fields, and status enum.
 - `agents.yaml`: current seeded registry rows.
 - `../lab-governance/templates/agent-self-stamp.yaml`: template each leaf agent can copy into its local governance area.
+- `../lab-governance/governance-init.md`: initialization guide for bringing a new agent workspace under governance.
 
 For desktop-orchestrator kind agents, the fixed local self-stamp path is:
 
