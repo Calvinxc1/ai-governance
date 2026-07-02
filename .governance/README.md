@@ -4,6 +4,8 @@ This directory is this repository's active local governance copy.
 
 Agents working in this repository load and follow this directory the same way they would use `.governance/` in any other repository. `AGENTS.md` points here for the active local policy contract.
 
+Use `task-map.yaml` as the explicit loading contract. It may define reusable route groups, but agents should still load only the groups and direct files named by selected routes instead of scanning policy folders.
+
 This directory intentionally duplicates governance rules that may also appear in `lab-governance/`. Drift is allowed when it is visible and intentional:
 
 - `.governance/` governs this repository's work.

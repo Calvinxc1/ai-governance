@@ -12,7 +12,7 @@ Layout:
 
 - `AGENTS.md`: thin entrypoint with precedence, always-load policy, and routing pointer.
 - `lab-governance/governance-init.md`: setup guide for initializing governance in a new or unverified agent workspace.
-- `lab-governance/task-map.yaml`: task or session routing to the additional policy files that should be loaded.
+- `lab-governance/task-map.yaml`: task or session routing to the additional policy files that should be loaded. Route groups provide reusable subroutes; selected routes, not folder names, remain the explicit loading contract.
 - `lab-governance/policies/`: standing domain policies in YAML.
 - `lab-governance/processes/`: meta-governance and operating processes.
 - `lab-governance/overrides/`: temporary exception log and its schema.

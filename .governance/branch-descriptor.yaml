@@ -2,7 +2,7 @@ id: branch_descriptor
 status: active
 branch: trunk
 kind: general
-canon_version: trunk/2.6.0
+canon_version: trunk/2.7.0
 narrative_blurb: Trunk carries the general governance contract true of every agent kind.
 orientation:
   consumes_layer: trunk
