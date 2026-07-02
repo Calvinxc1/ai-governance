@@ -74,3 +74,11 @@ versions:
     date: 2026-07-02
     bump: minor
     summary: Clarifies that committed active policy and process files are ratified by placement, moves draft proposals outside active governance, and marks active policy/process files ratified.
+  - canon_version: trunk/2.5.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: d6cde8eb1b83f61083d612d5460e5aac56a4475c
+    previous_canon_version: trunk/2.4.0
+    date: 2026-07-02
+    bump: minor
+    summary: Adds explicit governance maintenance validation requirements for YAML syntax, conflict markers, route coverage, branch descriptors, canon-version logs, registry targets, ratified placement status, and propagation reporting.
