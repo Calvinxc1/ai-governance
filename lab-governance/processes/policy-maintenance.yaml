@@ -16,4 +16,6 @@ rules:
   - Branch descriptors remain separate from AGENTS.md.
   - A kind branch descriptor is not present on trunk.
   - Agents do not push branches into this repository.
+  - When trunk governance policy changes, propagate the update into each governed child policy branch, including coding-agent and desktop-orchestrator, unless Jason explicitly scopes the change as trunk-local.
+  - Child policy propagation must include the changed governance files, any required branch descriptor or parent canon-version references, and validation for each child branch.
   - Generalizable changes travel upward as Gitea issues, not pull requests or upward merges.

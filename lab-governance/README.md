@@ -17,5 +17,6 @@ Layout:
 - `lab-governance/processes/`: meta-governance and operating processes.
 - `lab-governance/overrides/`: temporary exception log and its schema.
 - `lab-governance/templates/`: reusable setup templates, including the local self-stamp template and governance init seed prompt.
+- `lab-governance/templates/governed-agent-update-prompt.md`: canonical governed-agent update prompt for local governance copies, self-stamps, reconciliation feedback, and registry-loop attestation.
 
 Kind branches add `lab-governance/branch-descriptor.yaml` and `lab-governance/kind-routes.yaml`. Trunk does not carry those files, so trunk merge-downs do not overwrite kind orientation or kind-specific routing.
