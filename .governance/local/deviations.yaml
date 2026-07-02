@@ -72,3 +72,15 @@ deviations:
     local_rule: Only Jason or an explicitly authorized governance-maintenance agent may add, remove, or materially change active files under lab-governance/policies or lab-governance/processes. Before committing such a change, the agent must state the intended scope, ratification basis, affected active files, canon-version impact, child-branch propagation plan, and validation plan.
     non_generalized_reason: Ordinary downstream repositories do not maintain lab-governance and should not inherit this repository's maintainer-authority workflow.
     review_requirement: Report the ratification basis, source branch commit, propagated child branch commits when applicable, validation results, and any unresolved registry or propagation follow-up.
+  - id: governance-repo-validation-reporting
+    status: ratified
+    local_scope: this_repository
+    generalized_reference:
+      - lab-governance/processes/policy-maintenance.yaml
+    local_files:
+      - .governance/local/deviations.yaml
+      - .governance/processes/policy-maintenance.yaml
+    rationale: This repository performs lab-governance maintenance and branch propagation. Detailed validation reporting is a local maintainer obligation for this repository, not a general obligation imposed on downstream governance consumers.
+    local_rule: Before calling governance maintenance complete, the authorized governance-maintenance agent must validate YAML syntax, scan for conflict markers, verify task-map and kind-route references, verify active policy route coverage, verify branch descriptors, verify canon-version-log entries, verify affected registry targets, verify ratified placement status, and report source and propagated branch commits with branch status.
+    non_generalized_reason: Ordinary downstream repositories consume lab governance and should not inherit this repository's validation and propagation workflow unless they also maintain a lab-governance tree.
+    review_requirement: Report each validation check performed, any skipped check with reason, the source branch commit, propagated child branch commits when applicable, and unresolved follow-ups.
