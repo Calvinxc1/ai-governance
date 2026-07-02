@@ -6,17 +6,23 @@ routes:
   discussion_or_planning:
     - .governance/policies/execution-control.yaml
     - .governance/policies/epistemic-acceptance.yaml
-    - .governance/policies/inter-agent-communication.yaml
+    - .governance/policies/durable-communication-boundaries.yaml
   substantive_work:
     - .governance/policies/execution-control.yaml
     - .governance/policies/epistemic-acceptance.yaml
     - .governance/policies/risk-validation.yaml
     - .governance/policies/safety-transparency.yaml
     - .governance/policies/workflow-auditability.yaml
-    - .governance/policies/inter-agent-communication.yaml
   connector_or_boundary_work:
     - .governance/policies/boundaries.yaml
     - .governance/policies/safety-transparency.yaml
+    - .governance/policies/durable-communication-boundaries.yaml
+  live_agent_coordination:
+    - .governance/policies/agent-identity.yaml
+    - .governance/policies/durable-communication-boundaries.yaml
+    - .governance/policies/live-room-coordination.yaml
+    - .governance/policies/live-room-closeout.yaml
+  inter_agent_communication_index:
     - .governance/policies/inter-agent-communication.yaml
   knowledge_capture:
     - .governance/policies/knowledge-model.yaml

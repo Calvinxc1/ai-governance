@@ -49,3 +49,11 @@ versions:
     date: 2026-07-02
     bump: minor
     summary: Adds canonical governed-agent update prompt and process requiring local self-stamp updates, live reconciliation feedback, and registry-loop attestations for all governed agents.
+  - canon_version: trunk/2.3.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: pending
+    previous_canon_version: trunk/2.2.0
+    date: 2026-07-02
+    bump: minor
+    summary: Splits live agent communication policy into narrower identity, durable-boundary, coordination, and closeout routes, and wires governance version updates to the canonical governed-agent update prompt.

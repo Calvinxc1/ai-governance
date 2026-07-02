@@ -6,17 +6,23 @@ routes:
   discussion_or_planning:
     - lab-governance/policies/execution-control.yaml
     - lab-governance/policies/epistemic-acceptance.yaml
-    - lab-governance/policies/inter-agent-communication.yaml
+    - lab-governance/policies/durable-communication-boundaries.yaml
   substantive_work:
     - lab-governance/policies/execution-control.yaml
     - lab-governance/policies/epistemic-acceptance.yaml
     - lab-governance/policies/risk-validation.yaml
     - lab-governance/policies/safety-transparency.yaml
     - lab-governance/policies/workflow-auditability.yaml
-    - lab-governance/policies/inter-agent-communication.yaml
   connector_or_boundary_work:
     - lab-governance/policies/boundaries.yaml
     - lab-governance/policies/safety-transparency.yaml
+    - lab-governance/policies/durable-communication-boundaries.yaml
+  live_agent_coordination:
+    - lab-governance/policies/agent-identity.yaml
+    - lab-governance/policies/durable-communication-boundaries.yaml
+    - lab-governance/policies/live-room-coordination.yaml
+    - lab-governance/policies/live-room-closeout.yaml
+  inter_agent_communication_index:
     - lab-governance/policies/inter-agent-communication.yaml
   knowledge_capture:
     - lab-governance/policies/knowledge-model.yaml
