@@ -7,6 +7,8 @@ rules:
   - Keep active repo-local governance policy, process, routing, and override files under .governance.
   - Keep the generalized lab-wide governance copy under lab-governance.
   - Treat committed files under active governance policy and process directories as ratified and operative by placement.
+  - Because active lab-governance placement ratifies policy by placement, only Jason or an explicitly authorized governance-maintenance agent may add, remove, or materially change active files under lab-governance/policies or lab-governance/processes.
+  - Before committing lab-governance policy or process changes, state the intended scope, ratification basis, affected active files, canon-version impact, child-branch propagation plan, and validation plan.
   - Keep draft policy and process proposals outside active policy and process directories until Jason ratifies them.
   - Remove obsolete operative policy from active governance rather than carrying deprecated active files; Git history is the archive.
   - Treat drift between .governance and lab-governance as allowed only when it is visible and intentional.

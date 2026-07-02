@@ -58,3 +58,17 @@ deviations:
     local_rule: Before adding, moving, or versioning a governance policy change, agents must evaluate the narrowest existing scope that can correctly own the change. Prefer the narrowest existing applicable scope, including repo-local deviation, active local governance, kind branch, or trunk-general governance. Use trunk only when the rule is intended to apply across agent kinds or when Jason explicitly ratifies trunk scope.
     non_generalized_reason: This rule is specific to this repository's multi-branch governance maintenance workflow.
     review_requirement: Policy-change reportback must state the selected scope, why narrower existing scopes were insufficient or sufficient, and whether the change affects trunk, a kind branch, repo-local governance, or generalized lab governance.
+  - id: governance-repo-lab-governance-maintainer-authority
+    status: ratified
+    local_scope: this_repository
+    generalized_reference:
+      - README.md
+      - lab-governance/README.md
+      - lab-governance/processes/policy-maintenance.yaml
+    local_files:
+      - .governance/local/deviations.yaml
+      - .governance/processes/policy-maintenance.yaml
+    rationale: This repository is the maintainer of the generalized lab governance tree. Because committed active lab-governance policy and process files are ratified by placement, placement authority must be controlled locally.
+    local_rule: Only Jason or an explicitly authorized governance-maintenance agent may add, remove, or materially change active files under lab-governance/policies or lab-governance/processes. Before committing such a change, the agent must state the intended scope, ratification basis, affected active files, canon-version impact, child-branch propagation plan, and validation plan.
+    non_generalized_reason: Ordinary downstream repositories do not maintain lab-governance and should not inherit this repository's maintainer-authority workflow.
+    review_requirement: Report the ratification basis, source branch commit, propagated child branch commits when applicable, validation results, and any unresolved registry or propagation follow-up.
