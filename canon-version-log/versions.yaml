@@ -41,3 +41,11 @@ versions:
     date: 2026-06-30
     bump: minor
     summary: Adds ratified inter-agent coordination updates for pre-connect canonical-name settlement, default liaison selection, active keepalive and dismissal discipline, slower-backend liveness allowance, labeled multipart transfer, branch propagation discipline, and minimal startup governance version checks.
+  - canon_version: trunk/2.2.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: 927bd7ae6c5eed1e9f71cdd6611fbe028d97986f
+    previous_canon_version: trunk/2.1.0
+    date: 2026-07-02
+    bump: minor
+    summary: Adds canonical governed-agent update prompt and process requiring local self-stamp updates, live reconciliation feedback, and registry-loop attestations for all governed agents.

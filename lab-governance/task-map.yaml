@@ -27,6 +27,11 @@ routes:
     - lab-governance/policies/engagement-posture.yaml
   policy_edit:
     - lab-governance/processes/policy-maintenance.yaml
+  agent_governance_update:
+    - lab-governance/policies/execution-control.yaml
+    - lab-governance/policies/epistemic-acceptance.yaml
+    - lab-governance/policies/safety-transparency.yaml
+    - lab-governance/processes/agent-governance-update.yaml
   override_execution:
     - lab-governance/processes/override-governance.yaml
     - lab-governance/overrides/policy-overrides-spec.yaml

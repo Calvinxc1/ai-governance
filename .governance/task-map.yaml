@@ -27,6 +27,11 @@ routes:
     - .governance/policies/engagement-posture.yaml
   policy_edit:
     - .governance/processes/policy-maintenance.yaml
+  agent_governance_update:
+    - .governance/policies/execution-control.yaml
+    - .governance/policies/epistemic-acceptance.yaml
+    - .governance/policies/safety-transparency.yaml
+    - .governance/processes/agent-governance-update.yaml
   override_execution:
     - .governance/processes/override-governance.yaml
     - .governance/overrides/policy-overrides-spec.yaml
