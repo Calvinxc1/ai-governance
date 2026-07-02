@@ -15,18 +15,10 @@ rules:
   - Update path references in the same change when files move.
   - Keep README.md, lab-governance/README.md, and .governance/README.md aligned with the actual structure.
   - When changing operative wording, review nearby files for duplicated or conflicting rules.
-  - Validate YAML syntax for every changed YAML governance file before committing.
-  - Scan changed governance files for merge conflict markers before committing.
-  - Validate task-map and kind-route references so every routed file exists and every active policy file is reachable through an intended route or documented as intentionally unrouted.
-  - Validate branch descriptors after every canon-version or propagation change, including active branch identity, active canon_version, and parent canon_version on kind branches.
-  - Validate canon-version-log entries when canon_version changes, including previous_canon_version, parent_canon_version when applicable, bump level, date, summary, and introduced_by_commit provenance.
-  - Validate agent-registry target versions when a governance version target changes.
-  - Validate that active policy and process files under .governance and lab-governance use ratified placement semantics rather than draft status.
   - AGENTS.md remains the entrypoint and index, not the full policy body.
   - Branch descriptors remain separate from AGENTS.md.
   - A kind branch descriptor is not present on trunk.
   - Agents do not push branches into this repository.
   - When trunk governance policy changes, propagate the update into each governed child policy branch, including coding-agent and desktop-orchestrator, unless Jason explicitly scopes the change as trunk-local.
-  - Child policy propagation must include the changed governance files, any required branch descriptor or parent canon-version references, and validation for each child branch.
-  - Report the source commit, propagated branch commits, branch status, and validation results for each propagated branch.
+  - Child policy propagation must include the changed governance files and any required branch descriptor or parent canon-version references.
   - Generalizable changes travel upward as Gitea issues, not pull requests or upward merges.
