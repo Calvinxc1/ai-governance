@@ -11,9 +11,11 @@ The trunk branch carries the general contract for every agent kind. Kind branche
 Layout:
 
 - `AGENTS.md`: thin entrypoint with precedence, always-load policy, and routing pointer.
+- `lab-governance/governance-init.md`: setup guide for initializing governance in a new or unverified agent workspace.
 - `lab-governance/task-map.yaml`: task or session routing to the additional policy files that should be loaded.
 - `lab-governance/policies/`: standing domain policies in YAML.
 - `lab-governance/processes/`: meta-governance and operating processes.
 - `lab-governance/overrides/`: temporary exception log and its schema.
+- `lab-governance/templates/`: reusable setup templates, including the local self-stamp template and governance init seed prompt.
 
 Kind branches add `lab-governance/branch-descriptor.yaml` and `lab-governance/kind-routes.yaml`. Trunk does not carry those files, so trunk merge-downs do not overwrite kind orientation or kind-specific routing.
