@@ -90,3 +90,11 @@ versions:
     date: 2026-07-02
     bump: minor
     summary: Clarifies that detailed validation reporting for lab-governance maintenance is a repo-local maintainer obligation, not a generalized downstream lab-governance requirement.
+  - canon_version: trunk/2.7.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: e9e53e1ef270a274a11ecaac72ef85782025d39c
+    previous_canon_version: trunk/2.6.0
+    date: 2026-07-02
+    bump: minor
+    summary: Adds explicit task-map route groups as reusable subroutes while preserving selected routes as the policy loading contract.
