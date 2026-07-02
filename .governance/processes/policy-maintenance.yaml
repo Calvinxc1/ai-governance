@@ -1,11 +1,14 @@
 id: policy_maintenance
-status: draft
+status: ratified
 when: [policy_edit]
 rules:
   - When governance structure changes, update AGENTS.md, README.md, and affected governance files in the same change.
   - Keep policy in policies, process rules in processes, and temporary exception records in overrides.
   - Keep active repo-local governance policy, process, routing, and override files under .governance.
   - Keep the generalized lab-wide governance copy under lab-governance.
+  - Treat committed files under active governance policy and process directories as ratified and operative by placement.
+  - Keep draft policy and process proposals outside active policy and process directories until Jason ratifies them.
+  - Remove obsolete operative policy from active governance rather than carrying deprecated active files; Git history is the archive.
   - Treat drift between .governance and lab-governance as allowed only when it is visible and intentional.
   - Record repo-local deviations from lab-governance under .governance/local.
   - During governance alignment work, classify differences between .governance and lab-governance as path-only, documentation-only, local exception, or candidate general policy change.

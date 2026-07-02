@@ -66,3 +66,11 @@ versions:
     date: 2026-07-02
     bump: minor
     summary: Splits live agent communication policy into narrower identity, durable-boundary, coordination, and closeout routes, and wires governance version updates to the canonical governed-agent update prompt.
+  - canon_version: trunk/2.4.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: facf9c2e6d850c0de6aa67ffbdaafe48239c8e23
+    previous_canon_version: trunk/2.3.0
+    date: 2026-07-02
+    bump: minor
+    summary: Clarifies that committed active policy and process files are ratified by placement, moves draft proposals outside active governance, and marks active policy/process files ratified.

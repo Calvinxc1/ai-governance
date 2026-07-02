@@ -5,7 +5,7 @@ kind: desktop_orchestrator
 canon_version: desktop-orchestrator/1.1.0
 parent:
   branch: trunk
-  canon_version: trunk/2.3.0
+  canon_version: trunk/2.4.0
   summary: General contract true of every agent kind, coding or not.
 narrative_blurb: Desktop orchestrators inherit the full universal contract and specialize in cross-folder desktop work, person-to-person correspondence, canon-sensitive creative support, and active wellbeing judgment.
 orientation:

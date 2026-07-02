@@ -1,5 +1,5 @@
 id: universal
-status: draft
+status: ratified
 scope: all_agents
 always_load: true
 summary: Baseline contract every agent consumes before task-specific routing.

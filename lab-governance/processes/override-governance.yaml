@@ -1,5 +1,5 @@
 id: override_governance
-status: draft
+status: ratified
 when: [override]
 rules:
   - Override-governance rules are non-overridable.

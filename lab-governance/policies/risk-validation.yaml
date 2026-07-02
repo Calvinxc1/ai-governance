@@ -1,5 +1,5 @@
 id: risk_validation
-status: draft
+status: ratified
 scope: all_agents
 summary: Risk tiering and validation gates for substantive work.
 risk_tiers:

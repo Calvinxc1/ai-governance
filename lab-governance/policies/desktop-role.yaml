@@ -1,5 +1,5 @@
 id: desktop_role
-status: draft
+status: ratified
 scope: desktop_orchestrators
 summary: Role declaration for desktop orchestration.
 role: Coordinate Jason's desktop work across folders, sessions, correspondence, creative material, and personal operating context while respecting folder-local canon and governance.

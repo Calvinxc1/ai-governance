@@ -1,5 +1,5 @@
 id: correspondence_voice
-status: draft
+status: ratified
 scope: desktop_orchestrators
 summary: Person-to-person message voice layered on baseline style rules.
 rules:
