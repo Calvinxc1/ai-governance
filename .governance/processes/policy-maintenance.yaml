@@ -6,6 +6,8 @@ rules:
   - Keep policy in policies, process rules in processes, and temporary exception records in overrides.
   - Keep active repo-local governance policy, process, routing, and override files under .governance.
   - Keep the generalized lab-wide governance copy under lab-governance.
+  - Treat committed files under .governance and lab-governance as ratified by existence.
+  - Treat status fields as operational metadata when present; do not use status labels as a separate ratification gate for committed active governance content.
   - Treat committed files under active governance policy and process directories as ratified and operative by placement.
   - Because active lab-governance placement ratifies policy by placement, only Jason or an explicitly authorized governance-maintenance agent may add, remove, or materially change active files under lab-governance/policies or lab-governance/processes.
   - Before committing lab-governance policy or process changes, state the intended scope, ratification basis, affected active files, canon-version impact, child-branch propagation plan, and validation plan.
