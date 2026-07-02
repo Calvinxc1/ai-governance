@@ -1,10 +1,10 @@
 id: local_deviations
-status: draft
+status: ratified
 scope: ai_governance_repo
 summary: Explicit local deviations from the generalized lab-governance rule set.
 deviations:
   - id: governance-repo-dual-tree-maintenance
-    status: draft
+    status: ratified
     local_scope: this_repository
     generalized_reference:
       - lab-governance/README.md
@@ -18,7 +18,7 @@ deviations:
     non_generalized_reason: Ordinary repositories should normally treat .governance as their active local governance source and should not maintain a separate generalized lab-governance tree.
     review_requirement: When either tree changes, state whether the change is local-only, generalized-only, or intentionally duplicated.
   - id: governance-repo-visible-drift
-    status: draft
+    status: ratified
     local_scope: this_repository
     generalized_reference:
       - lab-governance/processes/policy-maintenance.yaml
@@ -31,7 +31,7 @@ deviations:
     non_generalized_reason: Downstream repositories should not infer permission to diverge from their received governance without an explicit local deviation record.
     review_requirement: During governance alignment work, compare the two trees and identify whether observed drift is path-only, documentation-only, local exception, or candidate general policy change.
   - id: governance-repo-branch-distribution
-    status: draft
+    status: ratified
     local_scope: this_repository
     generalized_reference:
       - lab-governance/README.md
