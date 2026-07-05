@@ -20,11 +20,17 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    If the task asks the agent to join, monitor, coordinate in, or close an Althing or other live agent room, select the `live_agent_coordination` route before joining the room.
 
-4. Check branch or kind routing.
+4. Load local governance when present.
+
+   If `.governance/local/index.yaml` exists, read it after the base lab/canon governance. Treat it as the workspace-owned pointer into local governance. The lab governance contract prescribes only this pointer file and not the internal structure of `.governance/local/`.
+
+   Local governance is the layer above the base lab/canon governance for that workspace. Explicit task overrides are the top layer and may override both base and local governance only for the declared one-shot operation.
+
+5. Check branch or kind routing.
 
    If the active governance branch has a `.governance/kind-routes.yaml` file, load it after the task map. Trunk-general governance does not require a kind-routes file.
 
-5. Prompt for the canonical agent name.
+6. Prompt for the canonical agent name.
 
    Ask Jason or the orchestrating agent for the agent's Jason-settled canonical name before version reconciliation or substantive work. Use a direct prompt:
 
@@ -34,13 +40,13 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    If a local self-stamp or registry row already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
 
-6. Check governance version state.
+7. Check governance version state.
 
    Read the local self-stamp if present. The standard desktop-orchestrator self-stamp path is `.governance/local/version-stamp.yaml`. Compare the self-stamp against the central registry row when a registry is available.
 
    The central registry in this repository is `agent-registry/agents.yaml`, with schema in `agent-registry/schema.yaml`.
 
-7. Apply the startup version rule.
+8. Apply the startup version rule.
 
    If current governance version equals target, continue silently. If current is behind target, report only:
 
@@ -54,7 +60,7 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    If Jason answers yes, use `lab-governance/templates/governance-bootstrap-prompt.md` from the ai-governance repository as the canonical bootstrap/update prompt. Follow that prompt for source branch selection, local governance update, self-stamp update, reconciliation reporting, and registry-loop attestation.
 
-8. Declare loaded governance if action will follow.
+9. Declare loaded governance if action will follow.
 
    Before edits, connector actions, or other substantive work, state the intended action, affected files or systems, expected risk tier, and validation plan unless Jason's latest message already clearly authorized immediate execution.
 
@@ -90,11 +96,15 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
    Start from `lab-governance/templates/agent-self-stamp.yaml`. Fill only locally attested values. Use `null` rather than invented data.
 
-5. Reconcile registry and self-stamp state.
+5. Create or preserve the local governance index.
+
+   Ensure `.governance/local/index.yaml` exists. Start from `lab-governance/templates/local-index.yaml` if needed. The index is a loose pointer into local governance; do not prescribe the rest of `.governance/local/` from lab governance.
+
+6. Reconcile registry and self-stamp state.
 
    If the registry and self-stamp disagree, do not silently choose one. Mark the state as `behind`, `drifted`, or `unknown` as appropriate, then route the decision to Jason through the active human liaison.
 
-6. Confirm no secrets were introduced.
+7. Confirm no secrets were introduced.
 
    Governance files may contain paths, branch names, canon versions, and provenance references. They must not contain tokens, API keys, private credentials, or recoverable secrets.
 
@@ -111,6 +121,7 @@ AGENTS.md
 .governance/policies/*.yaml
 .governance/processes/*.yaml
 .governance/overrides/*.yaml
+.governance/local/index.yaml
 .governance/local/version-stamp.yaml
 ```
 
@@ -138,6 +149,7 @@ Governance is initialized when all of the following are true:
 - The agent has asked for, confirmed, or explicitly reported as missing its Jason-settled canonical name.
 - The agent has loaded `AGENTS.md` and the always-load policy.
 - Additional policy was loaded only through the task map and any kind route.
+- Local governance was loaded through `.governance/local/index.yaml` when present.
 - The agent has checked self-stamp and registry state when those records exist.
 - Any version mismatch was reported using the minimal startup version rule.
 - The agent can name the active canon version it believes it is consuming, or can clearly state that the value is unknown.

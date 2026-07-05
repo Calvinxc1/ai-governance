@@ -6,6 +6,9 @@ rules:
   - Keep policy in policies, process rules in processes, and temporary exception records in overrides.
   - Keep active repo-local governance policy, process, routing, and override files under .governance.
   - Keep the generalized lab-wide governance copy under lab-governance.
+  - Treat lab/canon governance as the base layer, loaded local governance as the workspace layer above it, and explicit task overrides as the top layer for the declared one-shot operation.
+  - Prescribe only `.governance/local/index.yaml` as the universal entrypoint into local governance; do not prescribe the internal structure of `.governance/local/` from lab governance.
+  - Use `.governance/local/index.yaml` as a pointer file, not as the local policy body.
   - Treat committed files under .governance and lab-governance as ratified by existence.
   - Treat status fields as operational metadata when present; do not use status labels as a separate ratification gate for committed active governance content.
   - Treat committed files under active governance policy and process directories as ratified and operative by placement.

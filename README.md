@@ -11,6 +11,8 @@ The two trees intentionally duplicate governance rules. Drift between them is al
 
 Agents should start with `AGENTS.md`, then load local policy through `.governance/task-map.yaml` and any branch-local `.governance/kind-routes.yaml` file. The task map is the explicit loading contract: agents resolve route groups and direct route files from the map instead of inferring policy from folder names. When the task is to maintain the generalized rule set, compare the local copy against `lab-governance/` and update the appropriate tree explicitly.
 
+Repo-local governance, when present, is reached through `.governance/local/index.yaml`. Local governance is the layer above the generalized lab/canon base for that repository. Explicit one-shot overrides remain the top layer for the declared operation.
+
 General policy intended for lab propagation belongs in `lab-governance/`. Local governance needed for this repo's agents belongs in `.governance/`.
 
 For new agent setup and governed-agent updates, use the canonical prompt at `lab-governance/templates/governance-bootstrap-prompt.md`. The prompt points agents to `lab-governance/governance-init.md`, registry files, self-stamp mechanics, reconciliation feedback, and registry-loop attestation.
