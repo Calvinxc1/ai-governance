@@ -18,6 +18,14 @@ lab-governance/templates/governed-agent-update-prompt.md
 
 You are updating your local governance copy from Jason's ai-governance repository.
 
+If you do not already have a Jason-settled canonical agent name, stop before changing files and ask:
+
+```text
+What canonical agent name should I use for this workspace?
+```
+
+If a local self-stamp or registry row already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
+
 Before changing files, identify and report:
 
 - Your Jason-settled canonical agent name.
