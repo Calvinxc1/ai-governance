@@ -1,6 +1,6 @@
 id: agent_registry_schema
-status: active
-summary: Schema for the central ai-governance agent-version registry.
+status: legacy
+summary: Legacy schema for the central ai-governance agent-version registry. Current governed workspace status belongs in `.governance/local/status.yaml`.
 row_key: agents
 required_fields:
   - canonical_agent_name
@@ -41,7 +41,7 @@ field_definitions:
   status: One of active, current, behind, drifted, unknown, or retired.
   last_confirmed_date: Date this row was last confirmed, YYYY-MM-DD, or null when unknown.
   confirmed_by: Person or agent that confirmed this row, or null when unknown.
-  self_stamp_path: Path or URI to the agent's local self-stamp, or null when unknown.
+  self_stamp_path: Path or URI to the agent's legacy local self-stamp or current `.governance/local/status.yaml`, or null when unknown.
   notes: Short context for uncertainty, drift, or reconciliation state.
 null_allowed:
   - agent_kind
@@ -68,5 +68,4 @@ validation_rules:
   - Minor-level and patch-level gaps are visible version differences but do not by themselves raise an alarm status.
   - If status is current, current and target major versions should match for both active and generalized canon_version labels unless notes explain the exception.
   - Commit SHA references are provenance only, not indicators of governance version.
-  - A mismatch between this registry and an agent self-stamp is drift and must be routed to Jason through the active human liaison.
-  - Desktop-orchestrator kind agents and coding-agent kind leaf workspaces use `.governance/local/version-stamp.yaml` as the fixed local self-stamp path unless Jason explicitly sets a different local path.
+  - A mismatch between this legacy registry and local status must be reported to Jason through the active human liaison; the registry does not override `.governance/local/status.yaml`.

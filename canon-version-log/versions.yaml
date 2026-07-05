@@ -206,3 +206,11 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Adds coding-agent self-stamp path, default GitFlow startup, SemVer release discipline, and static type verification guidance.
+  - canon_version: trunk/3.6.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: f08bad7
+    previous_canon_version: trunk/3.5.0
+    date: 2026-07-05
+    bump: minor
+    summary: Decommissions central registry attestations as the default live status mechanism and establishes `.governance/local/status.yaml` as the portable local governance status report.
