@@ -153,3 +153,11 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Adds relay-to-Althing venue calibration and lightweight room-start protocol for live agent coordination.
+  - canon_version: trunk/3.5.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: PENDING_COMMIT
+    previous_canon_version: trunk/3.4.0
+    date: 2026-07-05
+    bump: minor
+    summary: Adds Jason's concise style, delivery, and analysis-method preferences.
