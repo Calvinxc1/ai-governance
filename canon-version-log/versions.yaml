@@ -137,3 +137,11 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Defines local governance as the workspace layer above lab governance, task overrides as the top one-shot layer, and `.governance/local/index.yaml` as the loose local pointer entrypoint.
+  - canon_version: trunk/3.3.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: PENDING_COMMIT
+    previous_canon_version: trunk/3.2.0
+    date: 2026-07-05
+    bump: minor
+    summary: Adds generalized outbound send and submit boundaries, owner-plus-pointer domain ownership guidance, and direct agent relay formatting.
