@@ -22,13 +22,23 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    If the active governance branch has a `.governance/kind-routes.yaml` file, load it after the task map. Trunk-general governance does not require a kind-routes file.
 
-5. Check governance version state.
+5. Prompt for the canonical agent name.
+
+   Ask Jason or the orchestrating agent for the agent's Jason-settled canonical name before version reconciliation or substantive work. Use a direct prompt:
+
+   ```text
+   What canonical agent name should I use for this workspace?
+   ```
+
+   If a local self-stamp or registry row already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
+
+6. Check governance version state.
 
    Read the local self-stamp if present. The standard desktop-orchestrator self-stamp path is `.governance/local/version-stamp.yaml`. Compare the self-stamp against the central registry row when a registry is available.
 
    The central registry in this repository is `agent-registry/agents.yaml`, with schema in `agent-registry/schema.yaml`.
 
-6. Apply the startup version rule.
+7. Apply the startup version rule.
 
    If current governance version equals target, continue silently. If current is behind target, report only:
 
@@ -42,7 +52,7 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    If Jason answers yes, use `lab-governance/templates/governed-agent-update-prompt.md` from the ai-governance repository as the canonical update prompt. Follow that prompt for source branch selection, local governance update, self-stamp update, reconciliation reporting, and registry-loop attestation.
 
-7. Declare loaded governance if action will follow.
+8. Declare loaded governance if action will follow.
 
    Before edits, connector actions, or other substantive work, state the intended action, affected files or systems, expected risk tier, and validation plan unless Jason's latest message already clearly authorized immediate execution.
 
@@ -52,7 +62,7 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
 1. Identify the intended agent kind and source branch.
 
-   Use the registry when present. If no registry row exists, ask Jason before choosing a governance branch or kind.
+   First ask for the workspace's canonical agent name. Use the registry when present. If no registry row exists, ask Jason before choosing a governance branch or kind.
 
 2. Copy the branch-local governance picture into the workspace.
 
@@ -111,6 +121,7 @@ Ordinary downstream repositories should not infer that they need to maintain tho
 Governance is initialized when all of the following are true:
 
 - The agent knows which governance entrypoint governs the workspace.
+- The agent has asked for, confirmed, or explicitly reported as missing its Jason-settled canonical name.
 - The agent has loaded `AGENTS.md` and the always-load policy.
 - Additional policy was loaded only through the task map and any kind route.
 - The agent has checked self-stamp and registry state when those records exist.
@@ -124,6 +135,7 @@ Governance is initialized when all of the following are true:
 Stop and ask before substantive work when:
 
 - No governance entrypoint can be found.
+- The Jason-settled canonical agent name is missing or disputed.
 - The active branch, kind, or target canon version is ambiguous.
 - Registry and self-stamp state disagree.
 - A policy conflict changes whether the agent may act.

@@ -98,3 +98,11 @@ versions:
     date: 2026-07-02
     bump: minor
     summary: Adds explicit task-map route groups as reusable subroutes while preserving selected routes as the policy loading contract.
+  - canon_version: trunk/2.8.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: d1618cc7b8cf599674e042b817ce7771f3acaf45
+    previous_canon_version: trunk/2.7.0
+    date: 2026-07-05
+    bump: minor
+    summary: Makes governance initialization explicitly prompt for the Jason-settled canonical agent name before version reconciliation, updates, or substantive work.
