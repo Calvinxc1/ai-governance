@@ -69,3 +69,4 @@ validation_rules:
   - If status is current, current and target major versions should match for both active and generalized canon_version labels unless notes explain the exception.
   - Commit SHA references are provenance only, not indicators of governance version.
   - A mismatch between this registry and an agent self-stamp is drift and must be routed to Jason through the active human liaison.
+  - Desktop-orchestrator kind agents and coding-agent kind leaf workspaces use `.governance/local/version-stamp.yaml` as the fixed local self-stamp path unless Jason explicitly sets a different local path.

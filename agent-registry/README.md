@@ -26,6 +26,12 @@ For desktop-orchestrator kind agents, the fixed local self-stamp path is:
 .governance/local/version-stamp.yaml
 ```
 
+For coding-agent kind leaf workspaces, the fixed local self-stamp path is also:
+
+```text
+.governance/local/version-stamp.yaml
+```
+
 ## Branch Placement
 
 The registry is committed on `trunk` because it is a governance-wide artifact, not specific to one agent kind. Kind branches receive it by normal trunk merge-down. Branch-specific agent details may still appear in rows when they describe a particular agent's active governance source.
