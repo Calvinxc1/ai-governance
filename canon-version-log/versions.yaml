@@ -164,7 +164,7 @@ versions:
   - canon_version: trunk/3.6.0
     scope: trunk
     branch: trunk
-    introduced_by_commit: PENDING_COMMIT
+    introduced_by_commit: f08bad7
     previous_canon_version: trunk/3.5.0
     date: 2026-07-05
     bump: minor
