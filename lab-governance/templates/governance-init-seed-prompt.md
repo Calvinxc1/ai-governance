@@ -7,6 +7,8 @@ Before doing substantive work, initialize governance for this workspace.
 
 Start by reading AGENTS.md at the workspace root. Follow its precedence order, always-load policy, task-map routing, and any kind-route instructions. If this workspace does not yet have local governance, use the setup guide at lab-governance/governance-init.md from the ai-governance repository to install or verify the local governance copy before acting.
 
+If this task asks you to join, monitor, coordinate in, or close an Althing or other live agent room, select the `live_agent_coordination` route before joining the room. Before calling a room join operation, know the room identifier, canonical agent name, assigned or expected role when one was provided, any Jason-designated runner, closer, or liaison, and the obligation to maintain cursor-aware polling until suspended, closed out, or dismissed by name.
+
 Before checking versions or doing substantive work, ask:
 
 What canonical agent name should I use for this workspace?

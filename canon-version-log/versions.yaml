@@ -97,3 +97,11 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Makes governance initialization explicitly prompt for the Jason-settled canonical agent name before version reconciliation, updates, or substantive work.
+  - canon_version: trunk/2.9.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: pending-uncommitted-working-tree
+    previous_canon_version: trunk/2.8.0
+    date: 2026-07-05
+    bump: minor
+    summary: Adds branch-target preflight for governance edits and consolidates all-agent Althing join-gate, cross-agent stewardship, Kanboard default-behavior, and governed update prompt corrections onto trunk.
