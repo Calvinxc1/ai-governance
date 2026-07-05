@@ -181,3 +181,11 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Adds generalized outbound send and submit boundaries, owner-plus-pointer domain ownership guidance, and direct agent relay formatting.
+  - canon_version: trunk/3.4.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: 9452a82
+    previous_canon_version: trunk/3.3.0
+    date: 2026-07-05
+    bump: minor
+    summary: Adds relay-to-Althing venue calibration and lightweight room-start protocol for live agent coordination.
