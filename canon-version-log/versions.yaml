@@ -109,7 +109,7 @@ versions:
   - canon_version: coding-agent/1.2.0
     scope: coding-agent
     branch: coding-agent
-    introduced_by_commit: pending
+    introduced_by_commit: 5bfaa1659d5ef351aede42c88266ddbc289493a7
     previous_canon_version: coding-agent/1.1.0
     parent_canon_version: trunk/2.8.0
     date: 2026-07-05
