@@ -6,6 +6,8 @@ rules:
   - This standard governs live agent-to-agent communication.
   - Do not treat this standard as defining a default set of channels or rooms.
   - Project-specific conversation topologies are allowed when the work calls for them, including hub-and-spoke coordination.
+  - Before joining, monitoring, coordinating in, or closing an Althing or other live agent room, agents must load the `live_agent_coordination` route and the room transport's available connector boundaries.
+  - Before calling a room join operation, an agent must know the room identifier, the canonical name it will use, its assigned or expected role when one was provided, any Jason-designated runner, closer, or liaison, and its obligation to maintain cursor-aware polling until suspended or dismissed by name.
   - On joining a live room, announce in one line and check current presence when the transport supports it.
   - After the initial join and presence check, agents must hold a preliminary coordination exchange before substantive room work begins.
   - The preliminary coordination exchange must identify the room purpose, active room runner or closer, active human liaison when one is needed, participant roles, round cap, stalemate cap, and whether the room starts active, suspended, or waiting on Jason.

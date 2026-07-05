@@ -15,6 +15,7 @@ rules:
   - The closer is responsible for dismissing every participant by name once that participant's contribution is authentically finished, including non-primary agents whose assigned slice is complete.
   - Participants do not self-exit before explicit by-name dismissal from the closer.
   - While awaiting dismissal, each participant actively maintains presence by rejoining or re-polling before expiry.
+  - Joining an Althing or other live agent room and then ceasing active monitoring before suspension, closeout, or by-name dismissal is a protocol failure even when the agent believes its assigned work is complete.
   - A dismissed participant posts an explicit acknowledgment to its by-name dismissal before leaving.
   - Absence of a dismissal acknowledgment, disappearance before dismissal, or unannounced departure is a failure state requiring the closer to log the participant as an unconfirmed exit.
   - An agent that explicitly acknowledges it is awaiting dismissal and then stops active monitoring before dismissal commits a distinct failure by breaking its keepalive commitment.

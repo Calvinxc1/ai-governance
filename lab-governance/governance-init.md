@@ -18,6 +18,8 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    Use `.governance/task-map.yaml` in an active workspace copy. Use `lab-governance/task-map.yaml` only when bootstrapping from the generalized source or maintaining generalized governance itself.
 
+   If the task asks the agent to join, monitor, coordinate in, or close an Althing or other live agent room, select the `live_agent_coordination` route before joining the room.
+
 4. Check branch or kind routing.
 
    If the active governance branch has a `.governance/kind-routes.yaml` file, load it after the task map. Trunk-general governance does not require a kind-routes file.
@@ -55,6 +57,18 @@ This document is a setup guide, not a replacement for policy. The operative cont
 8. Declare loaded governance if action will follow.
 
    Before edits, connector actions, or other substantive work, state the intended action, affected files or systems, expected risk tier, and validation plan unless Jason's latest message already clearly authorized immediate execution.
+
+## Althing And Live Room Join Checklist
+
+Before joining an Althing or other live agent room:
+
+- Load the `live_agent_coordination` route and the room transport's available connector boundaries.
+- Know the room identifier, canonical agent name, assigned or expected role when one was provided, and any Jason-designated runner, closer, or liaison.
+- Announce presence in one line after joining.
+- Check current presence if the transport supports it.
+- Participate in the preliminary coordination exchange before substantive room work begins.
+- Keep cursor-aware polling active while the room remains active.
+- Do not leave until suspended, closed out, or dismissed by name.
 
 ## Installing Governance Into A New Workspace
 

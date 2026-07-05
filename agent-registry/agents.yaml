@@ -38,7 +38,7 @@ agents:
     active_governance_branch: coding-agent
     current_governance_commit: null
     target_governance_commit: null
-    target_active_canon_version: coding-agent/1.3.0
+    target_active_canon_version: coding-agent/1.3.1
     current_active_canon_version: coding-agent/1.0.0
     target_generalized_canon_version: trunk/2.8.0
     current_generalized_canon_version: trunk/1.0.0
@@ -69,6 +69,10 @@ agents:
       moved to coding-agent/1.3.0 after Jason ratified cross-agent file
       stewardship boundaries requiring Althing acknowledgement, handoff, or
       Jason escalation before agents modify files maintained by another agent.
+      Target active canon moved to coding-agent/1.3.1 after Jason ratified an
+      explicit Althing/live-room join gate requiring fresh agents to load the
+      live_agent_coordination route before joining and maintain cursor-aware
+      polling until suspension, closeout, or by-name dismissal.
       Local self-stamp path is not yet standardized for coding-agent kind.
       Pending Jason ratification, the GitHub UQ library repo code stewardship
       belongs to Coding Agent while Education owns research substance;
