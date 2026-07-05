@@ -170,3 +170,12 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Adds Jason's concise style, delivery, and analysis-method preferences.
+  - canon_version: desktop-orchestrator/1.2.0
+    scope: desktop-orchestrator
+    branch: desktop-orchestrator
+    introduced_by_commit: PENDING_COMMIT
+    previous_canon_version: desktop-orchestrator/1.1.0
+    parent_canon_version: trunk/3.5.0
+    date: 2026-07-05
+    bump: minor
+    summary: Adds correspondence and prose draft-refinement preferences, including the heavy-lift drafting exception for formal or high-stakes correspondence.
