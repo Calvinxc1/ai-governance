@@ -16,7 +16,8 @@ Layout:
 - `lab-governance/policies/`: standing domain policies in YAML.
 - `lab-governance/processes/`: meta-governance and operating processes.
 - `lab-governance/overrides/`: temporary exception log and its schema.
-- `lab-governance/templates/`: reusable setup templates, including the local self-stamp template and canonical governance bootstrap prompt.
+- `lab-governance/templates/`: reusable setup templates, including the local self-stamp template, loose local index template, and canonical governance bootstrap prompt.
 - `lab-governance/templates/governance-bootstrap-prompt.md`: canonical prompt for first-time governance initialization and governed-agent updates.
+- `lab-governance/templates/local-index.yaml`: loose pointer template for `.governance/local/index.yaml`; the local directory's internal structure remains workspace-owned.
 
 Kind branches add `lab-governance/branch-descriptor.yaml` and `lab-governance/kind-routes.yaml`. Trunk does not carry those files, so trunk merge-downs do not overwrite kind orientation or kind-specific routing.
