@@ -52,7 +52,7 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    Then wait for Jason's answer before substantive work.
 
-   If Jason answers yes, use `lab-governance/templates/governed-agent-update-prompt.md` from the ai-governance repository as the canonical update prompt. Follow that prompt for source branch selection, local governance update, self-stamp update, reconciliation reporting, and registry-loop attestation.
+   If Jason answers yes, use `lab-governance/templates/governance-bootstrap-prompt.md` from the ai-governance repository as the canonical bootstrap/update prompt. Follow that prompt for source branch selection, local governance update, self-stamp update, reconciliation reporting, and registry-loop attestation.
 
 8. Declare loaded governance if action will follow.
 

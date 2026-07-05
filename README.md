@@ -13,6 +13,4 @@ Agents should start with `AGENTS.md`, then load local policy through `.governanc
 
 General policy intended for lab propagation belongs in `lab-governance/`. Local governance needed for this repo's agents belongs in `.governance/`.
 
-For new agent setup, use `lab-governance/governance-init.md`. A seed prompt for pointing a new agent at that guide lives at `lab-governance/templates/governance-init-seed-prompt.md`.
-
-For governed-agent updates, use the canonical prompt at `lab-governance/templates/governed-agent-update-prompt.md`. That prompt is the agent-facing source of truth for local governance update mechanics, self-stamp updates, reconciliation feedback, and registry-loop attestation.
+For new agent setup and governed-agent updates, use the canonical prompt at `lab-governance/templates/governance-bootstrap-prompt.md`. The prompt points agents to `lab-governance/governance-init.md`, registry files, self-stamp mechanics, reconciliation feedback, and registry-loop attestation.
