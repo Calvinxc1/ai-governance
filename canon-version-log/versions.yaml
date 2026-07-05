@@ -133,3 +133,11 @@ versions:
     date: 2026-07-05
     bump: patch
     summary: Clarifies the Althing and live-room join gate so fresh agents load live_agent_coordination before joining and maintain cursor-aware polling until suspension, closeout, or by-name dismissal.
+  - canon_version: trunk/2.9.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: be0067ff52a788baa8789ec4be866017fd3d0049
+    previous_canon_version: trunk/2.8.0
+    date: 2026-07-05
+    bump: minor
+    summary: Adds branch-target preflight for governance edits and consolidates all-agent Althing join-gate, cross-agent stewardship, Kanboard default-behavior, and governed update prompt corrections onto trunk.
