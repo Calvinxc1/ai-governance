@@ -173,7 +173,7 @@ versions:
   - canon_version: desktop-orchestrator/1.2.0
     scope: desktop-orchestrator
     branch: desktop-orchestrator
-    introduced_by_commit: PENDING_COMMIT
+    introduced_by_commit: 09a0a19
     previous_canon_version: desktop-orchestrator/1.1.0
     parent_canon_version: trunk/3.5.0
     date: 2026-07-05
