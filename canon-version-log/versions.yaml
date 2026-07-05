@@ -106,3 +106,12 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Makes governance initialization explicitly prompt for the Jason-settled canonical agent name before version reconciliation, updates, or substantive work.
+  - canon_version: coding-agent/1.2.0
+    scope: coding-agent
+    branch: coding-agent
+    introduced_by_commit: pending
+    previous_canon_version: coding-agent/1.1.0
+    parent_canon_version: trunk/2.8.0
+    date: 2026-07-05
+    bump: minor
+    summary: Adds stricter live-room startup coordination and by-name dismissal requirements so agents identify who is running the room before substantive work and non-primary participants do not leave without explicit release.

@@ -1,5 +1,5 @@
 schema: agent_registry_schema
-last_updated: 2026-07-02
+last_updated: 2026-07-05
 agents:
   - canonical_agent_name: Personal
     agent_kind: desktop_orchestrator
@@ -38,7 +38,7 @@ agents:
     active_governance_branch: coding-agent
     current_governance_commit: null
     target_governance_commit: null
-    target_active_canon_version: coding-agent/1.1.0
+    target_active_canon_version: coding-agent/1.2.0
     current_active_canon_version: coding-agent/1.0.0
     target_generalized_canon_version: trunk/2.8.0
     current_generalized_canon_version: trunk/1.0.0
@@ -63,11 +63,13 @@ agents:
       active canon moved to coding-agent/1.1.0 after Jason ratified less
       aggressive Kanboard usage for coding agents: lookup existing relevant
       cards, ask once before creating a new card, and never create one from
-      silence. Local self-stamp path is not yet standardized for coding-agent
-      kind. Pending Jason ratification, the GitHub UQ library repo code
-      stewardship belongs to Coding Agent while Education owns research
-      substance; render_paper.py is flagged as a latent embedded prose copy
-      requiring reconciliation.
+      silence. Target active canon moved to coding-agent/1.2.0 after Jason
+      ratified stricter live-room preliminary coordination and by-name
+      dismissal requirements for non-primary participants. Local self-stamp
+      path is not yet standardized for coding-agent kind. Pending Jason
+      ratification, the GitHub UQ library repo code stewardship belongs to
+      Coding Agent while Education owns research substance; render_paper.py is
+      flagged as a latent embedded prose copy requiring reconciliation.
   - canonical_agent_name: Career
     agent_kind: null
     active_governance_branch: null

@@ -2,7 +2,7 @@ id: branch_descriptor
 status: active
 branch: coding-agent
 kind: coding_agent
-canon_version: coding-agent/1.1.0
+canon_version: coding-agent/1.2.0
 parent:
   branch: trunk
   canon_version: trunk/2.8.0
