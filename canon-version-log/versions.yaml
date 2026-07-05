@@ -165,3 +165,11 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Replaces separate governance initialization and governed-agent update prompts with one canonical bootstrap prompt for both ungoverned and governed agents.
+  - canon_version: trunk/3.2.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: c258fd5
+    previous_canon_version: trunk/3.1.0
+    date: 2026-07-05
+    bump: minor
+    summary: Defines local governance as the workspace layer above lab governance, task overrides as the top one-shot layer, and `.governance/local/index.yaml` as the loose local pointer entrypoint.
