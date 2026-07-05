@@ -16,13 +16,12 @@ lab-governance/templates/governed-agent-update-prompt.md
 
 ## Prompt
 
+```markdown
 You are updating your local governance copy from Jason's ai-governance repository.
 
 If you do not already have a Jason-settled canonical agent name, stop before changing files and ask:
 
-```text
-What canonical agent name should I use for this workspace?
-```
+    What canonical agent name should I use for this workspace?
 
 If a local self-stamp or registry row already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
 
@@ -51,26 +50,24 @@ Then perform the update carefully:
 
 After updating, create a structured registry attestation. Use this shape:
 
-```yaml
-type: agent_registry_attestation
-canonical_agent_name: null
-agent_kind: null
-active_governance_branch: null
-source_repository: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
-source_commit: null
-previous_active_canon_version: null
-current_active_canon_version: null
-previous_generalized_canon_version: null
-current_generalized_canon_version: null
-self_stamp_path: null
-self_stamp_updated: null
-registry_loop_transport: null
-registry_loop_result: null
-updated_at: null
-result: null
-reconciliation:
-  - null
-```
+    type: agent_registry_attestation
+    canonical_agent_name: null
+    agent_kind: null
+    active_governance_branch: null
+    source_repository: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
+    source_commit: null
+    previous_active_canon_version: null
+    current_active_canon_version: null
+    previous_generalized_canon_version: null
+    current_generalized_canon_version: null
+    self_stamp_path: null
+    self_stamp_updated: null
+    registry_loop_transport: null
+    registry_loop_result: null
+    updated_at: null
+    result: null
+    reconciliation:
+      - null
 
 Submit the attestation through the currently ratified registry-loop transport when available. If no transport is available, write the attestation to a local durable path and report that path. Do not directly edit `agent-registry/agents.yaml` unless a ratified process explicitly authorizes direct registry mutation.
 
@@ -82,3 +79,4 @@ Close out by reporting:
 - Registry attestation path or submission target.
 - Whether the central registry is updated, pending, failed, or explicitly deferred.
 - Any unresolved reconciliation item and its owner.
+```
