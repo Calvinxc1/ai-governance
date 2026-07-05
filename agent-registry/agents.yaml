@@ -8,7 +8,7 @@ agents:
     target_governance_commit: null
     target_active_canon_version: desktop-orchestrator/1.0.0
     current_active_canon_version: desktop-orchestrator/1.0.0
-    target_generalized_canon_version: trunk/2.9.0
+    target_generalized_canon_version: trunk/2.10.0
     current_generalized_canon_version: trunk/2.0.0
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#desktop-orchestrator
@@ -16,7 +16,7 @@ agents:
     last_confirmed_date: 2026-06-25
     confirmed_by: Jason
     self_stamp_path: .governance/local/version-stamp.yaml
-    notes: Personal adopted trunk/2.0.0 from desktop-orchestrator@3b49fb37 and re-cut its local self-stamp on 2026-06-25. On 2026-06-30, Personal demoted schooling and Argo research files to pointers after Education confirmed receipt as source of truth; see .governance/records/2026-06-29-education-research-handoff.md. Target generalized canon moved to trunk/2.1.0 after Jason ratified inter-agent coordination and startup version-check updates, to trunk/2.2.0 after Jason ratified the canonical governed-agent update prompt and registry-loop attestation process, to trunk/2.3.0 after the live communication routing split and startup update-prompt wiring, to trunk/2.4.0 after active governance status semantics were clarified, to trunk/2.5.0 after governance maintenance validation requirements were specified, to trunk/2.6.0 after detailed validation reporting was clarified as repo-local maintainer workflow, to trunk/2.7.0 after task-map route groups were added as explicit reusable subroutes, to trunk/2.8.0 after canonical-name prompting was added to governance initialization, and to trunk/2.9.0 after branch-target preflight, Althing join-gate, cross-agent stewardship, and Kanboard default-behavior corrections were consolidated onto trunk.
+    notes: Personal adopted trunk/2.0.0 from desktop-orchestrator@3b49fb37 and re-cut its local self-stamp on 2026-06-25. On 2026-06-30, Personal demoted schooling and Argo research files to pointers after Education confirmed receipt as source of truth; see .governance/records/2026-06-29-education-research-handoff.md. Target generalized canon moved to trunk/2.1.0 after Jason ratified inter-agent coordination and startup version-check updates, to trunk/2.2.0 after Jason ratified the canonical governed-agent update prompt and registry-loop attestation process, to trunk/2.3.0 after the live communication routing split and startup update-prompt wiring, to trunk/2.4.0 after active governance status semantics were clarified, to trunk/2.5.0 after governance maintenance validation requirements were specified, to trunk/2.6.0 after detailed validation reporting was clarified as repo-local maintainer workflow, to trunk/2.7.0 after task-map route groups were added as explicit reusable subroutes, to trunk/2.8.0 after canonical-name prompting was added to governance initialization, to trunk/2.9.0 after branch-target preflight, Althing join-gate, cross-agent stewardship, and Kanboard default-behavior corrections were consolidated onto trunk, and to trunk/2.10.0 after portable inter-agent brief formatting rules were added.
   - canonical_agent_name: Education
     agent_kind: desktop_orchestrator
     active_governance_branch: desktop-orchestrator
@@ -24,7 +24,7 @@ agents:
     target_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
     target_active_canon_version: desktop-orchestrator/1.0.0
     current_active_canon_version: desktop-orchestrator/1.0.0
-    target_generalized_canon_version: trunk/2.9.0
+    target_generalized_canon_version: trunk/2.10.0
     current_generalized_canon_version: trunk/2.0.0
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: /home/jcherry/Documents/Claude Projects/Education
@@ -32,7 +32,7 @@ agents:
     last_confirmed_date: 2026-06-29
     confirmed_by: Jason
     self_stamp_path: .governance/local/version-stamp.yaml
-    notes: Education supersedes the prior working name Academics. Seeded from origin/desktop-orchestrator@1517e56f27bcc7642a5559752dbc40cb89ae8ee1 per Jason's 2026-06-29 instruction and the 2026-06-25 governance-sync recommendation; the moving origin/desktop-orchestrator ref was observed at 3b49fb37687c4410785bfe00649138b431101d72 during stamping. On 2026-06-30, Education became source of truth for schooling and Argo research substance transferred from Personal and Career; see .governance/records/2026-06-29-education-research-handoff.md. Target generalized canon moved to trunk/2.1.0 after Jason ratified inter-agent coordination and startup version-check updates, to trunk/2.2.0 after Jason ratified the canonical governed-agent update prompt and registry-loop attestation process, to trunk/2.3.0 after the live communication routing split and startup update-prompt wiring, to trunk/2.4.0 after active governance status semantics were clarified, to trunk/2.5.0 after governance maintenance validation requirements were specified, to trunk/2.6.0 after detailed validation reporting was clarified as repo-local maintainer workflow, to trunk/2.7.0 after task-map route groups were added as explicit reusable subroutes, to trunk/2.8.0 after canonical-name prompting was added to governance initialization, and to trunk/2.9.0 after branch-target preflight, Althing join-gate, cross-agent stewardship, and Kanboard default-behavior corrections were consolidated onto trunk.
+    notes: Education supersedes the prior working name Academics. Seeded from origin/desktop-orchestrator@1517e56f27bcc7642a5559752dbc40cb89ae8ee1 per Jason's 2026-06-29 instruction and the 2026-06-25 governance-sync recommendation; the moving origin/desktop-orchestrator ref was observed at 3b49fb37687c4410785bfe00649138b431101d72 during stamping. On 2026-06-30, Education became source of truth for schooling and Argo research substance transferred from Personal and Career; see .governance/records/2026-06-29-education-research-handoff.md. Target generalized canon moved to trunk/2.1.0 after Jason ratified inter-agent coordination and startup version-check updates, to trunk/2.2.0 after Jason ratified the canonical governed-agent update prompt and registry-loop attestation process, to trunk/2.3.0 after the live communication routing split and startup update-prompt wiring, to trunk/2.4.0 after active governance status semantics were clarified, to trunk/2.5.0 after governance maintenance validation requirements were specified, to trunk/2.6.0 after detailed validation reporting was clarified as repo-local maintainer workflow, to trunk/2.7.0 after task-map route groups were added as explicit reusable subroutes, to trunk/2.8.0 after canonical-name prompting was added to governance initialization, to trunk/2.9.0 after branch-target preflight, Althing join-gate, cross-agent stewardship, and Kanboard default-behavior corrections were consolidated onto trunk, and to trunk/2.10.0 after portable inter-agent brief formatting rules were added.
   - canonical_agent_name: Coding Agent
     agent_kind: coding_agent
     active_governance_branch: coding-agent
@@ -40,7 +40,7 @@ agents:
     target_governance_commit: null
     target_active_canon_version: coding-agent/1.3.1
     current_active_canon_version: coding-agent/1.0.0
-    target_generalized_canon_version: trunk/2.9.0
+    target_generalized_canon_version: trunk/2.10.0
     current_generalized_canon_version: trunk/1.0.0
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#coding-agent
@@ -63,18 +63,19 @@ agents:
       trunk/2.8.0 after canonical-name prompting was added to governance
       initialization, and to trunk/2.9.0 after branch-target preflight,
       Althing join-gate, cross-agent stewardship, and Kanboard default-behavior
-      corrections were consolidated onto trunk. Target active canon moved to
-      coding-agent/1.1.0 after Jason ratified less aggressive Kanboard usage
-      for coding agents: lookup existing relevant cards, ask once before
-      creating a new card, and never create one from silence. Target active
-      canon moved to coding-agent/1.2.0 after Jason ratified stricter live-room
-      preliminary coordination and by-name dismissal requirements for
+      corrections were consolidated onto trunk, and to trunk/2.10.0 after
+      portable inter-agent brief formatting rules were added. Target active
+      canon moved to coding-agent/1.1.0 after Jason ratified less aggressive
+      Kanboard usage for coding agents: lookup existing relevant cards, ask once
+      before creating a new card, and never create one from silence. Target
+      active canon moved to coding-agent/1.2.0 after Jason ratified stricter
+      live-room preliminary coordination and by-name dismissal requirements for
       non-primary participants. Target active canon moved to coding-agent/1.3.0
       after Jason ratified cross-agent file stewardship boundaries requiring
       Althing acknowledgement, handoff, or Jason escalation before agents modify
       files maintained by another agent. Target active canon moved to
-      coding-agent/1.3.1 after Jason ratified an explicit Althing/live-room
-      join gate requiring fresh agents to load the live_agent_coordination route
+      coding-agent/1.3.1 after Jason ratified an explicit Althing/live-room join
+      gate requiring fresh agents to load the live_agent_coordination route
       before joining and maintain cursor-aware polling until suspension,
       closeout, or by-name dismissal.
       Local self-stamp path is not yet standardized for coding-agent kind.
