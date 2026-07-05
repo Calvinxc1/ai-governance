@@ -38,7 +38,7 @@ agents:
     active_governance_branch: coding-agent
     current_governance_commit: null
     target_governance_commit: null
-    target_active_canon_version: coding-agent/1.0.0
+    target_active_canon_version: coding-agent/1.1.0
     current_active_canon_version: coding-agent/1.0.0
     target_generalized_canon_version: trunk/2.7.0
     current_generalized_canon_version: trunk/1.0.0
@@ -48,7 +48,26 @@ agents:
     last_confirmed_date: 2026-06-25
     confirmed_by: Coding Agent
     self_stamp_path: null
-    notes: Coding Agent was current at trunk/1.0.0; target moved to trunk/2.0.0 after Jason ratified the Althing presence protocol patch, to trunk/2.1.0 after Jason ratified inter-agent coordination and startup version-check updates, to trunk/2.2.0 after Jason ratified the canonical governed-agent update prompt and registry-loop attestation process, to trunk/2.3.0 after the live communication routing split and startup update-prompt wiring, to trunk/2.4.0 after active governance status semantics were clarified, to trunk/2.5.0 after governance maintenance validation requirements were specified, and to trunk/2.6.0 after detailed validation reporting was clarified as repo-local maintainer workflow, and to trunk/2.7.0 after task-map route groups were added as explicit reusable subroutes. Local self-stamp path is not yet standardized for coding-agent kind. Pending Jason ratification, the GitHub UQ library repo code stewardship belongs to Coding Agent while Education owns research substance; render_paper.py is flagged as a latent embedded prose copy requiring reconciliation.
+    notes: >-
+      Coding Agent was current at trunk/1.0.0; target moved to trunk/2.0.0
+      after Jason ratified the Althing presence protocol patch, to trunk/2.1.0
+      after Jason ratified inter-agent coordination and startup version-check
+      updates, to trunk/2.2.0 after Jason ratified the canonical governed-agent
+      update prompt and registry-loop attestation process, to trunk/2.3.0 after
+      the live communication routing split and startup update-prompt wiring, to
+      trunk/2.4.0 after active governance status semantics were clarified, to
+      trunk/2.5.0 after governance maintenance validation requirements were
+      specified, and to trunk/2.6.0 after detailed validation reporting was
+      clarified as repo-local maintainer workflow, and to trunk/2.7.0 after
+      task-map route groups were added as explicit reusable subroutes. Target
+      active canon moved to coding-agent/1.1.0 after Jason ratified less
+      aggressive Kanboard usage for coding agents: lookup existing relevant
+      cards, ask once before creating a new card, and never create one from
+      silence. Local self-stamp path is not yet standardized for coding-agent
+      kind. Pending Jason ratification, the GitHub UQ library repo code
+      stewardship belongs to Coding Agent while Education owns research
+      substance; render_paper.py is flagged as a latent embedded prose copy
+      requiring reconciliation.
   - canonical_agent_name: Career
     agent_kind: null
     active_governance_branch: null

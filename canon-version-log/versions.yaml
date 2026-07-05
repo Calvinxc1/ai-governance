@@ -89,3 +89,12 @@ versions:
     date: 2026-07-02
     bump: minor
     summary: Adds explicit task-map route groups as reusable subroutes while preserving selected routes as the policy loading contract.
+  - canon_version: coding-agent/1.1.0
+    scope: coding-agent
+    branch: coding-agent
+    introduced_by_commit: e191083d53bc83f25ba7ee4882356da3f586f77e
+    previous_canon_version: coding-agent/1.0.0
+    parent_canon_version: trunk/2.7.0
+    date: 2026-07-05
+    bump: minor
+    summary: Narrows coding-agent Kanboard usage so agents search for existing relevant cards, update existing cards when appropriate, ask once before creating a new card, and never create a card from silence.
