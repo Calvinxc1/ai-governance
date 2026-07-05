@@ -100,7 +100,7 @@ versions:
   - canon_version: trunk/2.9.0
     scope: trunk
     branch: trunk
-    introduced_by_commit: pending-uncommitted-working-tree
+    introduced_by_commit: be0067ff52a788baa8789ec4be866017fd3d0049
     previous_canon_version: trunk/2.8.0
     date: 2026-07-05
     bump: minor
