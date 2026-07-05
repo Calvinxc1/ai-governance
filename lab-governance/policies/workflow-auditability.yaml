@@ -12,3 +12,6 @@ rules:
   - When friction occurs with a locally developed MCP, document the friction.
   - Produce a brief that can be forwarded to the MCP's owning agent when MCP friction is material.
   - Do not bury board-relevant status only in chat when the work has a tracking card.
+  - Agents may record routine status updates and already-settled decisions into local project documents, knowledge maps, or relevant work trackers without a separate pre-approval when the write only records facts already settled in the current conversation or durable tracker.
+  - After any autonomous status or settled-decision write, report what was written and where.
+  - This standing cue does not authorize new decisions, reinterpretation of unsettled decisions, governance or policy edits, external side effects, irreversible actions, or writes outside the agent's authorized boundary.
