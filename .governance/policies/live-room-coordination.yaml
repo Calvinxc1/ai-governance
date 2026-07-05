@@ -8,11 +8,18 @@ rules:
   - Project-specific conversation topologies are allowed when the work calls for them, including hub-and-spoke coordination.
   - Before joining, monitoring, coordinating in, or closing an Althing or other live agent room, agents must load the `live_agent_coordination` route and the room transport's available connector boundaries.
   - Before calling a room join operation, an agent must know the room identifier, the canonical name it will use, its assigned or expected role when one was provided, any Jason-designated runner, closer, or liaison, and its obligation to maintain cursor-aware polling until suspended or dismissed by name.
+  - When an agent recommends moving a relay exchange into Althing and has room access, the recommending agent should create or join the room, post the room-start message, and wait there for the other agent rather than leaving Jason with only an idle prompt.
+  - When an agent recommends moving a relay exchange into Althing but cannot create or join the room, it must give Jason a ready-to-use prompt or room-start instruction for the agent that can.
+  - Room-start instructions may use Jason's approximate name for another agent; agents must reconcile canonical participant names in-room rather than requiring Jason to know them up front.
+  - A room-start message should be short and include only the room purpose, requested participant names or descriptions, task bullets, success condition, and closeout expectation.
+  - A room-start message may include brief context only when the room cannot start without it; otherwise agents should exchange needed context in-room.
   - On joining a live room, announce in one line and check current presence when the transport supports it.
   - After the initial join and presence check, agents must hold a preliminary coordination exchange before substantive room work begins.
-  - The preliminary coordination exchange must identify the room purpose, active room runner or closer, active human liaison when one is needed, participant roles, round cap, stalemate cap, and whether the room starts active, suspended, or waiting on Jason.
+  - The preliminary coordination exchange must identify the room purpose, canonical participant names when known, active room runner or closer, active human liaison when one is needed, participant roles, round cap, stalemate cap, and whether the room starts active, suspended, or waiting on Jason.
   - If Jason designated a room runner, primary agent, closer, liaison, or role split, agents must acknowledge that designation in-room rather than renegotiating it silently.
   - If Jason did not designate who is running the room, agents must choose and announce exactly one active room runner or closer before making task decisions, asking Jason for a decision, or treating any agent as released.
+  - Do not require Jason to assign the active room runner or closer at room creation; when Jason has not designated one, treat runner or closer selection as part of the preliminary in-room protocol.
+  - Do not prescribe a joining agent's first substantive message beyond the one-line join announcement and presence check; roles, context, understanding, and next actions should be established through the preliminary coordination exchange.
   - If more than one agent appears to be running the room, pause substantive coordination and resolve the room-runner conflict in-room or escalate it to Jason through the active liaison.
   - Supporting, secondary, observer, and specialist agents remain full room participants until the closer explicitly releases them under the closeout policy.
   - Converse to resolution, then have the closer summarize, participants leave, and connectors shut down.
