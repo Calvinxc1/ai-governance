@@ -1,0 +1,21 @@
+type: agent_registry_attestation
+canonical_agent_name: Personal
+agent_kind: desktop_orchestrator
+active_governance_branch: desktop-orchestrator
+source_repository: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
+source_commit: b0d7627bdc182412ed58ecb208b7cf7a2db5495e
+previous_active_canon_version: desktop-orchestrator/1.0.0
+current_active_canon_version: desktop-orchestrator/1.1.0
+previous_generalized_canon_version: trunk/2.0.0
+current_generalized_canon_version: trunk/3.0.0
+self_stamp_path: .governance/local/version-stamp.yaml
+self_stamp_updated: true
+registry_loop_transport: local_attestation_file
+registry_loop_result: written
+updated_at: 2026-07-05T21:07:35Z
+result: completed
+reconciliation:
+  - Local self-stamp was missing before this update and has now been created.
+  - Central registry row for Personal still records current_active_canon_version as desktop-orchestrator/1.0.0 and current_generalized_canon_version as trunk/2.0.0; registry current-state reconciliation remains pending because the canonical prompt does not authorize direct registry mutation.
+  - origin/desktop-orchestrator was observed at 7719dd4b6a5584d852194baddcd351cad3cc86d7, behind the checked-out local source commit b0d7627bdc182412ed58ecb208b7cf7a2db5495e; this update consumed the checked-out lab-governance source path after local trunk/3.0.0 propagation.
+  - Differences between .governance and lab-governance were classified as documented path-only, documentation-only, and repo-local maintainer-workflow deviations under .governance/local/deviations.yaml.
