@@ -161,3 +161,11 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Adds Jason's concise style, delivery, and analysis-method preferences.
+  - canon_version: trunk/3.6.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: PENDING_COMMIT
+    previous_canon_version: trunk/3.5.0
+    date: 2026-07-05
+    bump: minor
+    summary: Decommissions central registry attestations as the default live status mechanism and establishes `.governance/local/status.yaml` as the portable local governance status report.

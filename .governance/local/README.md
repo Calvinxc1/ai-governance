@@ -15,3 +15,5 @@ Local deviations must be:
 - promoted to `lab-governance/` only when Jason decides the rule should generalize
 
 The canonical deviation list is `deviations.yaml`.
+
+`index.yaml` is the loose local-governance pointer. `status.yaml` is this workspace's portable governance status report. Other local files are repository-owned and should not be inferred as lab-wide structure.

@@ -7,7 +7,7 @@ rules:
   - Keep lab-wide governance policy, process, routing, and override files under lab-governance.
   - Keep active repo-local governance policy, process, routing, and override files under .governance.
   - Treat lab/canon governance as the base layer, loaded local governance as the workspace layer above it, and explicit task overrides as the top layer for the declared one-shot operation.
-  - Prescribe only `.governance/local/index.yaml` as the universal entrypoint into local governance; do not prescribe the internal structure of `.governance/local/` from lab governance.
+  - Prescribe `.governance/local/index.yaml` as the universal entrypoint into local governance policy and `.governance/local/status.yaml` as the universal local governance status report; do not prescribe the rest of `.governance/local/` from lab governance.
   - Use `.governance/local/index.yaml` as a pointer file, not as the local policy body.
   - Treat committed files under active governance policy and process directories as ratified and operative by placement.
   - Keep draft policy and process proposals outside active policy and process directories until Jason ratifies them.
@@ -20,7 +20,7 @@ rules:
   - Before editing governance files, identify the owning governance layer for the requested change as trunk-general, kind-specific, repo-local, registry/bookkeeping, or propagation-only.
   - Before editing governance files, compare the owning layer against the current Git branch, `.governance/branch-descriptor.yaml`, and `lab-governance/branch-descriptor.yaml` when present.
   - If the current branch does not match the owning layer, switch to the owning branch before editing rather than making the change on the current branch.
-  - General all-agent rules, live-room rules, governance initialization guides, generalized templates, registry-loop prompts, and lab-wide process changes belong on trunk first unless Jason explicitly scopes them to a kind branch or repo-local deviation.
+  - General all-agent rules, live-room rules, governance initialization guides, generalized templates, local-status bootstrap prompts, and lab-wide process changes belong on trunk first unless Jason explicitly scopes them to a kind branch or repo-local deviation.
   - Kind-specific rules belong on that kind branch and must not be treated as trunk policy unless separately promoted through an explicit trunk change.
   - Do not satisfy propagation by editing `lab-governance` on a child branch while the trunk-owned source remains stale.
   - Before committing governance changes, state the owning layer, current branch, changed paths, canon-version target, and downstream branches that must receive propagation.
