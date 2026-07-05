@@ -113,3 +113,11 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Adds portable inter-agent brief formatting rules requiring copy/paste-ready agent briefs to be provided as a single fenced Markdown code block with a sender header.
+  - canon_version: trunk/3.0.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: bad774a12887abb8645087390279ad8729a2aade
+    previous_canon_version: trunk/2.10.0
+    date: 2026-07-05
+    bump: major
+    summary: Makes durable local files the only portable home for project-specific governance and durable project knowledge, forbids project-specific memory pointers, and adds a narrow standing cue for recording routine status updates and already-settled decisions.
