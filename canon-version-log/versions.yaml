@@ -108,7 +108,7 @@ versions:
   - canon_version: trunk/2.10.0
     scope: trunk
     branch: trunk
-    introduced_by_commit: pending-local-commit
+    introduced_by_commit: 34fed4d248ce792639cd9b067ab9abb0d4430ae5
     previous_canon_version: trunk/2.9.0
     date: 2026-07-05
     bump: minor
