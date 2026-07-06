@@ -177,3 +177,11 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Adds all-agent live-room identity correction, post-prompt await-loop obligations, and generalized version-control guardrails without granting trunk-level autonomous commit authority.
+  - canon_version: trunk/3.8.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: f48555f
+    previous_canon_version: trunk/3.7.0
+    date: 2026-07-06
+    bump: minor
+    summary: Adds live-room task-packet, canonical join-status, repository closeout verification, and version-agnostic kind-branch migration checklist guidance.
