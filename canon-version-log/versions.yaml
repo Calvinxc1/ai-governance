@@ -193,3 +193,11 @@ versions:
     date: 2026-07-07
     bump: minor
     summary: Adds portable relay fence-integrity rules requiring agents to choose safe outer code fences and verify that embedded fences do not terminate copy/paste blocks early.
+  - canon_version: trunk/3.10.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: pending
+    previous_canon_version: trunk/3.9.0
+    date: 2026-07-07
+    bump: minor
+    summary: Strengthens relay-to-Althing initiation, live-room prompt completion, and by-name dismissal rules so agents with room access treat live coordination as an active duty cycle.

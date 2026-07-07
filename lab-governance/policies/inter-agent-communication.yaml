@@ -16,4 +16,6 @@ rules:
   - Do not put explanatory text inside the copy/paste code block unless it is part of the communication Jason should send.
   - Use copy/paste relay for one-way messages, bounded requests, simple handoffs, or exchanges expected to need no more than one response.
   - Use an Althing or other live room when the exchange needs multi-turn convergence, disagreement resolution, live handoff, shared situational awareness, or reduced Jason mediation.
-  - If a relay exchange becomes repeated back-and-forth or clearly needs live coordination, surface that immediately and provide Jason a ready prompt or room-start instruction for moving the exchange into Althing.
+  - If a relay exchange becomes repeated back-and-forth or clearly needs live coordination, surface that immediately.
+  - If the agent has live-room access, it must start or join the room itself, post the room packet there, and give Jason only the short invite prompt needed to summon another participant.
+  - If the agent lacks live-room access, it may provide Jason a ready-to-use room-start prompt for an agent that can create or join the room.
