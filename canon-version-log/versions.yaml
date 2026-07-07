@@ -188,7 +188,7 @@ versions:
   - canon_version: trunk/3.9.0
     scope: trunk
     branch: trunk
-    introduced_by_commit: uncommitted
+    introduced_by_commit: ab893bb
     previous_canon_version: trunk/3.8.0
     date: 2026-07-07
     bump: minor
