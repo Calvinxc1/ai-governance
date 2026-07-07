@@ -262,3 +262,11 @@ versions:
     date: 2026-07-07
     bump: minor
     summary: Adds connector capability verification rules requiring targeted discovery and authoritative metadata checks before agents report that a connector lacks an action.
+  - canon_version: trunk/3.13.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: 9a8b39db8c1aeff906e2182b2a074878412014cb
+    previous_canon_version: trunk/3.12.0
+    date: 2026-07-07
+    bump: minor
+    summary: Adds a connector capability answer gate requiring connector capability questions and negative capability answers to complete targeted action and metadata discovery first.
