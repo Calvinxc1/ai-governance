@@ -6,7 +6,7 @@ active_governance_branch: trunk
 current_active_canon_version: trunk/3.11.0
 current_generalized_canon_version: trunk/3.11.0
 source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
-governance_source_commit: null
+governance_source_commit: 782a8c0478100bbf2225808d6eedb580f7403f2f
 runtime_surface: codex_cli
 code_authority: governance_maintenance_with_explicit_user_authorization
 last_verified_at: 2026-07-07
