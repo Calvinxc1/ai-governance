@@ -243,3 +243,11 @@ versions:
     date: 2026-07-07
     bump: minor
     summary: Adds a connector capability answer gate requiring connector capability questions and negative capability answers to complete targeted action and metadata discovery first.
+  - canon_version: trunk/3.14.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: c661d272213d130501b5f3618158adeaad73b7a4
+    previous_canon_version: trunk/3.13.0
+    date: 2026-07-07
+    bump: minor
+    summary: Strengthens connector capability checks into an explicit pre-answer and pre-action checklist and requires immediate live-room route switching when agents with room access are asked to participate.
