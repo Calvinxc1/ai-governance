@@ -201,3 +201,11 @@ versions:
     date: 2026-07-07
     bump: minor
     summary: Strengthens relay-to-Althing initiation, live-room prompt completion, and by-name dismissal rules so agents with room access treat live coordination as an active duty cycle.
+  - canon_version: trunk/3.11.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: null
+    previous_canon_version: trunk/3.10.0
+    date: 2026-07-07
+    bump: minor
+    summary: Adds all-agent discretion for obvious speech-to-text transcription artifacts while requiring clarification when intended meaning, scope, risk, or action is materially uncertain.

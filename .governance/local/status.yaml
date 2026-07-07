@@ -3,10 +3,10 @@ schema_version: 1
 canonical_agent_name: Governance Agent
 agent_kind: desktop_orchestrator
 active_governance_branch: trunk
-current_active_canon_version: trunk/3.10.0
-current_generalized_canon_version: trunk/3.10.0
+current_active_canon_version: trunk/3.11.0
+current_generalized_canon_version: trunk/3.11.0
 source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
-governance_source_commit: 7c919ae
+governance_source_commit: null
 runtime_surface: codex_cli
 code_authority: governance_maintenance_with_explicit_user_authorization
 last_verified_at: 2026-07-07
