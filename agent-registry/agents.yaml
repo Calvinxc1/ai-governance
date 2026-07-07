@@ -8,7 +8,7 @@ agents:
     target_governance_commit: null
     target_active_canon_version: desktop-orchestrator/1.0.0
     current_active_canon_version: desktop-orchestrator/1.0.0
-    target_generalized_canon_version: trunk/3.10.0
+    target_generalized_canon_version: trunk/3.11.0
     current_generalized_canon_version: trunk/2.0.0
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#desktop-orchestrator
@@ -24,7 +24,7 @@ agents:
     target_governance_commit: 1517e56f27bcc7642a5559752dbc40cb89ae8ee1
     target_active_canon_version: desktop-orchestrator/1.0.0
     current_active_canon_version: desktop-orchestrator/1.0.0
-    target_generalized_canon_version: trunk/3.10.0
+    target_generalized_canon_version: trunk/3.11.0
     current_generalized_canon_version: trunk/2.0.0
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: /home/jcherry/Documents/Claude Projects/Education
@@ -40,7 +40,7 @@ agents:
     target_governance_commit: null
     target_active_canon_version: coding-agent/1.4.0
     current_active_canon_version: coding-agent/1.0.0
-    target_generalized_canon_version: trunk/3.10.0
+    target_generalized_canon_version: trunk/3.11.0
     current_generalized_canon_version: trunk/1.0.0
     canon_version_log_ref: canon-version-log/versions.yaml
     source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git#coding-agent
