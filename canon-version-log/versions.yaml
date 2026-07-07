@@ -209,3 +209,11 @@ versions:
     date: 2026-07-07
     bump: minor
     summary: Adds all-agent discretion for obvious speech-to-text transcription artifacts while requiring clarification when intended meaning, scope, risk, or action is materially uncertain.
+  - canon_version: trunk/3.12.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: pending
+    previous_canon_version: trunk/3.11.0
+    date: 2026-07-07
+    bump: minor
+    summary: Adds connector capability verification rules requiring targeted discovery and authoritative metadata checks before agents report that a connector lacks an action.
