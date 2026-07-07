@@ -228,7 +228,7 @@ versions:
   - canon_version: trunk/3.14.0
     scope: trunk
     branch: trunk
-    introduced_by_commit: pending
+    introduced_by_commit: c661d272213d130501b5f3618158adeaad73b7a4
     previous_canon_version: trunk/3.13.0
     date: 2026-07-07
     bump: minor
