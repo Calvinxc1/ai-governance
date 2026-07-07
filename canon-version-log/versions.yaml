@@ -185,3 +185,11 @@ versions:
     date: 2026-07-06
     bump: minor
     summary: Adds live-room task-packet, canonical join-status, repository closeout verification, and version-agnostic kind-branch migration checklist guidance.
+  - canon_version: trunk/3.9.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: uncommitted
+    previous_canon_version: trunk/3.8.0
+    date: 2026-07-07
+    bump: minor
+    summary: Adds portable relay fence-integrity rules requiring agents to choose safe outer code fences and verify that embedded fences do not terminate copy/paste blocks early.
