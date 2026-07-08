@@ -242,7 +242,7 @@ versions:
   - canon_version: factorio-modding-agent/1.1.0
     scope: factorio-modding-agent
     branch: factorio-modding-agent
-    introduced_by_commit: pending_commit
+    introduced_by_commit: f77e3062528546b46e00e7e11093a1c344e02297
     previous_canon_version: factorio-modding-agent/1.0.0
     parent_canon_version: coding-agent/1.4.0
     date: 2026-07-08
