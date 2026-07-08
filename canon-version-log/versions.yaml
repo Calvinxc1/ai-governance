@@ -239,6 +239,15 @@ versions:
     date: 2026-07-05
     bump: major
     summary: Creates the Factorio modding agent child branch under coding-agent with shared Factorio lifecycle, prototype, dependency, validation, release, changelog, and local overlay governance.
+  - canon_version: factorio-modding-agent/1.1.0
+    scope: factorio-modding-agent
+    branch: factorio-modding-agent
+    introduced_by_commit: pending_commit
+    previous_canon_version: factorio-modding-agent/1.0.0
+    parent_canon_version: coding-agent/1.4.0
+    date: 2026-07-08
+    bump: minor
+    summary: Adds staged internal Factorio mod Gitflow adoption, repo-local workflow/status tracking, branch protection and hotfix release-stage rules, strict changelog obligations, CI/CD release gates, and post-release main-to-dev sync requirements.
   - canon_version: trunk/3.9.0
     scope: trunk
     branch: trunk

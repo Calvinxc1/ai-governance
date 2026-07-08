@@ -21,6 +21,6 @@ Layout:
 - `lab-governance/templates/kind-branch-migration-checklist.md`: version-agnostic checklist for adopting a target kind branch without hard-coding a particular canon version.
 - `lab-governance/templates/local-index.yaml`: loose pointer template for `.governance/local/index.yaml`; the local directory's internal structure remains workspace-owned.
 - `lab-governance/templates/local-status.yaml`: local status template for `.governance/local/status.yaml`; this is metadata, not a local policy body.
-- Kind branches may add branch-specific templates; the Factorio modding branch includes `lab-governance/templates/factorio-local-overlay.yaml` for workspace-local mod facts.
+- Kind branches may add branch-specific templates; the Factorio modding branch includes `lab-governance/templates/factorio-local-workflow.yaml` to scaffold workspace-local Factorio workflow/status facts.
 
 Kind branches add `lab-governance/branch-descriptor.yaml` and `lab-governance/kind-routes.yaml`. Trunk does not carry those files, so trunk merge-downs do not overwrite kind orientation or kind-specific routing.
