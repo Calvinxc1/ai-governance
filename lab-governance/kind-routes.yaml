@@ -17,6 +17,10 @@ route_groups:
   coding.git:
     - lab-governance/policies/gitflow.yaml
     - lab-governance/policies/commit-push-discipline.yaml
+  coding.gitflow_deployment:
+    - lab-governance/runbooks/gitflow-deployment.yaml
+  coding.gitflow_hotfix:
+    - lab-governance/runbooks/gitflow-hotfix.yaml
   coding.review:
     - lab-governance/policies/code-review.yaml
 routes:
@@ -31,6 +35,16 @@ routes:
   git_work:
     groups:
       - coding.git
+    files: []
+  gitflow_deployment:
+    groups:
+      - coding.git
+      - coding.gitflow_deployment
+    files: []
+  gitflow_hotfix:
+    groups:
+      - coding.git
+      - coding.gitflow_hotfix
     files: []
   code_review:
     groups:

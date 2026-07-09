@@ -303,3 +303,12 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Adds coding-agent PR, branch, tag, release, and forge-backed Git mutation gates requiring system-of-record identification, PR/ref state verification, forge endpoint use for PR semantics, and post-mutation forge verification.
+  - canon_version: coding-agent/1.6.0
+    scope: coding-agent
+    branch: coding-agent
+    introduced_by_commit: pending-ratification
+    previous_canon_version: coding-agent/1.5.0
+    parent_canon_version: trunk/3.16.0
+    date: 2026-07-09
+    bump: minor
+    summary: Adds GitFlow deployment and hotfix runbooks as on-demand coding-agent target-branch paths, reduces their policy to outcomes and invariants, and standardizes target-branch gates, pull request head guards, block-on-outdated protection, and read-only repo deployment configuration.
