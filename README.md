@@ -9,10 +9,12 @@ It has two governance layers:
 
 The two trees intentionally duplicate governance rules. Drift between them is allowed when it is visible and intentional: `.governance/` governs this repository, while `lab-governance/` is the candidate general rule set for other agents and repos.
 
+This branch is part of the secondary enforcement-redesign governance channel. It experiments with an enforcement-first structure: hard invariants, outcome plus bounds, and deliberately ungoverned cheap reversible work.
+
 Agents should start with `AGENTS.md`, then load local policy through `.governance/task-map.yaml` and any branch-local `.governance/kind-routes.yaml` file. The task map is the explicit loading contract: agents resolve route groups and direct route files from the map instead of inferring policy from folder names. When the task is to maintain the generalized rule set, compare the local copy against `lab-governance/` and update the appropriate tree explicitly.
 
 Repo-local governance, when present, is reached through `.governance/local/index.yaml`. Local governance is the layer above the generalized lab/canon base for that repository. Explicit one-shot overrides remain the top layer for the declared operation.
 
 General policy intended for lab propagation belongs in `lab-governance/`. Local governance needed for this repo's agents belongs in `.governance/`.
 
-For new agent setup and governed-agent updates, use the canonical prompt at `lab-governance/templates/governance-bootstrap-prompt.md`. The prompt points agents to `lab-governance/governance-init.md`, registry files, self-stamp mechanics, reconciliation feedback, and registry-loop attestation.
+For new agent setup and governed-agent updates, use the canonical prompt at `lab-governance/templates/governance-bootstrap-prompt.md`. The prompt points agents to `lab-governance/governance-init.md`, local status, enforcement buckets, and reconciliation feedback. The legacy central registry is historical and non-authoritative.

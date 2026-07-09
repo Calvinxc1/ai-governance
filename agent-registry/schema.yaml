@@ -1,6 +1,6 @@
 id: agent_registry_schema
 status: legacy
-summary: Legacy schema for the central ai-governance agent-version registry. Current governed workspace status belongs in `.governance/local/status.yaml`.
+summary: Historical schema for legacy ai-governance agent-version registry rows. Current governed workspace status belongs in `.governance/local/status.yaml`.
 row_key: agents
 required_fields:
   - canonical_agent_name
