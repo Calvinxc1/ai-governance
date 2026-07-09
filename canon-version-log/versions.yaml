@@ -249,3 +249,10 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Adds no-substitution gates for system-of-record connector mutations, explicit no-reprompt live-room initiation monitoring, wrong-path audit remediation guidance, and a local Governance Agent duty to generalize policy-failure reviews into recurrence-prevention recommendations.
+  - canon_version: enforcement-redesign-trunk/1.0.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: pending-uncommitted-change
+    date: 2026-07-09
+    bump: major
+    summary: Starts the secondary enforcement-redesign governance channel with enforcement buckets, outcome-plus-bounds live-room and policy-maintenance rules, simplified connector bounds, collaboration levels, task brief template, and legacy registry cleanup.

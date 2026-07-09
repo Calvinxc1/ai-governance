@@ -1,5 +1,7 @@
 # Agent Registry
 
+Historical artifact only. This directory is not an authority for current agent governance status.
+
 This directory is a legacy central index of agent governance versions for `ai-governance`.
 
 Current rule: each governed workspace keeps its authoritative portable status at:
@@ -17,12 +19,14 @@ The legacy registry has two parts:
 
 The central registry is not the live authority for governed workspace status. Do not treat an absent, stale, or mismatched registry row as overriding local status. If local status, legacy self-stamp, and registry evidence conflict, report the conflict and ask Jason rather than silently choosing one.
 
+Do not create new registry rows as part of ordinary governance updates. Use `.governance/local/status.yaml` in the governed workspace.
+
 At the start of a new conversation, agents use `.governance/local/status.yaml` and source branch descriptors for the minimal version check required by execution control: if current equals target, continue silently; if current is behind target, report only current version, target version, and whether to update before proceeding.
 
 ## Files
 
 - `schema.yaml`: legacy registry schema, retained for historical rows.
-- `agents.yaml`: current legacy seeded registry rows.
+- `agents.yaml`: historical seeded registry rows retained only when they contain useful provenance.
 - `../lab-governance/templates/local-status.yaml`: template each governed workspace uses for `.governance/local/status.yaml`.
 - `../lab-governance/templates/agent-self-stamp.yaml`: legacy self-stamp template retained for migration reference.
 - `../lab-governance/governance-init.md`: initialization guide for bringing a new agent workspace under governance.

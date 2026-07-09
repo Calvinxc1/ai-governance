@@ -1,11 +1,11 @@
 id: branch_descriptor
 status: active
-branch: trunk
+branch: enforcement-redesign/trunk
 kind: general
-canon_version: trunk/3.16.0
-narrative_blurb: Trunk carries the general governance contract true of every agent kind.
+canon_version: enforcement-redesign-trunk/1.0.0
+narrative_blurb: Secondary enforcement-redesign trunk carries an experimental general governance contract true of every agent kind.
 orientation:
-  consumes_layer: trunk
+  consumes_layer: enforcement-redesign-trunk
   full_picture_branch: false
-  inheritance_model: Kind branches merge trunk down after Jason ratifies trunk changes.
+  inheritance_model: Secondary kind branches merge enforcement-redesign/trunk down after Jason ratifies channel changes.
   versioning_model: canon_version tracks the consumed governance contract, not the whole-repo commit.
