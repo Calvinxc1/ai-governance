@@ -259,7 +259,7 @@ versions:
   - canon_version: enforcement-redesign-trunk/1.1.0
     scope: enforcement-redesign-trunk
     branch: enforcement-redesign/trunk
-    introduced_by_commit: pending-uncommitted-change
+    introduced_by_commit: 76d3a6ee68de5eb13fe6d813ad17c5a16edd88d9
     previous_canon_version: enforcement-redesign-trunk/1.0.0
     date: 2026-07-09
     bump: minor
