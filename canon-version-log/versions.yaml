@@ -89,15 +89,6 @@ versions:
     date: 2026-07-02
     bump: minor
     summary: Adds explicit task-map route groups as reusable subroutes while preserving selected routes as the policy loading contract.
-  - canon_version: coding-agent/1.1.0
-    scope: coding-agent
-    branch: coding-agent
-    introduced_by_commit: 6f8b6f429b47abc2f9a00223989f8b34079afc3c
-    previous_canon_version: coding-agent/1.0.0
-    parent_canon_version: trunk/2.7.0
-    date: 2026-07-05
-    bump: minor
-    summary: Narrows coding-agent Kanboard usage so agents search for existing relevant cards, update existing cards when appropriate, ask once before creating a new card, and never create a card from silence.
   - canon_version: trunk/2.8.0
     scope: trunk
     branch: trunk
@@ -106,33 +97,6 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Makes governance initialization explicitly prompt for the Jason-settled canonical agent name before version reconciliation, updates, or substantive work.
-  - canon_version: coding-agent/1.2.0
-    scope: coding-agent
-    branch: coding-agent
-    introduced_by_commit: 5bfaa1659d5ef351aede42c88266ddbc289493a7
-    previous_canon_version: coding-agent/1.1.0
-    parent_canon_version: trunk/2.8.0
-    date: 2026-07-05
-    bump: minor
-    summary: Adds stricter live-room startup coordination and by-name dismissal requirements so agents identify who is running the room before substantive work and non-primary participants do not leave without explicit release.
-  - canon_version: coding-agent/1.3.0
-    scope: coding-agent
-    branch: coding-agent
-    introduced_by_commit: f00966dddfc3763ab345a213fbb5235b6787e088
-    previous_canon_version: coding-agent/1.2.0
-    parent_canon_version: trunk/2.8.0
-    date: 2026-07-05
-    bump: minor
-    summary: Adds cross-agent file stewardship boundaries requiring Althing acknowledgement, handoff, or Jason escalation before agents modify files maintained by another agent.
-  - canon_version: coding-agent/1.3.1
-    scope: coding-agent
-    branch: coding-agent
-    introduced_by_commit: bfcef89b5e8b152511827398fcd33e3e53897018
-    previous_canon_version: coding-agent/1.3.0
-    parent_canon_version: trunk/2.8.0
-    date: 2026-07-05
-    bump: patch
-    summary: Clarifies the Althing and live-room join gate so fresh agents load live_agent_coordination before joining and maintain cursor-aware polling until suspension, closeout, or by-name dismissal.
   - canon_version: trunk/2.9.0
     scope: trunk
     branch: trunk
@@ -197,15 +161,6 @@ versions:
     date: 2026-07-05
     bump: minor
     summary: Adds Jason's concise style, delivery, and analysis-method preferences.
-  - canon_version: coding-agent/1.4.0
-    scope: coding-agent
-    branch: coding-agent
-    introduced_by_commit: 386bf2a
-    previous_canon_version: coding-agent/1.3.1
-    parent_canon_version: trunk/3.5.0
-    date: 2026-07-05
-    bump: minor
-    summary: Adds coding-agent self-stamp path, default GitFlow startup, SemVer release discipline, and static type verification guidance.
   - canon_version: trunk/3.6.0
     scope: trunk
     branch: trunk
@@ -294,12 +249,18 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Adds no-substitution gates for system-of-record connector mutations, explicit no-reprompt live-room initiation monitoring, wrong-path audit remediation guidance, and a local Governance Agent duty to generalize policy-failure reviews into recurrence-prevention recommendations.
-  - canon_version: coding-agent/1.5.0
-    scope: coding-agent
-    branch: coding-agent
-    introduced_by_commit: f534b718665f8bdc01b9ffb5797ccb6813d5e17a
-    previous_canon_version: coding-agent/1.4.0
-    parent_canon_version: trunk/3.16.0
+  - canon_version: enforcement-redesign-trunk/1.0.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: f060741df40ed1b8dfa519e4d8c48c84158a6d9f
     date: 2026-07-09
-    bump: minor
-    summary: Adds coding-agent PR, branch, tag, release, and forge-backed Git mutation gates requiring system-of-record identification, PR/ref state verification, forge endpoint use for PR semantics, and post-mutation forge verification.
+    bump: major
+    summary: Starts the secondary enforcement-redesign governance channel with enforcement buckets, outcome-plus-bounds live-room and policy-maintenance rules, simplified connector bounds, collaboration levels, task brief template, and legacy registry cleanup.
+  - canon_version: enforcement-redesign-coding-agent/1.0.0
+    scope: enforcement-redesign-coding-agent
+    branch: enforcement-redesign/coding-agent
+    introduced_by_commit: pending-uncommitted-change
+    parent_canon_version: enforcement-redesign-trunk/1.0.0
+    date: 2026-07-09
+    bump: major
+    summary: Starts the secondary enforcement-redesign coding-agent channel and annotates commit, push, PR, branch, and forge mutations as hard invariants with enforcement points.

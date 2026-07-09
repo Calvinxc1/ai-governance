@@ -1,18 +1,18 @@
 id: branch_descriptor
 status: active
-branch: coding-agent
+branch: enforcement-redesign/coding-agent
 kind: coding_agent
-canon_version: coding-agent/1.5.0
+canon_version: enforcement-redesign-coding-agent/1.0.0
 parent:
-  branch: trunk
-  canon_version: trunk/3.16.0
-  summary: General contract true of every agent kind, coding or not.
-narrative_blurb: Coding agents inherit the full universal contract and add software engineering, GitFlow, review, documentation drift, and commit discipline.
+  branch: enforcement-redesign/trunk
+  canon_version: enforcement-redesign-trunk/1.0.0
+  summary: Secondary enforcement-redesign general contract true of every agent kind.
+narrative_blurb: Secondary enforcement-redesign coding agents inherit the enforcement-bucket model and add software engineering, GitFlow, review, documentation drift, and commit discipline.
 orientation:
-  consumes_layer: coding-agent
+  consumes_layer: enforcement-redesign-coding-agent
   full_picture_branch: true
-  inheritance_model: Trunk is merged down into this branch after Jason ratifies trunk changes.
-  versioning_model: canon_version tracks the consumed coding-agent governance contract, with parent.canon_version tracking the trunk-general contract.
+  inheritance_model: enforcement-redesign/trunk is merged down into this branch after Jason ratifies secondary-channel trunk changes.
+  versioning_model: canon_version tracks the consumed secondary coding-agent governance contract, with parent.canon_version tracking the secondary trunk-general contract.
   upward_signal_duty: File an upward Gitea issue when a coding-agent rule appears to generalize beyond coding agents.
   upward_issue_target: ai-projects/ai-governance
   upward_issue_format:
