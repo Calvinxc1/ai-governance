@@ -259,7 +259,7 @@ versions:
   - canon_version: enforcement-redesign-coding-agent/1.0.0
     scope: enforcement-redesign-coding-agent
     branch: enforcement-redesign/coding-agent
-    introduced_by_commit: pending-uncommitted-change
+    introduced_by_commit: 1c8753175dc16611b81785dcc1cea8bce41034b3
     parent_canon_version: enforcement-redesign-trunk/1.0.0
     date: 2026-07-09
     bump: major
