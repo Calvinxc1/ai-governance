@@ -4,11 +4,11 @@ This directory contains the lab-wide governance rule set maintained by this repo
 
 These files are the general policy and process contract intended to propagate to the rest of the lab and to specialized agent branches.
 
-This secondary branch channel uses an enforcement-first governance model. High-stakes recurring failures should map to hard gates, cheap default paths, or detectors; prose-only fixes are tracked debt unless Jason accepts the residual risk.
+This secondary branch channel uses an enforcement-first governance model. High-stakes recurring failures should map to hard gates, cheap default paths, or detectors; prose-only fixes are tracked debt unless Jason accepts the residual risk. Bootstrap and update instructions in this channel preserve the `enforcement-redesign/*` source branch family unless Jason explicitly redirects an agent to the normal branch family.
 
 This directory is not the active local governance entrypoint for agents working in this repository. That role belongs to `.governance/`. The two trees intentionally duplicate governance rules and may drift when the distinction is visible and intentional.
 
-The trunk branch carries the general contract for every agent kind. Kind branches carry complete branch-local pictures after trunk is merged down into them. Core content is intentionally duplicated across kind branches so an agent can read one branch and have the complete contract.
+The `enforcement-redesign/trunk` branch carries the experimental general contract for every agent kind. Secondary kind branches carry complete branch-local pictures after `enforcement-redesign/trunk` is merged down into them. Core content is intentionally duplicated across kind branches so an agent can read one branch and have the complete contract.
 
 Layout:
 
