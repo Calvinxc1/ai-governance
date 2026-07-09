@@ -272,3 +272,29 @@ versions:
     date: 2026-07-09
     bump: major
     summary: Starts the secondary enforcement-redesign Factorio modding channel on top of the secondary coding-agent contract.
+  - canon_version: enforcement-redesign-trunk/1.1.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: 76d3a6ee68de5eb13fe6d813ad17c5a16edd88d9
+    previous_canon_version: enforcement-redesign-trunk/1.0.0
+    date: 2026-07-09
+    bump: minor
+    summary: Makes bootstrap and governance-update documentation preserve the secondary enforcement-redesign branch channel so experimental prompts update from experimental branches unless Jason explicitly redirects.
+  - canon_version: enforcement-redesign-coding-agent/1.1.0
+    scope: enforcement-redesign-coding-agent
+    branch: enforcement-redesign/coding-agent
+    introduced_by_commit: ae2d129698fbad731c6f1f4fc833523f9a742297
+    previous_canon_version: enforcement-redesign-coding-agent/1.0.0
+    parent_canon_version: enforcement-redesign-trunk/1.1.0
+    date: 2026-07-09
+    bump: minor
+    summary: Propagates the experimental bootstrap branch-channel preservation rule into the secondary coding-agent branch.
+  - canon_version: enforcement-redesign-factorio-modding-agent/1.1.0
+    scope: enforcement-redesign-factorio-modding-agent
+    branch: enforcement-redesign/factorio-modding-agent
+    introduced_by_commit: pending-uncommitted-change
+    previous_canon_version: enforcement-redesign-factorio-modding-agent/1.0.0
+    parent_canon_version: enforcement-redesign-coding-agent/1.1.0
+    date: 2026-07-09
+    bump: minor
+    summary: Propagates the experimental bootstrap branch-channel preservation rule into the secondary Factorio modding branch.

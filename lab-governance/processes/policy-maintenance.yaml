@@ -9,8 +9,9 @@ rules:
   - Keep active repo-local governance under `.governance` and generalized lab governance under `lab-governance`.
   - Treat committed active files under governance policy and process directories as ratified by placement.
   - Keep draft proposals outside active policy and process directories until Jason ratifies them.
-  - Classify the owning layer before editing: trunk-general, kind-specific, repo-local, registry/bookkeeping, or propagation-only.
-  - General all-agent rules, live-room rules, governance initialization, generalized templates, connector boundaries, durable boundaries, and lab-wide process changes belong on trunk unless Jason scopes them narrower.
+  - Classify the owning layer before editing: channel trunk-general, kind-specific, repo-local, registry/bookkeeping, or propagation-only.
+  - Preserve the active governance branch channel. In the secondary enforcement-redesign channel, channel trunk means `enforcement-redesign/trunk`, not normal `trunk`.
+  - General all-agent rules, live-room rules, governance initialization, generalized templates, connector boundaries, durable boundaries, and lab-wide process changes belong on the channel trunk unless Jason scopes them narrower.
   - Kind-specific rules belong on that kind branch and are not trunk policy unless separately promoted.
   - Before editing, compare the owning layer to the current branch and branch descriptors; switch to the owning branch or create the ratified secondary branch before editing.
   - When a change alters the consumed governance contract, bump the relevant `canon_version`; use major for governance-model changes, minor for additive behavior, and patch for clarifications.
