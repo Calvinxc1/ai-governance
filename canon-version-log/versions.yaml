@@ -275,7 +275,7 @@ versions:
   - canon_version: enforcement-redesign-desktop-orchestrator/1.1.0
     scope: enforcement-redesign-desktop-orchestrator
     branch: enforcement-redesign/desktop-orchestrator
-    introduced_by_commit: pending-uncommitted-change
+    introduced_by_commit: 94e8245381c98e1a0b63532436643c9b32cfb09d
     previous_canon_version: enforcement-redesign-desktop-orchestrator/1.0.0
     parent_canon_version: enforcement-redesign-trunk/1.1.0
     date: 2026-07-09
