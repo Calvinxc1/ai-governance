@@ -17,4 +17,4 @@ Repo-local governance, when present, is reached through `.governance/local/index
 
 General policy intended for lab propagation belongs in `lab-governance/`. Local governance needed for this repo's agents belongs in `.governance/`.
 
-For new agent setup and governed-agent updates, use the canonical prompt at `lab-governance/templates/governance-bootstrap-prompt.md`. The prompt points agents to `lab-governance/governance-init.md`, local status, enforcement buckets, and reconciliation feedback. The legacy central registry is historical and non-authoritative.
+For new agent setup and governed-agent updates, use the canonical prompt at `lab-governance/templates/governance-bootstrap-prompt.md`. In this secondary branch channel, that prompt preserves the `enforcement-redesign/*` source channel so agents update from the experimental branch family rather than the normal branch family unless Jason explicitly redirects them. The legacy central registry is historical and non-authoritative.

@@ -58,7 +58,7 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    Then wait for Jason's answer before substantive work.
 
-   If Jason answers yes, use `lab-governance/templates/governance-bootstrap-prompt.md` from the ai-governance repository as the canonical bootstrap/update prompt. Follow that prompt for source branch selection, local governance update, local status update, and reconciliation reporting.
+   If Jason answers yes, use `lab-governance/templates/governance-bootstrap-prompt.md` from the ai-governance repository as the canonical bootstrap/update prompt. Follow that prompt for source branch channel, source branch selection, local governance update, local status update, and reconciliation reporting.
 
 9. Declare loaded governance if action will follow.
 
@@ -83,6 +83,8 @@ Use this sequence when an agent workspace does not yet have a local governance c
 1. Identify the intended agent kind and source branch.
 
    First ask for the workspace's canonical agent name. If local status or a legacy registry row already exists, use it only as candidate evidence and ask Jason to confirm or correct the name before choosing a governance branch or kind.
+
+   Preserve the prompt's source branch channel. If the bootstrap prompt came from an `enforcement-redesign/*` branch, choose the matching `enforcement-redesign/*` source branch for the intended agent kind unless Jason explicitly redirects the workspace to the normal branch family.
 
 2. Copy the branch-local governance picture into the workspace.
 
