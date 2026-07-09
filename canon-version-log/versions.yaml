@@ -304,3 +304,20 @@ versions:
     date: 2026-07-07
     bump: minor
     summary: Strengthens live-room monitoring, closeout, final-answer, handoff identity, and local owning-layer preflight rules so invite prompts do not end monitoring and receiving agents join under their own canonical names.
+  - canon_version: trunk/3.16.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: 681b475a4dad5b0fece0cdc371e90404c6c827a5
+    previous_canon_version: trunk/3.15.0
+    date: 2026-07-09
+    bump: minor
+    summary: Adds no-substitution gates for system-of-record connector mutations, explicit no-reprompt live-room initiation monitoring, wrong-path audit remediation guidance, and a local Governance Agent duty to generalize policy-failure reviews into recurrence-prevention recommendations.
+  - canon_version: coding-agent/1.5.0
+    scope: coding-agent
+    branch: coding-agent
+    introduced_by_commit: f534b718665f8bdc01b9ffb5797ccb6813d5e17a
+    previous_canon_version: coding-agent/1.4.0
+    parent_canon_version: trunk/3.16.0
+    date: 2026-07-09
+    bump: minor
+    summary: Adds coding-agent PR, branch, tag, release, and forge-backed Git mutation gates requiring system-of-record identification, PR/ref state verification, forge endpoint use for PR semantics, and post-mutation forge verification.
