@@ -259,3 +259,11 @@ versions:
     date: 2026-07-07
     bump: minor
     summary: Strengthens live-room monitoring, closeout, final-answer, handoff identity, and local owning-layer preflight rules so invite prompts do not end monitoring and receiving agents join under their own canonical names.
+  - canon_version: trunk/3.16.0
+    scope: trunk
+    branch: trunk
+    introduced_by_commit: 681b475a4dad5b0fece0cdc371e90404c6c827a5
+    previous_canon_version: trunk/3.15.0
+    date: 2026-07-09
+    bump: minor
+    summary: Adds no-substitution gates for system-of-record connector mutations, explicit no-reprompt live-room initiation monitoring, wrong-path audit remediation guidance, and a local Governance Agent duty to generalize policy-failure reviews into recurrence-prevention recommendations.
