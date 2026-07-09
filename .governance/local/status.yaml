@@ -3,10 +3,10 @@ schema_version: 1
 canonical_agent_name: Governance Agent
 agent_kind: desktop_orchestrator
 active_governance_branch: enforcement-redesign/factorio-modding-agent
-current_active_canon_version: enforcement-redesign-factorio-modding-agent/1.1.0
-current_generalized_canon_version: enforcement-redesign-trunk/1.1.0
+current_active_canon_version: enforcement-redesign-factorio-modding-agent/1.2.0
+current_generalized_canon_version: enforcement-redesign-trunk/1.2.0
 source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
-governance_source_commit: 8ed9ec506a876152f289d0bdbc80edb314c7e32b
+governance_source_commit: pending-uncommitted-change
 runtime_surface: codex_cli
 code_authority: governance_maintenance_with_explicit_user_authorization
 last_verified_at: 2026-07-09

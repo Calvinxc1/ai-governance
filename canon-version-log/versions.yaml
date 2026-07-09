@@ -298,3 +298,29 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Propagates the experimental bootstrap branch-channel preservation rule into the secondary Factorio modding branch.
+  - canon_version: enforcement-redesign-trunk/1.2.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: 3497c87207d65400c511f660e37adb4ef21a943c
+    previous_canon_version: enforcement-redesign-trunk/1.1.0
+    date: 2026-07-09
+    bump: minor
+    summary: Adds an experimental-channel transition prompt for moving already-governed agents from the normal governance branch family to the secondary enforcement-redesign branch family.
+  - canon_version: enforcement-redesign-coding-agent/1.2.0
+    scope: enforcement-redesign-coding-agent
+    branch: enforcement-redesign/coding-agent
+    introduced_by_commit: 6db8754ac074ba3899e297ca8cc30a2aea18e065
+    previous_canon_version: enforcement-redesign-coding-agent/1.1.0
+    parent_canon_version: enforcement-redesign-trunk/1.2.0
+    date: 2026-07-09
+    bump: minor
+    summary: Propagates the experimental-channel transition prompt into the secondary coding-agent branch.
+  - canon_version: enforcement-redesign-factorio-modding-agent/1.2.0
+    scope: enforcement-redesign-factorio-modding-agent
+    branch: enforcement-redesign/factorio-modding-agent
+    introduced_by_commit: pending-uncommitted-change
+    previous_canon_version: enforcement-redesign-factorio-modding-agent/1.1.0
+    parent_canon_version: enforcement-redesign-coding-agent/1.2.0
+    date: 2026-07-09
+    bump: minor
+    summary: Propagates the experimental-channel transition prompt into the secondary Factorio modding branch.
