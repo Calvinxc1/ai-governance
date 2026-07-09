@@ -264,3 +264,20 @@ versions:
     date: 2026-07-09
     bump: major
     summary: Starts the secondary enforcement-redesign desktop-orchestrator channel and removes obsolete local version-stamp and registry-attestation artifacts.
+  - canon_version: enforcement-redesign-trunk/1.1.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: 76d3a6ee68de5eb13fe6d813ad17c5a16edd88d9
+    previous_canon_version: enforcement-redesign-trunk/1.0.0
+    date: 2026-07-09
+    bump: minor
+    summary: Makes bootstrap and governance-update documentation preserve the secondary enforcement-redesign branch channel so experimental prompts update from experimental branches unless Jason explicitly redirects.
+  - canon_version: enforcement-redesign-desktop-orchestrator/1.1.0
+    scope: enforcement-redesign-desktop-orchestrator
+    branch: enforcement-redesign/desktop-orchestrator
+    introduced_by_commit: pending-uncommitted-change
+    previous_canon_version: enforcement-redesign-desktop-orchestrator/1.0.0
+    parent_canon_version: enforcement-redesign-trunk/1.1.0
+    date: 2026-07-09
+    bump: minor
+    summary: Propagates the experimental bootstrap branch-channel preservation rule into the secondary desktop-orchestrator branch.
