@@ -32,7 +32,7 @@ Before changing files, identify or ask for:
 - the agent kind
 - the active governance branch to consume
 - the current local status path and versions, if present
-- any legacy self-stamp or registry row that may provide candidate evidence
+- any legacy self-stamp or registry row that may provide candidate evidence only
 
 Do not infer the canonical agent name from repository name, hostname, model backend, runtime surface, task role, or prior chat label. If local status, a legacy self-stamp, or a legacy registry row names an agent, report it and ask Jason to confirm or correct it before mutating governance.
 
@@ -47,7 +47,7 @@ Then:
 7. Re-read the resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present.
 8. Treat lab/canon governance as the base layer, loaded local governance as the workspace layer above it, and explicit one-shot overrides as the top layer for their declared operation.
 9. Compare local status, source branch descriptor, and any legacy self-stamp or registry evidence. Report conflicts instead of silently reconciling them.
-10. Do not submit a central registry attestation unless Jason explicitly requests one. The portable status report is the local status file.
+10. Treat the legacy central registry as historical and non-authoritative. Do not submit a central registry attestation unless Jason explicitly requests legacy registry maintenance.
 
 Do not directly edit `agent-registry/agents.yaml` unless Jason explicitly asks for legacy registry maintenance.
 
