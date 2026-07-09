@@ -298,3 +298,12 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Propagates the experimental-channel transition prompt into the secondary coding-agent branch.
+  - canon_version: enforcement-redesign-coding-agent/1.3.0
+    scope: enforcement-redesign-coding-agent
+    branch: enforcement-redesign/coding-agent
+    introduced_by_commit: pending-ratification
+    previous_canon_version: enforcement-redesign-coding-agent/1.2.0
+    parent_canon_version: enforcement-redesign-trunk/1.2.0
+    date: 2026-07-09
+    bump: minor
+    summary: Adds GitFlow deployment and hotfix runbooks as on-demand coding-agent target-branch paths, reduces their policy to outcomes and invariants, and standardizes target-branch gates, pull request head guards, block-on-outdated protection, and read-only repo deployment configuration.

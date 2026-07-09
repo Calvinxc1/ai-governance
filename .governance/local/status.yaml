@@ -3,7 +3,7 @@ schema_version: 1
 canonical_agent_name: Governance Agent
 agent_kind: desktop_orchestrator
 active_governance_branch: enforcement-redesign/coding-agent
-current_active_canon_version: enforcement-redesign-coding-agent/1.2.0
+current_active_canon_version: enforcement-redesign-coding-agent/1.3.0
 current_generalized_canon_version: enforcement-redesign-trunk/1.2.0
 source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
 governance_source_commit: 6db8754ac074ba3899e297ca8cc30a2aea18e065
