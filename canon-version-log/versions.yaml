@@ -297,7 +297,7 @@ versions:
   - canon_version: coding-agent/1.5.0
     scope: coding-agent
     branch: coding-agent
-    introduced_by_commit: pending-uncommitted-change
+    introduced_by_commit: f534b718665f8bdc01b9ffb5797ccb6813d5e17a
     previous_canon_version: coding-agent/1.4.0
     parent_canon_version: trunk/3.16.0
     date: 2026-07-09
