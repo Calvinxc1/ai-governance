@@ -26,4 +26,4 @@ Layout:
 - `lab-governance/templates/local-status.yaml`: local status template for `.governance/local/status.yaml`; this is metadata, not a local policy body.
 - `lab-governance/templates/task-brief.md`: standard brief shape for objective, definition of done, bounds, risk, budget, and stopping condition.
 
-Kind branches add `lab-governance/branch-descriptor.yaml` and `lab-governance/kind-routes.yaml`. Trunk does not carry those files, so trunk merge-downs do not overwrite kind orientation or kind-specific routing.
+Kind branches add `lab-governance/branch-descriptor.yaml` and `lab-governance/kind-routes.yaml`. The channel trunk does not carry those files, so channel-trunk merge-downs do not overwrite kind orientation or kind-specific routing.
