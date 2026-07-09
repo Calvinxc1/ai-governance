@@ -292,7 +292,7 @@ versions:
   - canon_version: enforcement-redesign-factorio-modding-agent/1.1.0
     scope: enforcement-redesign-factorio-modding-agent
     branch: enforcement-redesign/factorio-modding-agent
-    introduced_by_commit: pending-uncommitted-change
+    introduced_by_commit: 8ed9ec506a876152f289d0bdbc80edb314c7e32b
     previous_canon_version: enforcement-redesign-factorio-modding-agent/1.0.0
     parent_canon_version: enforcement-redesign-coding-agent/1.1.0
     date: 2026-07-09
