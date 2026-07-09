@@ -28,7 +28,7 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
 5. Check branch or kind routing.
 
-   If the active governance branch has a `.governance/kind-routes.yaml` file, load it after the task map. Trunk-general governance does not require a kind-routes file.
+   If the active governance branch has a `.governance/kind-routes.yaml` file, load it after the task map. Channel-trunk-general governance does not require a kind-routes file.
 
 6. Prompt for the canonical agent name.
 
