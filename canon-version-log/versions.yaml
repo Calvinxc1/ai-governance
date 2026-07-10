@@ -298,3 +298,20 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Propagates the experimental-channel transition prompt into the secondary desktop-orchestrator branch.
+  - canon_version: enforcement-redesign-trunk/1.3.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: f64793769884c70307addfcde3e63084f2050fff
+    previous_canon_version: enforcement-redesign-trunk/1.2.0
+    date: 2026-07-10
+    bump: minor
+    summary: Adds request elicitation as a loadable-skill-backed intake gate, adds a tiny hard-invariant index, and populates the context-loaded Bucket A hard-invariant register with Jason-decided guarded domains.
+  - canon_version: enforcement-redesign-desktop-orchestrator/1.3.0
+    scope: enforcement-redesign-desktop-orchestrator
+    branch: enforcement-redesign/desktop-orchestrator
+    introduced_by_commit: pending-local-content-commit
+    previous_canon_version: enforcement-redesign-desktop-orchestrator/1.2.0
+    parent_canon_version: enforcement-redesign-trunk/1.3.0
+    date: 2026-07-10
+    bump: minor
+    summary: Propagates trunk request elicitation, hard-invariant index, and hard-invariant register into the secondary desktop-orchestrator branch.

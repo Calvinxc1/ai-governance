@@ -10,9 +10,9 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    Start with `AGENTS.md` at the workspace root. If no workspace-local `AGENTS.md` exists, ask Jason or the orchestrating agent where governance is mounted before doing substantive work.
 
-2. Load the always-load policy and enforcement model.
+2. Load the always-load policy, enforcement model, and hard-invariant index.
 
-   Follow the entrypoint exactly. In this governance system, the normal always-load files are `.governance/policies/universal.yaml` and `.governance/policies/enforcement-model.yaml` for an active workspace copy, or the corresponding `lab-governance/policies/` files when initializing from the generalized lab governance source.
+   Follow the entrypoint exactly. In this governance system, the normal always-load files are `.governance/policies/universal.yaml`, `.governance/policies/enforcement-model.yaml`, and `.governance/policies/hard-invariant-index.yaml` for an active workspace copy, or the corresponding `lab-governance/policies/` files when initializing from the generalized lab governance source.
 
 3. Load task-specific policy through the task map.
 

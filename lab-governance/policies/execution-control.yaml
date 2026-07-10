@@ -10,6 +10,8 @@ rules:
   - Proposal, analysis, question, and preference language is discussion, not execution permission.
   - After discussion, send a preflight before acting unless Jason's latest message already clearly authorizes immediate execution.
   - In preflight, name the intended actions, affected systems or files, expected risk tier, and validation plan.
+  - When request elicitation applies, fold the execution preflight into the elicitation confirmation when possible rather than asking Jason for two separate confirmations.
+  - A request-elicitation confirmation satisfies execution preflight only when it states the intended actions, affected systems or files, expected risk tier, and validation plan; otherwise send the missing preflight before acting.
   - Default to read-only discussion and planning when permission is ambiguous.
   - Requirements and the acceptance test must agree before work is called done.
   - If requirements and acceptance tests conflict, stop and surface the mismatch.

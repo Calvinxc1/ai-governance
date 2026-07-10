@@ -3,12 +3,12 @@ schema_version: 1
 canonical_agent_name: Governance Agent
 agent_kind: desktop_orchestrator
 active_governance_branch: enforcement-redesign/desktop-orchestrator
-current_active_canon_version: enforcement-redesign-desktop-orchestrator/1.2.0
-current_generalized_canon_version: enforcement-redesign-trunk/1.2.0
+current_active_canon_version: enforcement-redesign-desktop-orchestrator/1.3.0
+current_generalized_canon_version: enforcement-redesign-trunk/1.3.0
 source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
-governance_source_commit: a97cbc1973af1dd840d6191aca2ce0fcd6fbc921
+governance_source_commit: pending-local-content-commit
 runtime_surface: codex_cli
 code_authority: governance_maintenance_with_explicit_user_authorization
-last_verified_at: 2026-07-09
+last_verified_at: 2026-07-10
 agent_declared_status: current
 notes: Secondary enforcement-redesign desktop-orchestrator channel. Jason corrected this workspace's canonical live-room name to Governance Agent. Runtime surface does not determine governance role or code authority.
