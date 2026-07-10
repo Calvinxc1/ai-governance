@@ -6,7 +6,7 @@ active_governance_branch: enforcement-redesign/desktop-orchestrator
 current_active_canon_version: enforcement-redesign-desktop-orchestrator/1.3.0
 current_generalized_canon_version: enforcement-redesign-trunk/1.3.0
 source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
-governance_source_commit: pending-local-content-commit
+governance_source_commit: 23014f9b667b2fcb5e314df129bfb68bafc73abd
 runtime_surface: codex_cli
 code_authority: governance_maintenance_with_explicit_user_authorization
 last_verified_at: 2026-07-10
