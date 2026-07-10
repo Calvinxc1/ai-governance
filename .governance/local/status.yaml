@@ -6,7 +6,7 @@ active_governance_branch: enforcement-redesign/factorio-modding-agent
 current_active_canon_version: enforcement-redesign-factorio-modding-agent/1.3.0
 current_generalized_canon_version: enforcement-redesign-coding-agent/1.4.0
 source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
-governance_source_commit: pending-local-content-commit
+governance_source_commit: dcf0d3b1d28affc19b069fa50b64a2d5eb80ba39
 runtime_surface: codex_cli
 code_authority: governance_maintenance_with_explicit_user_authorization
 last_verified_at: 2026-07-10
