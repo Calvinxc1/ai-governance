@@ -2,10 +2,10 @@ id: branch_descriptor
 status: active
 branch: enforcement-redesign/coding-agent
 kind: coding_agent
-canon_version: enforcement-redesign-coding-agent/1.3.0
+canon_version: enforcement-redesign-coding-agent/1.4.0
 parent:
   branch: enforcement-redesign/trunk
-  canon_version: enforcement-redesign-trunk/1.2.0
+  canon_version: enforcement-redesign-trunk/1.3.0
   summary: Secondary enforcement-redesign general contract true of every agent kind.
 narrative_blurb: Secondary enforcement-redesign coding agents inherit the enforcement-bucket model and add software engineering, GitFlow, review, documentation drift, and commit discipline.
 orientation:
