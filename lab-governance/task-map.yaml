@@ -3,6 +3,7 @@ default_load:
   - AGENTS.md
   - lab-governance/policies/universal.yaml
   - lab-governance/policies/enforcement-model.yaml
+  - lab-governance/policies/hard-invariant-index.yaml
 route_resolution:
   - Load default_load first.
   - Select every route that matches the task shape.
@@ -12,8 +13,10 @@ route_resolution:
 route_groups:
   governance.enforcement:
     - lab-governance/policies/enforcement-model.yaml
+    - lab-governance/policies/hard-invariant-index.yaml
   execution.baseline:
     - lab-governance/policies/execution-control.yaml
+    - lab-governance/policies/request-elicitation.yaml
     - lab-governance/policies/epistemic-acceptance.yaml
   communication.durable_boundaries:
     - lab-governance/policies/durable-communication-boundaries.yaml
@@ -85,6 +88,11 @@ routes:
     groups: []
     files:
       - lab-governance/processes/policy-maintenance.yaml
+  guarded_domain_action:
+    groups:
+      - governance.enforcement
+    files:
+      - lab-governance/policies/hard-invariants.yaml
   agent_governance_update:
     groups:
       - governance.update

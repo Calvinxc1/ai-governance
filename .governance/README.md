@@ -15,4 +15,8 @@ This directory intentionally duplicates governance rules that may also appear in
 
 This secondary branch channel uses the enforcement-first redesign. Rules should be sorted into hard invariants, outcome-plus-bounds policies, or deliberately ungoverned cheap reversible work.
 
+Hard invariants are surfaced through `policies/hard-invariant-index.yaml`, a tiny always-loaded guarded-domain index. Load the full register at `policies/hard-invariants.yaml` only when the intended action enters a guarded domain.
+
+Use `skills/` for loadable skill sources that implement governance behavior in runtimes that support skills. Skill sources are policy-adjacent artifacts; their controlling policy remains under `policies/`.
+
 Use `local/` for explicit repo-local deviations from the generalized rule set. The universal local policy pointer is `local/index.yaml`; the universal local governance status report is `local/status.yaml`. Everything else under `local/` is workspace-owned unless explicitly routed by that local pointer. Use `records/` for repo-local alignment notes or operational metadata. If a local rule should become general lab governance, promote it through an explicit `lab-governance/` policy or process change.

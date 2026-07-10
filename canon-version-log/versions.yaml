@@ -272,3 +272,11 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Adds an experimental-channel transition prompt for moving already-governed agents from the normal governance branch family to the secondary enforcement-redesign branch family.
+  - canon_version: enforcement-redesign-trunk/1.3.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: pending-local-content-commit
+    previous_canon_version: enforcement-redesign-trunk/1.2.0
+    date: 2026-07-10
+    bump: minor
+    summary: Adds request elicitation as a loadable-skill-backed intake gate, adds a tiny hard-invariant index, and populates the context-loaded Bucket A hard-invariant register with Jason-decided guarded domains.

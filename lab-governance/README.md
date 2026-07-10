@@ -16,8 +16,11 @@ Layout:
 - `lab-governance/governance-init.md`: setup guide for initializing governance in a new or unverified agent workspace.
 - `lab-governance/task-map.yaml`: task or session routing to the additional policy files that should be loaded. Route groups provide reusable subroutes; selected routes, not folder names, remain the explicit loading contract.
 - `lab-governance/policies/enforcement-model.yaml`: bucket model for hard invariants, outcome-plus-bounds policy, and deliberately ungoverned work.
+- `lab-governance/policies/hard-invariant-index.yaml`: tiny always-loaded guarded-domain index for context-loading the full hard-invariant register.
+- `lab-governance/policies/hard-invariants.yaml`: full context-loaded Bucket A hard-invariant register.
 - `lab-governance/policies/`: standing domain policies in YAML.
 - `lab-governance/processes/`: meta-governance and operating processes.
+- `lab-governance/skills/`: loadable skill sources that implement governance behavior in runtimes that support skills.
 - `lab-governance/overrides/`: temporary exception log and its schema.
 - `lab-governance/templates/`: reusable setup templates, including the local governance status template, loose local index template, legacy self-stamp template, and canonical governance bootstrap prompt.
 - `lab-governance/templates/governance-bootstrap-prompt.md`: canonical prompt for first-time governance initialization and governed-agent updates.
