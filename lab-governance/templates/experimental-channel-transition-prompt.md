@@ -4,7 +4,7 @@ Use this prompt when an already-governed agent should move from the baseline pol
 
 This prompt is for transition, not first-time bootstrap. If the workspace has no `AGENTS.md` and no `.governance/` tree, use `governance-bootstrap-prompt.md` from literal branch `main` instead.
 
-Transition downstream workspaces only from the selected target branch's `lab-governance/` tree. Never use this repository's `.governance/` tree as the source or an external reference for another workspace. Do not copy the target branch's concrete `lab-governance/status.yaml`; create or update downstream status from `lab-governance/templates/local-status.yaml`.
+Transition downstream workspaces only from the selected target branch's `lab-governance/` tree. Never use this repository's `.governance/` tree as the source or an external reference for another workspace. Do not copy the target branch's concrete `lab-governance/status.yaml`; create or update downstream status at `.governance/local/status.yaml` from `lab-governance/templates/local-status.yaml`.
 
 Target branch mapping:
 
@@ -31,7 +31,7 @@ This is an enforcement-redesign policy-line transition. Do not update from `base
 First, inspect the current local governance state without changing files:
 
 - read `AGENTS.md`
-- read `lab-governance/status.yaml` if present
+- read `.governance/local/status.yaml` if present
 - read `lab-governance/branch-descriptor.yaml` if present
 - read `.governance/kind-routes.yaml` if present
 - identify the current active governance branch, current active canon version, generalized canon version, source branch, and source commit when locally recorded
@@ -60,7 +60,7 @@ Then:
 4. Copy or merge the target branch's `lab-governance/` product into this workspace, excluding the target branch's concrete `lab-governance/status.yaml`.
 5. Preserve workspace-local files under `.governance/local/` unless Jason or explicit policy says to reconcile them.
 6. Ensure `.governance/local/index.yaml` exists, using `lab-governance/templates/local-index.yaml` from the target branch when needed.
-7. Create or update this workspace's `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml` so it records the target branch, target active canon version, target generalized canon version, source repository, source branch, source commit when known, verification date, and any unresolved reconciliation notes.
+7. Create or update this workspace's `.governance/local/status.yaml` from `lab-governance/templates/local-status.yaml` so it records the target branch, target active canon version, target generalized canon version, source repository, source branch, source commit when known, verification date, and any unresolved reconciliation notes.
 8. Re-read this workspace's resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/policies/enforcement-model.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present. These are this workspace's seeded files, not this repository's `.governance/` files.
 9. Compare the pre-transition status, new local status, target branch descriptor, and old branch or version evidence. Report conflicts instead of silently reconciling them.
 

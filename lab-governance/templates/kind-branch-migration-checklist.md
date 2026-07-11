@@ -31,7 +31,7 @@ This checklist is intentionally version-agnostic. Do not hard-code today's canon
 ## Local Governance
 
 - Confirm `.governance/local/index.yaml` exists as the local governance pointer when the workspace has local status, overlays, or deviations.
-- Confirm `lab-governance/status.yaml` exists when the workspace participates in portable local governance status.
+- Confirm `.governance/local/status.yaml` exists when the workspace participates in portable local governance status.
 - Confirm local status records the canonical agent name, active governance branch, active `canon_version`, and parent or generalized `canon_version` using the current target values.
 - Confirm local status records runtime surface, gate state, granted capability authority, repository trust state when applicable, managed requirements state when applicable, and projection state when applicable.
 - Confirm an ungated runtime surface has no production or protected mutation authority unless Jason explicitly accepted a named residual risk.
