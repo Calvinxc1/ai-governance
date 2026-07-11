@@ -328,3 +328,11 @@ versions:
     date: 2026-07-11
     bump: patch
     summary: Aligns the lab-governance policy-maintenance process with the uniform `.governance` operating-layer rule, including repo-wide `.governance` propagation validation and `/main` policy-line trunk wording.
+  - canon_version: enforcement-redesign-trunk/1.6.4
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk/main
+    introduced_by_commit: 20e87d83befd8f7737fed124e7d79c56a0553642
+    previous_canon_version: enforcement-redesign-trunk/1.6.3
+    date: 2026-07-11
+    bump: patch
+    summary: Aligns the uniform `.governance` agent-governance-update process with the lab-governance product by requiring status creation from the local-status template without a branch-metadata qualifier.
