@@ -23,6 +23,7 @@ rules:
   - Validate generated artifacts before propagation; malformed artifacts that can fail closed must not land unvalidated.
   - Do not classify a runtime mechanism as working until a behavioral test has exercised that mechanism on the target surface.
   - Record untested or documentation-only mechanisms as deferred or pending test.
+  - For Claude runtime surfaces, do not rely on AGENTS.md auto-loading; Claude forced-core projections must explicitly direct the agent to manually read root AGENTS.md when present, .governance/policies/universal.yaml, and .governance/task-map.yaml before task-specific routing, then self-report the entrypoints read.
 forced_core:
   purpose: Keep enough governance physically present in the runtime-injected surface that pointer following is not the first control.
   contents:
@@ -43,6 +44,7 @@ known_surfaces:
     gates:
       - none_observed
     known_inert:
+      - AGENTS.md auto-loading.
       - CLAUDE.md @path import expansion.
       - Path-scoped .claude/rules frontmatter.
       - Project, plugin, or user hooks.
@@ -57,6 +59,7 @@ known_surfaces:
     projection_targets:
       - CLAUDE.md forced core where present.
       - Unconditional .claude/rules/*.md forced-core projection.
+      - Manual AGENTS.md governance-walk directive in Claude forced-core projection.
     residual_risk: All policy-layer Bucket A invariants on this surface are prose unless authority is removed below the policy layer.
   - id: codex_pycharm
     observed_on: 2026-07-11
