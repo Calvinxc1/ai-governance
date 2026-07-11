@@ -8,7 +8,7 @@ This versioned policy-line branch uses an enforcement-first governance model. Hi
 
 This directory is not the active local governance entrypoint for agents working in this repository. That role belongs to `.governance/`. The two trees intentionally duplicate governance rules and may drift when the distinction is visible and intentional.
 
-The `enforcement-redesign/trunk/1.3.0` branch carries the experimental general contract for every agent kind. Secondary kind branches carry complete branch-local pictures after `enforcement-redesign/trunk/1.3.0` is merged down into them. Core content is intentionally duplicated across kind branches so an agent can read one branch and have the complete contract.
+The `enforcement-redesign/trunk/1.4.0` branch carries the experimental general contract for every agent kind. Secondary kind branches carry complete branch-local pictures after `enforcement-redesign/trunk/1.4.0` is merged down into them. Core content is intentionally duplicated across kind branches so an agent can read one branch and have the complete contract.
 
 Layout:
 
