@@ -304,3 +304,19 @@ versions:
     date: 2026-07-11
     bump: minor
     summary: Records the repo-wide structural change that made `.governance/` a byte-identical Governance Agent operating layer, collapsed branch metadata and status into `lab-governance/`, renamed active policy endpoints to `/main`, and clarified bootstrap/init sourcing so downstream workspaces seed and update only from the selected branch's `lab-governance/` tree.
+  - canon_version: enforcement-redesign-trunk/1.6.1
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk/main
+    introduced_by_commit: 60a0f70389e6d477be1bb37f96488e0bc1c6db90
+    previous_canon_version: enforcement-redesign-trunk/1.6.0
+    date: 2026-07-11
+    bump: patch
+    summary: Clarifies that downstream bootstrap, update, and enforcement-redesign transition workflows must exclude the source branch's concrete `lab-governance/status.yaml`, generate downstream status from the template, and use `/main` endpoint wording throughout the active propagation docs.
+  - canon_version: enforcement-redesign-trunk/1.6.2
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk/main
+    introduced_by_commit: 095d27c5ea2ae2d6e9d8de4beb0f5f41b9b00884
+    previous_canon_version: enforcement-redesign-trunk/1.6.1
+    date: 2026-07-11
+    bump: patch
+    summary: Makes governance initialization branch-neutral about always-load files so downstream workspaces follow the selected branch entrypoint instead of assuming enforcement-redesign hard-invariant files exist on every policy line.
