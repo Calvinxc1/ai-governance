@@ -12,7 +12,6 @@ deviations:
     local_files:
       - .governance/README.md
       - .governance/processes/policy-maintenance.yaml
-      - branch-governance/README.md
       - README.md
     rationale: This repository maintains both its active local governance copy and the generalized governance rule set that may propagate to other repositories.
     local_rule: Agents may edit both the uniform .governance operating layer and lab-governance in the same task when the task is explicitly about governance maintenance or alignment. A .governance edit is repo-wide operating governance and must propagate to every branch; a lab-governance edit follows the owning policy-line or kind branch.
@@ -41,9 +40,8 @@ deviations:
       - .governance/processes/policy-maintenance.yaml
       - .governance/README.md
       - .governance/records/
-      - branch-governance/
     rationale: This repository uses trunk and kind branches to maintain complete governance pictures for different agent kinds, while `.governance` is now a single operating layer shared by every branch.
-    local_rule: After Jason ratifies a governance structure or rule change on the active policy-line trunk, agents must propagate the update into that policy line's governed child version branches, such as `enforcement-redesign/coding-agent/1.6.0` and `enforcement-redesign/desktop-orchestrator/1.5.0` in the enforcement-redesign policy line, unless Jason explicitly scopes the change as policy-line trunk-local. When committing and pushing work on a branch that has governed downstream kind or sub-branches, agents must propagate the work to the appropriate downstream branches in the same policy line before calling the work complete unless Jason explicitly scopes the change as branch-local. Any change to `.governance` is not policy-line-local; it must be propagated to every branch in this repository. Governance policy files that alter the ratified governance product contract require a semantic-version-style canon_version bump in the same change; repo-local operating process, deviation, record, registry, and bookkeeping changes do not require a canon_version bump unless they alter the ratified governance product contract consumed by agents.
+    local_rule: After Jason ratifies a governance structure or rule change on the active policy-line trunk, agents must propagate the update into that policy line's governed child branches, such as `enforcement-redesign/coding-agent/main` and `enforcement-redesign/desktop-orchestrator/main` in the enforcement-redesign policy line, unless Jason explicitly scopes the change as policy-line trunk-local. When committing and pushing work on a branch that has governed downstream kind or sub-branches, agents must propagate the work to the appropriate downstream branches in the same policy line before calling the work complete unless Jason explicitly scopes the change as branch-local. Any change to `.governance` is not policy-line-local; it must be propagated to every branch in this repository. Governance policy files that alter the ratified governance product contract require a semantic-version-style canon_version bump in the same change; repo-local operating process, deviation, record, registry, and bookkeeping changes do not require a canon_version bump unless they alter the ratified governance product contract consumed by agents.
     non_generalized_reason: Ordinary repositories are not expected to maintain governance propagation branches.
     review_requirement: Branch distribution must preserve each branch's local governance entrypoint, keep `.governance` byte-identical across all branches when it changes, and separately maintain any generalized lab-governance copy required by that branch. Report the source commit, propagated branch commits, validation for each branch, any canon_version bump or explicit no-bump reason, and any explicit branch-local reason when propagation is skipped.
   - id: governance-repo-narrowest-policy-scope
@@ -51,14 +49,13 @@ deviations:
     local_scope: this_repository
     generalized_reference:
       - README.md
-      - branch-governance/branch-descriptor.yaml
       - lab-governance/branch-descriptor.yaml
     local_files:
       - .governance/local/deviations.yaml
       - .governance/processes/policy-maintenance.yaml
       - lab-governance/processes/policy-maintenance.yaml
     rationale: This repository maintains policy-line trunk governance and kind-specific complete governance pictures. Policy placement should preserve the narrowest correct scope rather than defaulting to policy-line trunk or repo-wide operating governance.
-    local_rule: Before adding, moving, or versioning a governance policy change, agents must evaluate the narrowest existing scope that can correctly own the change. Prefer the narrowest existing applicable scope, including branch metadata, repo-local operating deviation, kind branch, or policy-line trunk governance. Use `.governance` only when the rule should govern the repository operating layer on every branch. Use the active policy-line trunk only when the rule is intended to apply across agent kinds in that channel or when Jason explicitly ratifies policy-line trunk scope.
+    local_rule: Before adding, moving, or versioning a governance policy change, agents must evaluate the narrowest existing scope that can correctly own the change. Prefer the narrowest existing applicable scope, including lab-governance branch metadata, repo-local operating deviation, kind branch, or policy-line trunk governance. Use `.governance` only when the rule should govern the repository operating layer on every branch. Use the active policy-line trunk only when the rule is intended to apply across agent kinds in that channel or when Jason explicitly ratifies policy-line trunk scope.
     non_generalized_reason: This rule is specific to this repository's multi-branch governance maintenance workflow.
     review_requirement: Policy-change reportback must state the selected scope, why narrower existing scopes were insufficient or sufficient, and whether the change affects the uniform `.governance` operating layer, policy-line trunk, a kind branch, branch metadata, or generalized lab governance.
   - id: governance-repo-lab-governance-maintainer-authority
@@ -96,11 +93,11 @@ deviations:
       - lab-governance/templates/local-status.yaml
     local_files:
       - .governance/local/deviations.yaml
-      - branch-governance/status.yaml
+      - lab-governance/status.yaml
     rationale: Governance Agent may be accessed through Codex machinery, but Jason classified it as a desktop-orchestrator-family governance agent rather than a coding agent. Runtime surface, governance role, and code authority must not be conflated.
     local_rule: An agent's runtime surface does not determine its governance role, agent family, or code authority. Governance Agent is a desktop-orchestrator-family governance-specialized agent with no code-writing authority unless Jason explicitly grants a separate implementation role. Governance Agent may draft, interpret, review, and coordinate governance work; it may work with Coding Agent for implementation; it must not treat Codex access, filesystem access, or tool availability as permission to write code.
     non_generalized_reason: This records a local role/runtime reconciliation for Governance Agent in this repository. It may become generalized later if other agents are accessed through runtime surfaces that differ from their governance role.
-    review_requirement: Branch status records must distinguish canonical agent name, governance kind or family, runtime surface, and code authority when those differ. If a requested action crosses from governance drafting or coordination into code implementation, Governance Agent must stop and route the implementation to Coding Agent or ask Jason for explicit handoff instructions.
+    review_requirement: Lab-governance status records must distinguish canonical agent name, governance kind or family, runtime surface, and code authority when those differ. If a requested action crosses from governance drafting or coordination into code implementation, Governance Agent must stop and route the implementation to Coding Agent or ask Jason for explicit handoff instructions.
   - id: governance-repo-owning-layer-preflight
     status: ratified
     local_scope: this_repository
@@ -109,10 +106,9 @@ deviations:
       - lab-governance/processes/policy-maintenance.yaml
     local_files:
       - .governance/local/deviations.yaml
-      - branch-governance/branch-descriptor.yaml
       - lab-governance/branch-descriptor.yaml
     rationale: A governance-maintenance edit was initially started on a child branch because the incident came from a Factorio room, even though the requested behavior governed all live-room agents.
-    local_rule: Before editing active governance in this repository, Governance Agent must explicitly classify the owning layer from the requested rule's behavioral scope, compare it to the current branch and branch descriptors under `branch-governance` or `lab-governance` when present, and switch to the owning branch before editing. Incident source, current branch, participating agent type, or examples from one agent family are not sufficient to scope a live-room, identity, initialization, durable-boundary, connector-boundary, or policy-maintenance rule to a child branch. When a requested amendment affects more than one agent family or any all-agent coordination behavior, default to trunk ownership unless Jason explicitly scopes it narrower. When the requested amendment changes `.governance`, treat it as repo-wide operating governance and propagate it to every branch.
+    local_rule: Before editing active governance in this repository, Governance Agent must explicitly classify the owning layer from the requested rule's behavioral scope, compare it to the current branch and branch descriptors under `lab-governance` when present, and switch to the owning branch before editing. Incident source, current branch, participating agent type, or examples from one agent family are not sufficient to scope a live-room, identity, initialization, durable-boundary, connector-boundary, or policy-maintenance rule to a child branch. When a requested amendment affects more than one agent family or any all-agent coordination behavior, default to trunk ownership unless Jason explicitly scopes it narrower. When the requested amendment changes `.governance`, treat it as repo-wide operating governance and propagate it to every branch.
     non_generalized_reason: The generalized process already states the owning-layer rule; this local amendment records the Governance Agent failure mode and makes the preflight mandatory for this repository's maintainer workflow.
     review_requirement: Report the owning-layer classification, current branch before edits, target branch used for edits, whether examples were incidental or scope-defining, and any propagation branches required before calling governance maintenance complete.
   - id: governance-agent-policy-failure-generalization
