@@ -43,6 +43,21 @@ deviations:
     local_rule: After Jason ratifies a governance structure or rule change on the active policy-line trunk, agents must propagate the update into that policy line's governed child version branches, such as `enforcement-redesign/coding-agent/1.5.0` and `enforcement-redesign/desktop-orchestrator/1.4.0` in the enforcement-redesign policy line, unless Jason explicitly scopes the change as policy-line trunk-local. When committing and pushing work on a branch that has governed downstream kind or sub-branches, agents must propagate the work to the appropriate downstream branches in the same policy line before calling the work complete unless Jason explicitly scopes the change as branch-local. Governance policy files that alter the ratified governance contract require a semantic-version-style canon_version bump in the same change; repo-local process, deviation, record, registry, and bookkeeping changes do not require a canon_version bump unless they alter the ratified governance contract consumed by agents.
     non_generalized_reason: Ordinary repositories are not expected to maintain governance propagation branches.
     review_requirement: Branch distribution must preserve each branch's local governance entrypoint and separately maintain any generalized lab-governance copy required by that branch. Report the source commit, propagated branch commits, validation for each branch, any canon_version bump or explicit no-bump reason, and any explicit branch-local reason when propagation is skipped.
+  - id: governance-repo-narrowest-policy-scope
+    status: ratified
+    local_scope: this_repository
+    generalized_reference:
+      - README.md
+      - .governance/branch-descriptor.yaml
+      - lab-governance/branch-descriptor.yaml
+    local_files:
+      - .governance/local/deviations.yaml
+      - .governance/processes/policy-maintenance.yaml
+      - lab-governance/processes/policy-maintenance.yaml
+    rationale: This repository maintains policy-line trunk governance and kind-specific complete governance pictures. Policy placement should preserve the narrowest correct scope rather than defaulting to policy-line trunk.
+    local_rule: Before adding, moving, or versioning a governance policy change, agents must evaluate the narrowest existing scope that can correctly own the change. Prefer the narrowest existing applicable scope, including repo-local deviation, active local governance, kind branch, or policy-line trunk governance. Use the active policy-line trunk only when the rule is intended to apply across agent kinds in that channel or when Jason explicitly ratifies policy-line trunk scope.
+    non_generalized_reason: This rule is specific to this repository's multi-branch governance maintenance workflow.
+    review_requirement: Policy-change reportback must state the selected scope, why narrower existing scopes were insufficient or sufficient, and whether the change affects policy-line trunk, a kind branch, repo-local governance, or generalized lab governance.
   - id: governance-repo-lab-governance-maintainer-authority
     status: ratified
     local_scope: this_repository
