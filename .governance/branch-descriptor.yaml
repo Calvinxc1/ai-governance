@@ -1,14 +1,14 @@
 id: branch_descriptor
 status: active
-branch: enforcement-redesign/trunk/1.4.0
+branch: enforcement-redesign/trunk/1.5.0
 kind: general
-canon_version: enforcement-redesign/trunk/1.4.0
+canon_version: enforcement-redesign/trunk/1.5.0
 narrative_blurb: Enforcement-redesign trunk carries the experimental general governance
   contract true of every agent kind.
 orientation:
-  consumes_layer: enforcement-redesign/trunk/1.4.0
+  consumes_layer: enforcement-redesign/trunk/1.5.0
   full_picture_branch: false
-  inheritance_model: Kind version branches merge enforcement-redesign/trunk/1.4.0
+  inheritance_model: Kind version branches merge enforcement-redesign/trunk/1.5.0
     down after Jason ratifies enforcement-redesign trunk changes.
   versioning_model: The versioned branch path is the active governance version; canon_version
     mirrors that branch path.
