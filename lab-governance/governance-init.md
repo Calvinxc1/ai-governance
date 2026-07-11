@@ -4,15 +4,17 @@ Purpose: give a new agent enough procedure to initialize governance before doing
 
 This document is a setup guide, not a replacement for policy. The operative contract remains the repository or workspace governance files the agent loads during initialization.
 
+For a downstream workspace, the seed and update source is always the selected branch's `lab-governance/` tree from Jason's `ai-governance` repository. This repository's `.governance/` tree is the Governance Agent's own uniform operating layer and must not be copied, merged, diffed against, or used as an external source for another workspace.
+
 ## Startup Order
 
 1. Find the workspace governance entrypoint.
 
    Start with `AGENTS.md` at the workspace root. If no workspace-local `AGENTS.md` exists, ask Jason or the orchestrating agent where governance is mounted before doing substantive work.
 
-2. Load the always-load policy.
+2. Load the always-load policy, enforcement model, and hard-invariant index.
 
-   Follow the entrypoint exactly. In this governance system, the normal always-load file is `.governance/policies/universal.yaml` for an active workspace copy, or `lab-governance/policies/universal.yaml` when initializing from the generalized lab governance source.
+   Follow the entrypoint exactly. In this governance system, the normal always-load files are `.governance/policies/universal.yaml`, `.governance/policies/enforcement-model.yaml`, and `.governance/policies/hard-invariant-index.yaml` for an active workspace copy, or the corresponding `lab-governance/policies/` files when initializing from the generalized lab governance source.
 
 3. Load task-specific policy through the task map.
 
@@ -28,7 +30,7 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
 5. Check branch or kind routing.
 
-   If the active governance branch has a `.governance/kind-routes.yaml` file, load it after the task map. Trunk-general governance does not require a kind-routes file.
+   If the active governance branch has a `.governance/kind-routes.yaml` file, load it after the task map. Channel-trunk-general governance does not require a kind-routes file.
 
 6. Prompt for the canonical agent name.
 
@@ -58,7 +60,7 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
    Then wait for Jason's answer before substantive work.
 
-   If Jason answers yes, use `lab-governance/templates/governance-bootstrap-prompt.md` from the ai-governance repository as the canonical bootstrap/update prompt. Follow that prompt for source branch selection, local governance update, local status update, and reconciliation reporting.
+   If Jason answers yes, use `lab-governance/templates/governance-bootstrap-prompt.md` from the ai-governance repository as the canonical bootstrap/update prompt. Follow that prompt for source policy line, source branch selection, local governance update, local status update, and reconciliation reporting.
 
 9. Declare loaded governance if action will follow.
 
@@ -84,9 +86,11 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
    First ask for the workspace's canonical agent name. If local status or a legacy registry row already exists, use it only as candidate evidence and ask Jason to confirm or correct the name before choosing a governance branch or kind.
 
-2. Copy the branch-local governance picture into the workspace.
+   Preserve the prompt's source policy line. If the bootstrap prompt came from a `baseline/<endpoint>/main` or `enforcement-redesign/<endpoint>/main` branch, choose the current mapped `/main` endpoint branch for the intended agent kind within that same policy line unless Jason explicitly redirects the workspace to another policy line.
 
-   A governed workspace should have a local `.governance/` tree and an `AGENTS.md` entrypoint. Do not point ordinary workspace agents directly at this repository's `.governance/` tree unless Jason explicitly chooses a centralized mount model for that workspace.
+2. Copy the selected branch's `lab-governance/` product into the workspace.
+
+   A governed workspace should have a local `.governance/` tree and an `AGENTS.md` entrypoint seeded or updated from the selected branch's `lab-governance/` tree. Never seed or update a downstream workspace from this repository's `.governance/` tree. Do not point ordinary workspace agents directly at this repository's `.governance/` tree unless Jason explicitly chooses a centralized mount model for that workspace.
 
 3. Preserve the entrypoint contract.
 
@@ -125,6 +129,8 @@ lab-governance/branch-descriptor.yaml
 lab-governance/status.yaml
 ```
 
+The downstream workspace's `.governance/` tree is its local seeded copy derived from the selected branch's `lab-governance/` product. It is not copied from this repository's `.governance/` operating layer.
+
 Kind branches may add:
 
 ```text
@@ -141,7 +147,11 @@ canon-version-log/
 
 Ordinary downstream repositories should not infer that they need to maintain those generalized governance maintenance trees locally.
 
-`agent-registry/` is retained as a legacy central seed and historical audit aid. It is not the authoritative live status mechanism for governed workspaces.
+`agent-registry/` is retained only as a non-authoritative historical artifact. It is not the live status mechanism for governed workspaces.
+
+## Task Briefs
+
+For substantial delegated work, use `lab-governance/templates/task-brief.md`. Describe the outcome and bounds; prescribe only the protocol needed to protect the work.
 
 ## Acceptance Checklist
 
