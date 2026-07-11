@@ -25,8 +25,8 @@ baseline/factorio-modding-agent/1.1.0
 Current enforcement-redesign branches:
 
 ```text
-enforcement-redesign/trunk/1.4.0
-enforcement-redesign/coding-agent/1.5.0
-enforcement-redesign/desktop-orchestrator/1.4.0
-enforcement-redesign/factorio-modding-agent/1.4.0
+enforcement-redesign/trunk/1.5.0
+enforcement-redesign/coding-agent/1.6.0
+enforcement-redesign/desktop-orchestrator/1.5.0
+enforcement-redesign/factorio-modding-agent/1.5.0
 ```
