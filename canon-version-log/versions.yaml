@@ -296,3 +296,11 @@ versions:
     date: 2026-07-10
     bump: minor
     summary: Adds capability-routed policy files for Kanboard tracking, MCP maintenance, live-room-capable operation, relay-only live-room prompts, and outbound correspondence, while trimming those details from general workflow, communication, style, and boundary files.
+  - canon_version: enforcement-redesign-trunk/1.6.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk/main
+    introduced_by_commit: pending
+    previous_canon_version: enforcement-redesign-trunk/1.5.0
+    date: 2026-07-11
+    bump: minor
+    summary: Records the repo-wide structural change that made `.governance/` a byte-identical Governance Agent operating layer, collapsed branch metadata and status into `lab-governance/`, renamed active policy endpoints to `/main`, and clarified bootstrap/init sourcing so downstream workspaces seed and update only from the selected branch's `lab-governance/` tree.
