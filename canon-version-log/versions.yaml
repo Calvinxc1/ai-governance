@@ -280,3 +280,11 @@ versions:
     date: 2026-07-10
     bump: minor
     summary: Adds request elicitation as a loadable-skill-backed intake gate, adds a tiny hard-invariant index, and populates the context-loaded Bucket A hard-invariant register with Jason-decided guarded domains.
+  - canon_version: enforcement-redesign-trunk/1.4.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: ca85bb7e70832d0cb492d63eb7d01e51aed6f5a5
+    previous_canon_version: enforcement-redesign-trunk/1.3.0
+    date: 2026-07-10
+    bump: minor
+    summary: Consolidates safety-transparency and durable-communication boundaries into execution control, policy maintenance, and inter-agent communication; moves Gmail and forge operational detail out of policy-line trunk boundaries; and trims trunk version-control guardrail detail for kind-level ownership.
