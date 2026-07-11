@@ -9,7 +9,9 @@ rules:
   - Agents must use `lab-governance/templates/governance-bootstrap-prompt.md` from the ai-governance Gitea repository when the canonical bootstrap/update prompt is available.
   - Agents must not improvise governance initialization or update mechanics when the canonical bootstrap/update prompt is available.
   - The prompt path is the source of truth for initialization and update instructions, including branch selection, local status updates, and reconciliation reporting.
-  - The bootstrap/update process must preserve `lab-governance/status.yaml` as the portable local governance status report.
+  - The prompt's source policy line is part of the source of truth. If the prompt came from a `baseline/<endpoint>/main` or `enforcement-redesign/<endpoint>/main` branch, bootstrap or update from the current mapped `/main` endpoint branch for the target agent kind within that same policy line unless Jason explicitly redirects to another policy line.
+  - The bootstrap/update process must seed and update downstream workspaces from the selected branch's `lab-governance/` tree, never from this repository's `.governance/` tree.
+  - The bootstrap/update process must not copy the selected source branch's concrete `lab-governance/status.yaml` into a downstream workspace. It must create or update downstream status from `lab-governance/templates/local-status.yaml`.
   - Completing the prompt does not imply that the legacy central registry has been updated.
   - The prompt must require live feedback about local status changes, branch selection, canon-version changes, and any reconciliation that remains unresolved.
   - The central registry loop is decommissioned as the default live status mechanism; agents must not submit registry attestations unless Jason explicitly requests legacy registry maintenance.
@@ -19,11 +21,13 @@ rules:
 prompt_contract:
   - Require or confirm canonical agent name.
   - Require or confirm agent kind.
+  - Identify the prompt source branch or source policy line when known.
   - Resolve the active governance branch for that agent.
+  - Preserve the prompt source policy line during branch selection unless Jason explicitly redirects it.
   - Fetch or inspect the ai-governance Gitea repository.
-  - Copy or merge the correct governance source into the local agent workspace.
+  - Copy or merge the correct `lab-governance/` source into the local agent workspace, excluding the selected source branch's concrete `lab-governance/status.yaml`.
   - Preserve local-only governance files unless the prompt explicitly instructs reconciliation.
-  - Create or update `lab-governance/status.yaml`.
+  - Create or update `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml`.
   - Validate loaded canon versions after update.
   - Compare the new policy state against the local status file and any legacy self-stamp or registry evidence.
   - Provide live reconciliation feedback before and after local mutation.

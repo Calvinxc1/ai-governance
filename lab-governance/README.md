@@ -4,7 +4,7 @@ This directory contains the lab-wide governance rule set maintained by this repo
 
 These files are the general policy and process contract intended to propagate to the rest of the lab and to specialized agent branches.
 
-This directory is not the active local governance entrypoint for agents working in this repository. That role belongs to `.governance/`. The two trees intentionally duplicate governance rules and may drift when the distinction is visible and intentional.
+This directory is the maintained governance product for this branch. It is not the active local operating layer for the Governance Agent working in this repository; that role belongs to the uniform `.governance/` tree.
 
 The trunk branch carries the general contract for every agent kind. Kind branches carry complete branch-local pictures after trunk is merged down into them. Core content is intentionally duplicated across kind branches so an agent can read one branch and have the complete contract.
 
@@ -20,6 +20,7 @@ Layout:
 - `lab-governance/templates/governance-bootstrap-prompt.md`: canonical prompt for first-time governance initialization and governed-agent updates.
 - `lab-governance/templates/kind-branch-migration-checklist.md`: version-agnostic checklist for adopting a target kind branch without hard-coding a particular canon version.
 - `lab-governance/templates/local-index.yaml`: loose pointer template for `.governance/local/index.yaml`; the local directory's internal structure remains workspace-owned.
-- `lab-governance/templates/local-status.yaml`: local status template for `lab-governance/status.yaml`; this is metadata, not a local policy body.
+- `lab-governance/templates/local-status.yaml`: local status template for downstream `lab-governance/status.yaml`; this is metadata, not a local policy body.
+- `lab-governance/status.yaml`: source-branch maintainer status for this repository. Do not copy this concrete file into downstream workspaces; generate downstream status from `lab-governance/templates/local-status.yaml`.
 
 Kind branches add `lab-governance/branch-descriptor.yaml` and `lab-governance/kind-routes.yaml`. Trunk does not carry those files, so trunk merge-downs do not overwrite kind orientation or kind-specific routing.
