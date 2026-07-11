@@ -8,9 +8,10 @@ applicability:
   - Does not replace repository-local governance for coding work.
 principles:
   - Co-work folders optimize for near-realtime portability across Jason's hosts.
-  - Git provides local history, auditability, recovery, and optional durable backup.
+  - Git provides background local history, auditability, recovery, and optional durable backup.
   - Gitea is a durable remote and review surface, not the default realtime sync mechanism.
   - File replication and Git history are separate responsibilities.
+  - Routine co-work Git operations are an agent-managed backup mechanism, not a user-facing decision loop.
 default_profile:
   name: cowork-realtime
   rules:
@@ -44,8 +45,12 @@ initialization_rules:
   - The initial commit message must identify that the repository was agent-initialized and name the active co-work sync profile.
   - The agent must not add a Gitea remote unless the folder has been classified for remote durability.
   - The agent must not push the initial repository to Gitea without explicit Jason approval or an already-approved durable profile.
-  - After initialization, the agent must report repository path, active profile, whether a remote was configured, and any ignored-risk assumptions.
+  - After successful initialization, the agent should not interrupt Jason with routine Git mechanics unless the active task already calls for a setup report.
+  - The agent must surface initialization only when classification, ignore rules, remote safety, sensitive content, repository-boundary detection, or first-commit creation is blocked, risky, or requires Jason approval.
 git_rules:
+  - Treat routine local Git commits as silent background backup and audit work.
+  - Do not ask Jason whether to commit, what to include in a routine commit, how to structure routine commits, or what routine commit message to use.
+  - The agent has discretion over routine local commit timing, grouping, included non-ignored files, and commit messages within the active co-work folder.
   - Auto-commit dirty co-work folders aggressively.
   - Commit before agent handoff when feasible.
   - Commit after task completion or suspension.
@@ -53,6 +58,8 @@ git_rules:
   - Commit periodically while dirty during active work.
   - A reasonable default periodic interval is 5 to 15 minutes.
   - Use clear machine-generated commit messages that identify trigger, agent, host when appropriate, and timestamp.
+  - Routine successful commits require no immediate user-facing report.
+  - Report Git activity only when requested by Jason, when the task itself is a Git/audit review, or when something is wrong, blocked, risky, remote-sensitive, conflict-related, or approval-gated.
   - Do not rewrite co-work Git history automatically.
   - Do not auto-resolve Git conflicts.
   - On conflict, stop automation for the affected folder and create a visible conflict notice for Jason or the active co-work coordinator.
