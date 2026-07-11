@@ -15,8 +15,8 @@ orientation:
   full_picture_branch: true
   inheritance_model: baseline/trunk/main is merged down into this branch after Jason
     ratifies baseline trunk changes.
-  versioning_model: The versioned branch path is the active governance version; canon_version
-    mirrors that branch path.
+  versioning_model: The stable `/main` endpoint branch path is the active governance
+    version; canon_version mirrors that branch path.
   upward_signal_duty: File an upward Gitea issue when a desktop-orchestrator rule
     appears to generalize beyond desktop orchestration.
   upward_issue_target: ai-projects/ai-governance
