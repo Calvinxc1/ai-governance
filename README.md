@@ -1,6 +1,6 @@
 # AI Governance
 
-This repository stores Jason's AI agent governance. The `main` branch is only a routing branch: it explains the branch structure and points to the active governance branches.
+This repository stores Jason's AI agent governance. The `main` branch is only a routing branch: it explains the branch structure and points to the active governance branches. It also carries the repo-local `.governance/` copy that should remain available across branches.
 
 Active governance is stored on versioned branches shaped as:
 

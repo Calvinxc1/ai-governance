@@ -1,0 +1,15 @@
+id: branch_descriptor
+status: informational
+branch: main
+kind: repository_routing
+canon_version: null
+narrative_blurb: Main is the repository routing branch. It identifies the active
+  versioned governance branches and carries the repository-local governance support
+  copy.
+orientation:
+  consumes_layer: null
+  full_picture_branch: false
+  inheritance_model: Main is not a parent policy branch. Active governance branches
+    are listed in README.md.
+  versioning_model: Main is not a versioned governance contract; active governance
+    versions are the versioned branch paths listed in README.md.
