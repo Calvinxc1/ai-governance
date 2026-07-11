@@ -8,9 +8,6 @@ collaboration_levels:
   positions_plus_decider: Collect bounded positions from multiple agents and route the decision to the named decider without requiring the agents to converge live.
   iterative_live_room: Convene a live room only when agents must exchange multiple turns, resolve disagreement, coordinate active handoff, or maintain shared live state.
 rules:
-  - Load `.governance/policies/agent-identity.yaml` for canonical identity rules.
-  - Load `.governance/policies/live-room-coordination.yaml` for active live-room coordination.
-  - Load `.governance/policies/live-room-closeout.yaml` for live-room closeout, dismissal, stale-presence, and completion rules.
   - Match the venue to the job, including live ephemeral coordination versus durable ratified governance.
   - Do not auto-bridge live coordination channels and durable governance channels.
   - Hand-write every durable outcome to its system of record.
@@ -36,6 +33,4 @@ rules:
   - Use copy/paste relay for one-way messages, bounded requests, simple handoffs, or exchanges expected to need no more than one response.
   - Use an Althing or other live room only for iterative live-room collaboration.
   - If a relay exchange becomes repeated back-and-forth or clearly needs live coordination, surface that immediately.
-  - If the agent has live-room access, it must start or join the room itself, post the room packet there, and give Jason only the short invite prompt needed to summon another participant.
-  - If the agent lacks live-room access, it may provide Jason a ready-to-use room-start prompt for an agent that can create or join the room.
   - Insight can travel through reads, summaries, bounded position requests, or live rooms; one agent still must not write in another agent's domain without authorization.
