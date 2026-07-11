@@ -1,25 +1,30 @@
 id: branch_descriptor
 status: active
-branch: desktop-orchestrator
+branch: baseline/desktop-orchestrator/1.2.0
 kind: desktop_orchestrator
-canon_version: desktop-orchestrator/1.2.0
+canon_version: baseline/desktop-orchestrator/1.2.0
 parent:
-  branch: trunk
-  canon_version: trunk/3.16.0
+  branch: baseline/trunk/3.16.0
+  canon_version: baseline/trunk/3.16.0
   summary: General contract true of every agent kind, coding or not.
-narrative_blurb: Desktop orchestrators inherit the full universal contract and specialize in cross-folder desktop work, person-to-person correspondence, canon-sensitive creative support, and active wellbeing judgment.
+narrative_blurb: Baseline desktop orchestrators inherit the full universal contract
+  and specialize in cross-folder desktop work, person-to-person correspondence, canon-sensitive
+  creative support, and active wellbeing judgment.
 orientation:
-  consumes_layer: desktop-orchestrator
+  consumes_layer: baseline/desktop-orchestrator/1.2.0
   full_picture_branch: true
-  inheritance_model: Trunk is merged down into this branch after Jason ratifies trunk changes.
-  versioning_model: canon_version tracks the consumed desktop-orchestrator governance contract, with parent.canon_version tracking the trunk-general contract.
-  upward_signal_duty: File an upward Gitea issue when a desktop-orchestrator rule appears to generalize beyond desktop orchestration.
+  inheritance_model: baseline/trunk/3.16.0 is merged down into this branch after Jason
+    ratifies baseline trunk changes.
+  versioning_model: The versioned branch path is the active governance version; canon_version
+    mirrors that branch path.
+  upward_signal_duty: File an upward Gitea issue when a desktop-orchestrator rule
+    appears to generalize beyond desktop orchestration.
   upward_issue_target: ai-projects/ai-governance
   upward_issue_format:
-    title_prefix: "[upward]"
+    title_prefix: '[upward]'
     body_required:
-      - observed folder or session
-      - current local wording or behavior
-      - why it may generalize
-      - proposed target level
-      - proposed wording
+    - observed folder or session
+    - current local wording or behavior
+    - why it may generalize
+    - proposed target level
+    - proposed wording
