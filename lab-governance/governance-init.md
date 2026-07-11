@@ -66,7 +66,7 @@ Do not copy this repository's concrete `lab-governance/status.yaml` into a downs
 
 9. Declare loaded governance if action will follow.
 
-   Before edits, connector actions, or other substantive work, state the intended action, affected files or systems, expected risk tier, and validation plan unless Jason's latest message already clearly authorized immediate execution.
+   Before edits, connector actions, or other substantive work, perform the final action verification required by execution-control: state the intended action, affected files or systems, expected risk tier, and validation plan, then wait for Jason's approval unless his immediately preceding message already approved that exact verification.
 
 ## Althing And Live Room Join Checklist
 
@@ -108,9 +108,13 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
 6. Reconcile local status with source governance state.
 
-   Compare local status with the selected source branch descriptor and any legacy self-stamp. If records disagree, do not silently choose one. Mark the local status as `behind`, `drifted`, or `unknown` as appropriate, then route the decision to Jason through the active human liaison.
+   Compare local status with the selected source branch descriptor, old branch or version evidence, and any legacy self-stamp. If records disagree, do not silently choose one. Treat obsolete branch names and old status shapes as migration evidence rather than authoritative blockers unless they create a real policy-line, identity, or local-governance conflict. Mark the local status as `behind`, `drifted`, or `unknown` as appropriate, then route the decision to Jason through the active human liaison.
 
-7. Confirm no secrets were introduced.
+7. Review local governance conflicts.
+
+   After seeding or updating base governance, load every local governance file reachable from `.governance/local/index.yaml` and compare local governance against the newly seeded canonical governance. Surface conflicts, duplicated rules, obsolete local overrides, and local rules that now overlap with canonical rules. Local governance wins operationally over canonical governance unless Jason or explicit local policy says otherwise, but conflicts and redundancies must still be reported.
+
+8. Confirm no secrets were introduced.
 
    Governance files may contain paths, branch names, canon versions, and provenance references. They must not contain tokens, API keys, private credentials, or recoverable secrets.
 
@@ -178,6 +182,7 @@ Stop and ask before substantive work when:
 - The Jason-settled canonical agent name is missing or disputed.
 - The active branch, kind, or target canon version is ambiguous.
 - Local status, legacy self-stamp, and source governance state disagree.
+- Local governance conflicts with updated canonical governance in a way that changes whether the agent may act.
 - A policy conflict changes whether the agent may act.
 - The requested task depends on accepting a draft governance rule as ratified.
 
