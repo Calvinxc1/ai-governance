@@ -62,7 +62,7 @@ Do not copy this repository's concrete `lab-governance/status.yaml` into a downs
 
    Then wait for Jason's answer before substantive work.
 
-   If Jason answers yes, use `lab-governance/templates/governance-bootstrap-prompt.md` from the ai-governance repository as the canonical bootstrap/update prompt. Follow that prompt for source policy line, source branch selection, local governance update, local status update, and reconciliation reporting.
+   If Jason answers yes, use `governance-bootstrap-prompt.md` from the root of literal branch `main` of the ai-governance repository as the canonical bootstrap/update prompt. Follow that prompt for explicit target policy-line selection, source branch selection, local governance update, local status update, and reconciliation reporting.
 
 9. Declare loaded governance if action will follow.
 
@@ -88,7 +88,7 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
    First ask for the workspace's canonical agent name. If local status or a legacy registry row already exists, use it only as candidate evidence and ask Jason to confirm or correct the name before choosing a governance branch or kind.
 
-   Preserve the prompt's source policy line. If the bootstrap prompt came from a `baseline/<endpoint>/main` or `enforcement-redesign/<endpoint>/main` branch, choose the current mapped `/main` endpoint branch for the intended agent kind within that same policy line unless Jason explicitly redirects the workspace to another policy line.
+   Use the target policy line explicitly named by Jason, the orchestrating agent, or confirmed local status. If the target policy line is missing or disputed, ask whether the workspace should use `baseline` or `enforcement-redesign` before changing files. Then choose the current mapped `/main` endpoint branch for the intended agent kind within that confirmed policy line unless Jason explicitly redirects the workspace to another branch.
 
 2. Copy the selected branch's `lab-governance/` product into the workspace.
 
