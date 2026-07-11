@@ -1,20 +1,20 @@
 id: branch_descriptor
 status: active
-branch: enforcement-redesign/desktop-orchestrator/1.5.0
+branch: enforcement-redesign/desktop-orchestrator/main
 kind: desktop_orchestrator
-canon_version: enforcement-redesign/desktop-orchestrator/1.5.0
+canon_version: enforcement-redesign/desktop-orchestrator/main
 parent:
-  branch: enforcement-redesign/trunk/1.5.0
-  canon_version: enforcement-redesign/trunk/1.5.0
+  branch: enforcement-redesign/trunk/main
+  canon_version: enforcement-redesign/trunk/main
   summary: Enforcement-redesign general contract true of every agent kind.
 narrative_blurb: Enforcement-redesign desktop orchestrators inherit the enforcement-bucket
   model and specialize in cross-folder desktop work, person-to-person correspondence,
   canon-sensitive creative support, Gmail read-only boundaries, and desktop co-work
   synchronization.
 orientation:
-  consumes_layer: enforcement-redesign/desktop-orchestrator/1.5.0
+  consumes_layer: enforcement-redesign/desktop-orchestrator/main
   full_picture_branch: true
-  inheritance_model: enforcement-redesign/trunk/1.5.0 is merged down into this branch
+  inheritance_model: enforcement-redesign/trunk/main is merged down into this branch
     after Jason ratifies enforcement-redesign trunk changes.
   versioning_model: The versioned branch path is the active governance version; canon_version
     mirrors that branch path.
