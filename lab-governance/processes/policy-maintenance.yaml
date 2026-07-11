@@ -10,7 +10,7 @@ rules:
   - Treat committed active files under governance policy and process directories as ratified by placement.
   - Keep draft proposals outside active policy and process directories until Jason ratifies them.
   - Classify the owning layer before editing: policy-line trunk-general, kind-specific, repo-local, registry/bookkeeping, or propagation-only.
-  - Preserve the active governance policy line. In the enforcement-redesign policy line, policy-line trunk means the current `enforcement-redesign/trunk/<version>` branch, not `baseline/trunk/3.16.0`.
+  - Preserve the active governance policy line. In the enforcement-redesign policy line, policy-line trunk means the current `enforcement-redesign/trunk/<version>` branch, not `baseline/trunk/main`.
   - General all-agent rules, live-room rules, governance initialization, generalized templates, connector boundaries, inter-agent communication boundaries, and lab-wide process changes belong on the policy-line trunk unless Jason scopes them narrower.
   - Kind-specific rules belong on that kind branch and are not trunk policy unless separately promoted.
   - When a change touches the policy that governs that change, keep the governing policy aligned in the same change.

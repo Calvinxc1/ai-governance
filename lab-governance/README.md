@@ -8,7 +8,7 @@ This versioned policy-line branch uses an enforcement-first governance model. Hi
 
 This directory is not the active local governance entrypoint for agents working in this repository. That role belongs to `.governance/`. The two trees intentionally duplicate governance rules and may drift when the distinction is visible and intentional.
 
-The `enforcement-redesign/trunk/1.5.0` branch carries the experimental general contract for every agent kind. Secondary kind branches carry complete branch-local pictures after `enforcement-redesign/trunk/1.5.0` is merged down into them. Core content is intentionally duplicated across kind branches so an agent can read one branch and have the complete contract.
+The `enforcement-redesign/trunk/main` branch carries the experimental general contract for every agent kind. Secondary kind branches carry complete branch-local pictures after `enforcement-redesign/trunk/main` is merged down into them. Core content is intentionally duplicated across kind branches so an agent can read one branch and have the complete contract.
 
 Layout:
 
@@ -27,7 +27,7 @@ Layout:
 - `lab-governance/templates/experimental-channel-transition-prompt.md`: prompt for moving an already-governed workspace from the baseline policy line to the `enforcement-redesign/<endpoint>/<version>` policy line.
 - `lab-governance/templates/kind-branch-migration-checklist.md`: version-agnostic checklist for adopting a target kind branch without hard-coding a particular canon version.
 - `lab-governance/templates/local-index.yaml`: loose pointer template for `.governance/local/index.yaml`; the local directory's internal structure remains workspace-owned.
-- `lab-governance/templates/local-status.yaml`: local status template for `.governance/local/status.yaml`; this is metadata, not a local policy body.
+- `lab-governance/templates/local-status.yaml`: local status template for `lab-governance/status.yaml`; this is metadata, not a local policy body.
 - `lab-governance/templates/task-brief.md`: standard brief shape for objective, definition of done, bounds, risk, budget, and stopping condition.
 
 Kind branches add `lab-governance/branch-descriptor.yaml` and `lab-governance/kind-routes.yaml`. The policy-line trunk does not carry those files, so policy-line trunk merge-downs do not overwrite kind orientation or kind-specific routing.

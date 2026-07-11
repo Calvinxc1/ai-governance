@@ -7,10 +7,10 @@ This prompt is for transition, not first-time bootstrap. If the workspace has no
 Target branch mapping:
 
 ```text
-general -> enforcement-redesign/trunk/1.5.0
-coding_agent -> enforcement-redesign/coding-agent/1.6.0
-desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/1.5.0
-factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/1.5.0
+general -> enforcement-redesign/trunk/main
+coding_agent -> enforcement-redesign/coding-agent/main
+desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/main
+factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/main
 ```
 
 ## Prompt
@@ -29,8 +29,8 @@ This is an enforcement-redesign policy-line transition. Do not update from `base
 First, inspect the current local governance state without changing files:
 
 - read `AGENTS.md`
-- read `.governance/local/status.yaml` if present
-- read `.governance/branch-descriptor.yaml` if present
+- read `lab-governance/status.yaml` if present
+- read `lab-governance/branch-descriptor.yaml` if present
 - read `.governance/kind-routes.yaml` if present
 - identify the current active governance branch, current active canon version, generalized canon version, source branch, and source commit when locally recorded
 
@@ -44,21 +44,21 @@ Confirm or ask for:
 Target enforcement-redesign branch mapping:
 
 ```text
-general -> enforcement-redesign/trunk/1.5.0
-coding_agent -> enforcement-redesign/coding-agent/1.6.0
-desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/1.5.0
-factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/1.5.0
+general -> enforcement-redesign/trunk/main
+coding_agent -> enforcement-redesign/coding-agent/main
+desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/main
+factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/main
 ```
 
 Then:
 
 1. Fetch or inspect `ai-governance`.
 2. Verify the target enforcement-redesign branch exists.
-3. Read the target branch's `AGENTS.md`, `.governance/branch-descriptor.yaml`, `lab-governance/governance-init.md`, and `lab-governance/templates/governance-bootstrap-prompt.md`.
+3. Read the target branch's `AGENTS.md`, `lab-governance/branch-descriptor.yaml`, `lab-governance/governance-init.md`, and `lab-governance/templates/governance-bootstrap-prompt.md`.
 4. Copy or merge the target branch-local governance picture into this workspace.
 5. Preserve workspace-local files under `.governance/local/` unless Jason or explicit policy says to reconcile them.
 6. Ensure `.governance/local/index.yaml` exists, using `lab-governance/templates/local-index.yaml` from the target branch when needed.
-7. Update `.governance/local/status.yaml` so it records the target branch, target active canon version, target generalized canon version, source repository, source branch, source commit when known, verification date, and any unresolved reconciliation notes.
+7. Update `lab-governance/status.yaml` so it records the target branch, target active canon version, target generalized canon version, source repository, source branch, source commit when known, verification date, and any unresolved reconciliation notes.
 8. Re-read the resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/policies/enforcement-model.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present.
 9. Compare the pre-transition status, new local status, target branch descriptor, and any legacy self-stamp or registry evidence. Report conflicts instead of silently reconciling them.
 10. Treat the legacy central registry as historical and non-authoritative. Do not submit a central registry attestation unless Jason explicitly requests legacy registry maintenance.
