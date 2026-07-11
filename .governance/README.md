@@ -14,6 +14,8 @@ Do not put branch-specific canon versions, kind inheritance, or policy-line prod
 
 This operating layer uses the enforcement-first redesign. Rules should be sorted into hard invariants, outcome-plus-bounds policies, or deliberately ungoverned cheap reversible work.
 
+Runtime-surface authority is governed through `policies/runtime-surface-adapter.yaml`. Agent kind, runtime surface, and authority are separate axes; ungated runtime surfaces may not hold production or protected mutation authority.
+
 Hard invariants are surfaced through `policies/hard-invariant-index.yaml`, a tiny always-loaded guarded-domain index. Load the full register at `policies/hard-invariants.yaml` only when the intended action enters a guarded domain.
 
 Use `skills/` for loadable skill sources that implement governance behavior in runtimes that support skills. Skill sources are policy-adjacent artifacts; their controlling policy remains under `policies/`.
