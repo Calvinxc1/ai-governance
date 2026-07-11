@@ -2,6 +2,7 @@ id: task_map
 default_load:
   - .governance/policies/universal.yaml
   - .governance/policies/enforcement-model.yaml
+  - .governance/policies/runtime-surface-adapter.yaml
   - .governance/policies/hard-invariant-index.yaml
 route_resolution:
   - Load default_load first.
@@ -13,6 +14,7 @@ route_resolution:
 route_groups:
   governance.enforcement:
     - .governance/policies/enforcement-model.yaml
+    - .governance/policies/runtime-surface-adapter.yaml
     - .governance/policies/hard-invariant-index.yaml
   execution.baseline:
     - .governance/policies/execution-control.yaml
