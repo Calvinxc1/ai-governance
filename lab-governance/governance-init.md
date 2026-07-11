@@ -6,15 +6,17 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
 For a downstream workspace, the seed and update source is always the selected branch's `lab-governance/` tree from Jason's `ai-governance` repository. This repository's `.governance/` tree is the Governance Agent's own uniform operating layer and must not be copied, merged, diffed against, or used as an external source for another workspace.
 
+Do not copy this repository's concrete `lab-governance/status.yaml` into a downstream workspace. That file is source-branch maintainer status for this repository. Downstream workspaces create or update their own `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml`.
+
 ## Startup Order
 
 1. Find the workspace governance entrypoint.
 
    Start with `AGENTS.md` at the workspace root. If no workspace-local `AGENTS.md` exists, ask Jason or the orchestrating agent where governance is mounted before doing substantive work.
 
-2. Load the always-load policy, enforcement model, and hard-invariant index.
+2. Load the always-load policy files named by the entrypoint.
 
-   Follow the entrypoint exactly. In this governance system, the normal always-load files are `.governance/policies/universal.yaml`, `.governance/policies/enforcement-model.yaml`, and `.governance/policies/hard-invariant-index.yaml` for an active workspace copy, or the corresponding `lab-governance/policies/` files when initializing from the generalized lab governance source.
+   Follow the entrypoint exactly. Different policy lines may name different always-load files. Use `.governance/` paths for an active workspace copy, or the corresponding `lab-governance/` paths only when initializing from the generalized lab governance source.
 
 3. Load task-specific policy through the task map.
 
@@ -90,7 +92,7 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
 2. Copy the selected branch's `lab-governance/` product into the workspace.
 
-   A governed workspace should have a local `.governance/` tree and an `AGENTS.md` entrypoint seeded or updated from the selected branch's `lab-governance/` tree. Never seed or update a downstream workspace from this repository's `.governance/` tree. Do not point ordinary workspace agents directly at this repository's `.governance/` tree unless Jason explicitly chooses a centralized mount model for that workspace.
+   A governed workspace should have a local `.governance/` tree and an `AGENTS.md` entrypoint seeded or updated from the selected branch's `lab-governance/` tree. Never seed or update a downstream workspace from this repository's `.governance/` tree. Exclude the selected source branch's concrete `lab-governance/status.yaml`; downstream status is generated from the status template and filled with locally attested values. Do not point ordinary workspace agents directly at this repository's `.governance/` tree unless Jason explicitly chooses a centralized mount model for that workspace.
 
 3. Preserve the entrypoint contract.
 
@@ -98,7 +100,7 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
 4. Create or update the local status file.
 
-   Ensure `lab-governance/status.yaml` exists. Start from `lab-governance/templates/local-status.yaml`. Fill only locally attested values. Use `null` rather than invented data.
+   Ensure `lab-governance/status.yaml` exists. Start from `lab-governance/templates/local-status.yaml`. Fill only locally attested values for the downstream workspace. Use `null` rather than invented data, and do not reuse this repository's source-branch status values.
 
 5. Create or preserve the local governance index.
 
