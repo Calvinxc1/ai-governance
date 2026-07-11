@@ -16,17 +16,17 @@ Policy lines:
 Current baseline branches:
 
 ```text
-baseline/trunk/3.16.0
-baseline/coding-agent/1.6.0
-baseline/desktop-orchestrator/1.2.0
-baseline/factorio-modding-agent/1.1.0
+baseline/trunk/main
+baseline/coding-agent/main
+baseline/desktop-orchestrator/main
+baseline/factorio-modding-agent/main
 ```
 
 Current enforcement-redesign branches:
 
 ```text
-enforcement-redesign/trunk/1.5.0
-enforcement-redesign/coding-agent/1.6.0
-enforcement-redesign/desktop-orchestrator/1.5.0
-enforcement-redesign/factorio-modding-agent/1.5.0
+enforcement-redesign/trunk/main
+enforcement-redesign/coding-agent/main
+enforcement-redesign/desktop-orchestrator/main
+enforcement-redesign/factorio-modding-agent/main
 ```
