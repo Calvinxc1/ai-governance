@@ -385,3 +385,29 @@ versions:
     date: 2026-07-10
     bump: minor
     summary: Propagates trunk and coding consolidation into Factorio while preserving Factorio-specific modding and release policies as the narrowest owner for mod lifecycle, changelog, portal, and staged release rules.
+  - canon_version: enforcement-redesign-trunk/1.5.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: eda13f3356e5c705a7a12b409c394ac400079acf
+    previous_canon_version: enforcement-redesign-trunk/1.4.0
+    date: 2026-07-10
+    bump: minor
+    summary: Adds capability-routed policy files for Kanboard tracking, MCP maintenance, live-room-capable operation, relay-only live-room prompts, and outbound correspondence, while trimming those details from general workflow, communication, style, and boundary files.
+  - canon_version: enforcement-redesign-coding-agent/1.6.0
+    scope: enforcement-redesign-coding-agent
+    branch: enforcement-redesign/coding-agent
+    introduced_by_commit: 42dba4aa8c672874aa3fa391a38c59479890309c
+    previous_canon_version: enforcement-redesign-coding-agent/1.5.0
+    parent_canon_version: enforcement-redesign-trunk/1.5.0
+    date: 2026-07-10
+    bump: minor
+    summary: Propagates trunk capability-routed Kanboard, MCP maintenance, live-room, relay-only, and outbound-correspondence policies into the coding-agent branch.
+  - canon_version: enforcement-redesign-factorio-modding-agent/1.5.0
+    scope: enforcement-redesign-factorio-modding-agent
+    branch: enforcement-redesign/factorio-modding-agent
+    introduced_by_commit: 5d1f87411730c6fce01707b8a343d37df22465fb
+    previous_canon_version: enforcement-redesign-factorio-modding-agent/1.4.0
+    parent_canon_version: enforcement-redesign-coding-agent/1.6.0
+    date: 2026-07-10
+    bump: minor
+    summary: Propagates trunk and coding capability routes into Factorio while preserving Factorio-specific modding and release policy ownership.
