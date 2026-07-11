@@ -53,11 +53,21 @@ Do not copy this repository's concrete `lab-governance/status.yaml` into a downs
 
 7. Check local governance status.
 
-   Read `lab-governance/status.yaml` when present. This is the universal local status path for a governed workspace. It records the agent's canonical name, kind, active governance branch, current active canon version, current generalized canon version, source, and locally attested status.
+   Read `lab-governance/status.yaml` when present. This is the universal local status path for a governed workspace. It records the agent's canonical name, kind, active governance branch, current active canon version, current generalized canon version, source, runtime surface, granted authority, and locally attested status.
 
    If the file is missing during initialization or update, create it from `lab-governance/templates/local-status.yaml`. Fill only locally attested values and use `null` for unknowns. The local status file is the authoritative portable report.
 
-8. Apply the startup version rule.
+8. Verify runtime surface and authority state.
+
+   Record the active `runtime_surface`, `runtime_surface_gate_state`, `granted_capability_authority`, repository trust state where applicable, managed requirements state where applicable, and projection state where applicable.
+
+   If the runtime surface is ungated, confirm that production and protected mutation authority are absent or externally mediated before substantive work that would use that authority. If the surface appears to hold protected authority without a tested gate or capability removal, stop and route the decision to Jason.
+
+   On Codex surfaces that rely on repository `.codex/config.toml`, verify that the repository is trusted before relying on repo-local `developer_instructions`. An untrusted repository may still load `AGENTS.md` while silently skipping repo `.codex/` config, so it can appear governed without the full load contract.
+
+   On Codex surfaces that rely on generated TOML, `.rules`, or managed requirements artifacts, verify that the artifacts are present, current for the recorded canon version, and validated before treating their controls as active.
+
+9. Apply the startup version rule.
 
    If current governance version equals target, continue silently. If current is behind target, report only:
 
@@ -71,7 +81,7 @@ Do not copy this repository's concrete `lab-governance/status.yaml` into a downs
 
    If Jason answers yes, use `governance-bootstrap-prompt.md` from the root of literal branch `main` of the ai-governance repository as the canonical bootstrap/update prompt. Follow that prompt for explicit target policy-line selection, source branch selection, local governance update, local status update, and reconciliation reporting.
 
-9. Declare loaded governance if action will follow.
+10. Declare loaded governance if action will follow.
 
    Before edits, connector actions, or other substantive work, perform the final action verification required by execution-control: state the intended action, affected files or systems, expected risk tier, and validation plan, then wait for Jason's approval unless his immediately preceding message already approved that exact verification.
 
@@ -109,19 +119,25 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
    Ensure `lab-governance/status.yaml` exists. Start from `lab-governance/templates/local-status.yaml`. Fill only locally attested values for the downstream workspace. Use `null` rather than invented data, and do not reuse this repository's source-branch status values.
 
-5. Create or preserve the local governance index.
+5. Record runtime surface and capability authority.
+
+   Fill runtime-surface fields from observed local state. Do not infer that a runtime gate works from documentation. If a required value is unknown, leave it `null` or mark it unknown rather than inventing it.
+
+   For Codex workspaces that rely on repo `.codex/config.toml`, verify repository trust before relying on `developer_instructions`. For workspaces that rely on managed requirements, verify the managed file is present and current. For workspaces with generated projections, verify the projection stamps match the source branch and canon version.
+
+6. Create or preserve the local governance index.
 
    Ensure `.governance/local/index.yaml` exists. Start from `lab-governance/templates/local-index.yaml` if needed. The index is a loose pointer into local governance; do not prescribe the rest of `.governance/local/` from lab governance.
 
-6. Reconcile local status with source governance state.
+7. Reconcile local status with source governance state.
 
    Compare local status with the selected source branch descriptor and old branch or version evidence. If records disagree, do not silently choose one. Treat obsolete branch names and old status shapes as migration evidence rather than authoritative blockers unless they create a real policy-line, identity, or local-governance conflict. Mark the local status as `behind`, `drifted`, or `unknown` as appropriate, then route the decision to Jason through the active human liaison.
 
-7. Review local governance conflicts.
+8. Review local governance conflicts.
 
    After seeding or updating base governance into the downstream `.governance/` tree, load every local governance file reachable from `.governance/local/index.yaml` and compare local governance against the newly seeded canonical governance. Surface conflicts, duplicated rules, obsolete local overrides, and local rules that now overlap with canonical rules. Local governance wins operationally over canonical governance unless Jason or explicit local policy says otherwise, but conflicts and redundancies must still be reported.
 
-8. Confirm no secrets were introduced.
+9. Confirm no secrets were introduced.
 
    Governance files may contain paths, branch names, canon versions, and provenance references. They must not contain tokens, API keys, private credentials, or recoverable secrets.
 
@@ -173,6 +189,9 @@ Governance is initialized when all of the following are true:
 - Additional policy was loaded only through the task map and any kind route.
 - Local governance was loaded through `.governance/local/index.yaml` when present.
 - The agent has checked `lab-governance/status.yaml` and reconciled it against source governance state when possible.
+- The agent has recorded or explicitly marked unknown the active runtime surface, gate state, granted capability authority, repository trust state when applicable, managed requirements state when applicable, and projection state when applicable.
+- Any protected authority on an ungated runtime surface has been removed, externally mediated, or routed to Jason before use.
+- Any repo-local Codex `developer_instructions` dependency is backed by verified repository trust.
 - Any version mismatch was reported using the minimal startup version rule.
 - The agent can name the active canon version it believes it is consuming, or can clearly state that the value is unknown.
 - The agent has not written secrets into governance files.
@@ -186,6 +205,8 @@ Stop and ask before substantive work when:
 - The Jason-settled canonical agent name is missing or disputed.
 - The active branch, kind, or target canon version is ambiguous.
 - Local status and source governance state disagree.
+- Runtime surface, gate state, repository trust, managed requirements, projection freshness, or granted authority state is unknown and the requested work depends on it.
+- The requested work would use production or protected mutation authority on an ungated surface.
 - Local governance conflicts with updated canonical governance in a way that changes whether the agent may act.
 - A policy conflict changes whether the agent may act.
 - The requested task depends on accepting a draft governance rule as ratified.
