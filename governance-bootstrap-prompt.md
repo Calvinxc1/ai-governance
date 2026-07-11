@@ -56,6 +56,13 @@ path: governance-bootstrap-prompt.md
 
 This prompt is policy-line neutral. Do not infer the target policy line from agent kind, runtime surface, repository name, task role, prior chat label, or the endpoint branch that happens to be easiest to read.
 
+Two-tree model:
+
+- In the downstream workspace, `.governance/` is the active local governance copy the agent loads and obeys.
+- In `ai-governance`, the selected endpoint branch's `lab-governance/` tree is the source product used to seed or update that downstream `.governance/` copy.
+- Never use `ai-governance`'s own `.governance/` tree as the downstream source; it governs this repository's Governance Agent only.
+- `lab-governance/status.yaml` in the downstream workspace is local status metadata, not the active local policy tree.
+
 Before changing files, identify or ask for:
 
 - the Jason-settled canonical agent name
@@ -64,7 +71,6 @@ Before changing files, identify or ask for:
 - the active governance branch selected from the branch mapping
 - the current local status path and versions, if present
 - any old branch names, old canon/version labels, missing modern status fields, or previous governance source paths
-- any legacy self-stamp or registry row that may provide candidate evidence only
 
 If the target policy line was not explicitly provided by Jason, the orchestrating agent, or a trusted local status record that Jason confirms, stop and ask:
 
@@ -72,7 +78,7 @@ If the target policy line was not explicitly provided by Jason, the orchestratin
 Which governance policy line should this workspace use: baseline or enforcement-redesign?
 ```
 
-If local status, old branch names, old canon/version labels, missing modern status fields, a legacy self-stamp, or a legacy registry row names an agent, branch, or policy line, report it as candidate evidence and ask Jason or the orchestrating agent to confirm or correct it before mutating governance. Do not silently reconcile conflicting evidence. Treat obsolete branch names and old status shapes as migration evidence, not as authoritative blockers, unless they create a real policy-line, identity, or local-governance conflict.
+If local status, old branch names, old canon/version labels, missing modern status fields, or previous governance source paths name an agent, branch, or policy line, report them as candidate evidence and ask Jason or the orchestrating agent to confirm or correct them before mutating governance. Do not silently reconcile conflicting evidence. Treat obsolete branch names and old status shapes as migration evidence, not as authoritative blockers, unless they create a real policy-line, identity, or local-governance conflict.
 
 Then:
 
@@ -80,7 +86,7 @@ Then:
 2. Read this universal prompt from literal branch `main`.
 3. Select the target branch from the mapping using the confirmed policy line and agent kind.
 4. Read the selected branch's `lab-governance/governance-init.md` as the setup guide and `lab-governance/templates/local-status.yaml` as the local status shape.
-5. Seed or update the downstream workspace only from the selected branch's `lab-governance/` tree.
+5. Seed or update the downstream workspace's active `.governance/` tree only from the selected branch's `lab-governance/` source product.
 6. Do not copy, merge, diff against, or otherwise use the ai-governance repository's `.governance/` tree as a source for a downstream workspace. In ai-governance, `.governance/` is the Governance Agent's own uniform operating layer, not the per-kind governance product.
 7. Do not copy the selected branch's concrete `lab-governance/status.yaml` into the downstream workspace. Treat it as source-branch maintainer metadata for ai-governance only.
 8. Create or update the downstream workspace's `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml` and fill it with locally attested downstream values.
@@ -89,10 +95,7 @@ Then:
 11. Re-read the downstream workspace's resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present. These are the files just seeded or updated in the downstream workspace, not ai-governance's `.governance/` files.
 12. Load every local governance file reachable from `.governance/local/index.yaml` and compare local governance against the newly seeded canonical governance for conflicts, duplicated rules, obsolete local overrides, and local rules that now overlap with canonical rules.
 13. Treat lab/canon governance as the base layer, loaded local governance as the workspace layer above it, and explicit one-shot overrides as the top layer for their declared operation. Local governance wins operationally over canonical governance unless Jason or explicit local policy says otherwise, but conflicts and redundancies must still be surfaced.
-14. Compare local status, source branch descriptor, old branch or version evidence, and any legacy self-stamp or registry evidence. Report conflicts instead of silently reconciling them.
-15. Treat the legacy central registry as historical and non-authoritative. Do not submit a central registry attestation unless Jason explicitly requests legacy registry maintenance.
-
-Do not directly edit `agent-registry/agents.yaml` unless Jason explicitly asks for legacy registry maintenance.
+14. Compare local status, source branch descriptor, and old branch or version evidence. Report conflicts instead of silently reconciling them.
 
 Close out with only:
 
@@ -102,7 +105,6 @@ Close out with only:
 - active and generalized canon versions after the operation
 - local status path updated or created
 - local status declared state
-- legacy registry status, only if Jason explicitly requested legacy registry maintenance
 - local governance conflicts, redundancies, or obsolete overrides found during update
 - unresolved reconciliation items and their owners
 ````
