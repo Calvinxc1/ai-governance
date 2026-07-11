@@ -27,7 +27,7 @@ prompt_contract:
   - Fetch or inspect the ai-governance Gitea repository.
   - Copy or merge the correct `lab-governance/` source into the local agent workspace, excluding the selected source branch's concrete `lab-governance/status.yaml`.
   - Preserve local-only governance files unless the prompt explicitly instructs reconciliation.
-  - Create or update `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml` when branch metadata is present.
+  - Create or update `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml`.
   - Validate loaded canon versions after update.
   - Compare the new policy state against the local status file and any legacy self-stamp or registry evidence.
   - Provide live reconciliation feedback before and after local mutation.
