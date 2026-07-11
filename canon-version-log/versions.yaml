@@ -332,3 +332,20 @@ versions:
     date: 2026-07-10
     bump: minor
     summary: Propagates trunk policy consolidation, folds desktop wellbeing, correspondence, and creative-canon files into engagement posture, style, desktop role, and knowledge-model routes, and adds a desktop Gmail boundary policy.
+  - canon_version: enforcement-redesign-trunk/1.5.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: eda13f3356e5c705a7a12b409c394ac400079acf
+    previous_canon_version: enforcement-redesign-trunk/1.4.0
+    date: 2026-07-10
+    bump: minor
+    summary: Adds capability-routed policy files for Kanboard tracking, MCP maintenance, live-room-capable operation, relay-only live-room prompts, and outbound correspondence, while trimming those details from general workflow, communication, style, and boundary files.
+  - canon_version: enforcement-redesign-desktop-orchestrator/1.5.0
+    scope: enforcement-redesign-desktop-orchestrator
+    branch: enforcement-redesign/desktop-orchestrator
+    introduced_by_commit: e1606deb24a27ee8cf2620fc5dc697cd2e150ac1
+    previous_canon_version: enforcement-redesign-desktop-orchestrator/1.4.0
+    parent_canon_version: enforcement-redesign-trunk/1.5.0
+    date: 2026-07-10
+    bump: minor
+    summary: Propagates trunk capability routes, makes desktop Gmail a capability route instead of a default load, and routes correspondence sessions through outbound-correspondence.
