@@ -18,26 +18,22 @@ route_groups:
     - lab-governance/policies/execution-control.yaml
     - lab-governance/policies/request-elicitation.yaml
     - lab-governance/policies/epistemic-acceptance.yaml
-  communication.durable_boundaries:
-    - lab-governance/policies/durable-communication-boundaries.yaml
+  communication.inter_agent:
+    - lab-governance/policies/inter-agent-communication.yaml
   communication.live_room:
+    - lab-governance/policies/inter-agent-communication.yaml
     - lab-governance/policies/agent-identity.yaml
-    - lab-governance/policies/durable-communication-boundaries.yaml
     - lab-governance/policies/live-room-coordination.yaml
     - lab-governance/policies/live-room-closeout.yaml
   connector.boundaries:
     - lab-governance/policies/boundaries.yaml
-    - lab-governance/policies/safety-transparency.yaml
-    - lab-governance/policies/durable-communication-boundaries.yaml
   safety.validation:
     - lab-governance/policies/risk-validation.yaml
-    - lab-governance/policies/safety-transparency.yaml
   workflow.auditability:
     - lab-governance/policies/workflow-auditability.yaml
   governance.update:
     - lab-governance/policies/execution-control.yaml
     - lab-governance/policies/epistemic-acceptance.yaml
-    - lab-governance/policies/safety-transparency.yaml
     - lab-governance/processes/agent-governance-update.yaml
   governance.override:
     - lab-governance/processes/override-governance.yaml
@@ -48,7 +44,7 @@ routes:
     groups:
       - governance.enforcement
       - execution.baseline
-      - communication.durable_boundaries
+      - communication.inter_agent
     files: []
   substantive_work:
     groups:

@@ -12,8 +12,7 @@ route_groups:
   coding.planning:
     - lab-governance/policies/plan-mode.yaml
   coding.substantive:
-    - lab-governance/policies/code-skepticism.yaml
-    - lab-governance/policies/documentation-drift.yaml
+    - lab-governance/policies/coding-work.yaml
   coding.git:
     - lab-governance/policies/gitflow.yaml
     - lab-governance/policies/commit-push-discipline.yaml

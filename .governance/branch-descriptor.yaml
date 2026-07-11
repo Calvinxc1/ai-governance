@@ -1,20 +1,20 @@
 id: branch_descriptor
 status: active
-branch: enforcement-redesign/factorio-modding-agent/1.3.0
+branch: enforcement-redesign/factorio-modding-agent/1.4.0
 kind: factorio_modding_agent
-canon_version: enforcement-redesign/factorio-modding-agent/1.3.0
+canon_version: enforcement-redesign/factorio-modding-agent/1.4.0
 parent:
-  branch: enforcement-redesign/coding-agent/1.4.0
-  canon_version: enforcement-redesign/coding-agent/1.4.0
-  summary: Enforcement-redesign coding-agent contract for software engineering, GitFlow,
-    review, documentation drift, and commit discipline.
+  branch: enforcement-redesign/coding-agent/1.5.0
+  canon_version: enforcement-redesign/coding-agent/1.5.0
+  summary: Enforcement-redesign coding-agent contract for software engineering, coding-work,
+    GitFlow, review, and commit discipline.
 narrative_blurb: Enforcement-redesign Factorio modding agents inherit coding-agent
   discipline and add Factorio lifecycle, prototype, dependency, release, changelog,
   and local workflow/status rules.
 orientation:
-  consumes_layer: enforcement-redesign/factorio-modding-agent/1.3.0
+  consumes_layer: enforcement-redesign/factorio-modding-agent/1.4.0
   full_picture_branch: true
-  inheritance_model: enforcement-redesign/coding-agent/1.4.0 is merged down into this
+  inheritance_model: enforcement-redesign/coding-agent/1.5.0 is merged down into this
     branch after Jason ratifies enforcement-redesign coding-agent or trunk changes.
   versioning_model: The versioned branch path is the active governance version; canon_version
     mirrors that branch path.
