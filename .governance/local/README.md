@@ -1,6 +1,6 @@
 # Local Governance Deviations
 
-This directory records explicit local deviations between this repository's active `.governance/` copy and the generalized `lab-governance/` rule set.
+This directory records explicit local deviations for this repository's uniform `.governance/` operating layer.
 
 Use this directory when the repository's purpose requires local behavior that should not automatically propagate to other repositories or agents.
 
@@ -11,9 +11,9 @@ Local deviations must be:
 - explicit
 - narrow
 - tied to this repository's governance-maintenance purpose
-- reviewed against `lab-governance/`
+- reviewed against branch-local metadata and `lab-governance/` when those trees exist on the current branch
 - promoted to `lab-governance/` only when Jason decides the rule should generalize
 
 The canonical deviation list is `deviations.yaml`.
 
-`index.yaml` is the loose local-governance pointer. `status.yaml` is this workspace's portable governance status report. Other local files are repository-owned and should not be inferred as lab-wide structure.
+`index.yaml` is the loose local-governance pointer. Branch-local status belongs outside `.governance`, under `branch-governance/status.yaml`. Other local files are repository-owned and should not be inferred as lab-wide structure.
