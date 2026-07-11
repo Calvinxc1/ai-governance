@@ -45,6 +45,11 @@ local_status_fields:
   - source_repository_or_path
   - governance_source_commit
   - runtime_surface
+  - runtime_surface_gate_state
+  - granted_capability_authority
+  - repository_trust_state
+  - managed_requirements_state
+  - projection_state
   - code_authority
   - last_verified_at
   - agent_declared_status
