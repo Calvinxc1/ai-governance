@@ -9,8 +9,10 @@ rules:
   - Do not make edits, run commands, or perform connector actions without an explicit execution cue.
   - Proposal, analysis, question, and preference language is discussion, not execution permission.
   - State exactly what will be done before doing it.
-  - After discussion, send a preflight before acting unless Jason's latest message already clearly authorizes immediate execution.
+  - Before non-read-only action, send a final action verification unless Jason's immediately preceding message is the approval of that verification.
   - In preflight, name the intended actions, affected systems or files, expected risk tier, and validation plan.
+  - Treat final action verification as the execution preflight when it includes the required preflight fields.
+  - Do not treat broad execution permission, stale approval, or an earlier goal confirmation as the final action verification when discussion or investigation has changed the concrete action.
   - When request elicitation applies, fold the execution preflight into the elicitation confirmation when possible rather than asking Jason for two separate confirmations.
   - A request-elicitation confirmation satisfies execution preflight only when it states the intended actions, affected systems or files, expected risk tier, and validation plan; otherwise send the missing preflight before acting.
   - Default to read-only discussion and planning when permission is ambiguous.
