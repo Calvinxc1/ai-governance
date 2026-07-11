@@ -4,7 +4,7 @@ This directory contains the lab-wide governance rule set maintained by this repo
 
 These files are the general policy and process contract intended to propagate to the rest of the lab and to specialized agent branches.
 
-This stable `/main` endpoint branch uses an enforcement-first governance model. High-stakes recurring failures should map to hard gates, cheap default paths, or detectors; prose-only fixes are tracked debt unless Jason accepts the residual risk. Bootstrap and update instructions preserve the prompt source policy line and select the current mapped `/main` endpoint for the target agent kind unless Jason explicitly redirects an agent to a different policy line.
+This stable `/main` endpoint branch uses an enforcement-first governance model. High-stakes recurring failures should map to hard gates, cheap default paths, or detectors; prose-only fixes are tracked debt unless Jason accepts the residual risk. Bootstrap and update instructions live on literal branch `main` and require an explicit target policy line before selecting the mapped `/main` endpoint for the target agent kind.
 
 This directory is the maintained governance product for this branch. It is not the active local operating layer for the Governance Agent working in this repository; that role belongs to the uniform `.governance/` tree.
 
@@ -22,8 +22,8 @@ Layout:
 - `lab-governance/processes/`: meta-governance and operating processes.
 - `lab-governance/skills/`: loadable skill sources that implement governance behavior in runtimes that support skills.
 - `lab-governance/overrides/`: temporary exception log and its schema.
-- `lab-governance/templates/`: reusable setup templates, including the local governance status template, loose local index template, legacy self-stamp template, and canonical governance bootstrap prompt.
-- `lab-governance/templates/governance-bootstrap-prompt.md`: canonical prompt for first-time governance initialization and governed-agent updates.
+- `lab-governance/templates/`: reusable setup templates, including the local governance status template, loose local index template, legacy self-stamp template, and bootstrap compatibility pointer.
+- `lab-governance/templates/governance-bootstrap-prompt.md`: compatibility pointer to the root-level universal canonical bootstrap prompt on literal branch `main`.
 - `lab-governance/templates/experimental-channel-transition-prompt.md`: prompt for moving an already-governed workspace from the baseline policy line to the `enforcement-redesign/<endpoint>/main` policy line.
 - `lab-governance/templates/kind-branch-migration-checklist.md`: version-agnostic checklist for adopting a target kind branch without hard-coding a particular canon version.
 - `lab-governance/templates/local-index.yaml`: loose pointer template for `.governance/local/index.yaml`; the local directory's internal structure remains workspace-owned.
