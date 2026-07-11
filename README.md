@@ -1,22 +1,20 @@
 # AI Governance
 
-This repository maintains Jason's AI agent governance.
+This branch carries a portable AI agent governance policy collection.
 
-It has two governance areas:
+It distinguishes two governance areas:
 
-- `.governance/` is this repository's uniform operating layer for the Governance Agent. It is byte-identical across active branches and is not a source for downstream workspaces.
 - `lab-governance/` is the maintained governance product for this branch. Downstream workspaces seed and update from the selected branch's `lab-governance/` tree.
+- `.governance/` is the downstream workspace-local governance tree created from the product; it is not part of this portable source branch. Workspace-local files under `.governance/local/` remain owned by the consuming workspace.
 
-The split is intentional: `.governance/` governs this repository's local agent behavior, while `lab-governance/` is the product this repository maintains for propagation to other agents and repositories.
+The split is intentional: `lab-governance/` is the portable source product, while downstream `.governance/` trees are local copies plus workspace-specific overlays.
 
-This branch is `enforcement-redesign/trunk/main`, a stable `/main` endpoint in the `enforcement-redesign` policy line.
+This branch is `portable/trunk/main`, a stable `/main` endpoint in the `portable` policy line.
 
-Agents should start with `AGENTS.md`, then load local policy through `.governance/task-map.yaml` and any branch-local `.governance/kind-routes.yaml` file. The task map is the explicit loading contract: agents resolve route groups and direct route files from the map instead of inferring policy from folder names. When the task is to maintain the generalized rule set, compare the local copy against `lab-governance/` and update the appropriate tree explicitly.
+Agents should start with `AGENTS.md`, then load policy through `lab-governance/task-map.yaml` and any branch-local `lab-governance/kind-routes.yaml` file. The task map is the explicit loading contract: agents resolve route groups and direct route files from the map instead of inferring policy from folder names.
 
-Repo-local governance, when present, is reached through `.governance/local/index.yaml`. Local governance is the layer above the generalized lab/canon base for that repository. Explicit one-shot overrides remain the top layer for the declared operation.
+Workspace-local governance, when present, is reached through `.governance/local/index.yaml`. Local governance is the layer above the generalized lab/canon base for that workspace. Explicit one-shot overrides remain the top layer for the declared operation.
 
-General policy intended for lab propagation belongs in `lab-governance/`. Local governance needed for this repo's agents belongs in `.governance/`.
+Portable policy belongs in `lab-governance/`. Local governance belongs in the consuming workspace's `.governance/local/`.
 
-For new agent setup and governed-agent updates, use the universal canonical prompt from literal branch `main` at root path `governance-bootstrap-prompt.md`. Endpoint-local prompt files are compatibility pointers only. The universal prompt requires an explicit target policy line, such as `baseline` or `enforcement-redesign`, before selecting the mapped `/main` endpoint for the target agent kind or mutating local governance. In a downstream workspace, `.governance/` is the active local governance tree; this branch's `lab-governance/` tree is the source product used to seed or update it.
-
-For an already-governed workspace that should move from the baseline policy line to the experimental branch family, use `lab-governance/templates/experimental-channel-transition-prompt.md`.
+For new agent setup and governed-agent updates, use the bootstrap prompt supplied by the policy source. In a downstream workspace, `.governance/` is the active local governance tree; this branch's `lab-governance/` tree is the source product used to seed or update it.

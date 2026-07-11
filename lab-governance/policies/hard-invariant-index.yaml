@@ -21,11 +21,8 @@ guarded_domains:
   - id: outbound_external_communication
     domain: Sending, submitting, posting, transmitting, or externally publishing communication or form content.
     full_policy: lab-governance/policies/hard-invariants.yaml
-  - id: gmail_read_only
-    domain: Gmail search, read, message mutation, thread mutation, label, archive, trash, spam, draft, or send behavior.
-    full_policy: lab-governance/policies/hard-invariants.yaml
   - id: impersonation
-    domain: Acting as Jason, speaking as Jason, signing as Jason, or presenting agent output as Jason's own action.
+    domain: Acting as human_owner, speaking as human_owner, signing as human_owner, or presenting agent output as human_owner's own action.
     full_policy: lab-governance/policies/hard-invariants.yaml
   - id: data_destruction_and_protective_controls
     domain: Deleting, overwriting, weakening retention, object lock, branch protection, 2FA, backup, or other protective controls.

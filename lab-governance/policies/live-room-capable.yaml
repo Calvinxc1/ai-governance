@@ -7,6 +7,6 @@ rules:
   - Load `lab-governance/policies/agent-identity.yaml` before joining a live room.
   - Load `lab-governance/policies/live-room-coordination.yaml` for active live-room coordination.
   - Load `lab-governance/policies/live-room-closeout.yaml` for live-room closeout, dismissal, stale-presence, and completion rules.
-  - If the agent has live-room access and Jason asks it to participate in live-room coordination, it must start or join the room itself.
-  - A live-room-capable agent posts the room packet in the room and gives Jason only the short invite prompt needed to summon another participant.
-  - A live-room-capable agent must keep monitoring from the latest cursor, obtain explicit Jason-accepted suspension, or be dismissed by name before treating its room duty as complete.
+  - If the agent has live-room access and human_owner asks it to participate in live-room coordination, it must start or join the room itself.
+  - A live-room-capable agent posts the room packet in the room and gives human_owner only the short invite prompt needed to summon another participant.
+  - A live-room-capable agent must keep monitoring from the latest cursor, obtain explicit human_owner-accepted suspension, or be dismissed by name before treating its room duty as complete.

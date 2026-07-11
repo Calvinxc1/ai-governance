@@ -1,14 +1,13 @@
 id: branch_descriptor
 status: active
-branch: enforcement-redesign/trunk/main
+branch: portable/trunk/main
 kind: general
-canon_version: enforcement-redesign/trunk/main
-narrative_blurb: Enforcement-redesign trunk carries the experimental general governance
+canon_version: portable/trunk/main
+narrative_blurb: Portable trunk carries the general governance
   contract true of every agent kind.
 orientation:
-  consumes_layer: enforcement-redesign/trunk/main
+  consumes_layer: portable/trunk/main
   full_picture_branch: false
-  inheritance_model: Kind version branches merge enforcement-redesign/trunk/main
-    down after Jason ratifies enforcement-redesign trunk changes.
+  inheritance_model: Kind branches merge portable/trunk/main down after governance_owner ratifies portable trunk changes.
   versioning_model: The stable `/main` endpoint branch path is the active governance
     version; canon_version mirrors that branch path.

@@ -1,4 +1,0 @@
-local_governance:
-  load:
-    - .governance/local/deviations.yaml
-  notes: []

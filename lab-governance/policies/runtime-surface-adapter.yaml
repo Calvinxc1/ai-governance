@@ -1,22 +1,22 @@
 id: runtime_surface_adapter
 status: ratified
 scope: all_agents
-summary: Runtime-surface loading, gating, and capability-authority rules for the enforcement-redesign policy line.
+summary: Runtime-surface loading, gating, and capability-authority rules for the portable policy line.
 bucket: A_hard_invariants
 ratification:
-  source: Jason ratified the surface-authority rule in conversation on 2026-07-11.
+  source: portable policy initialization
   rule: Ungated runtime surfaces may not hold production or protected mutation authority.
 surface_authority_rule:
   invariant: Runtime surface, agent kind, and authority are separate axes; authority follows the tested gates and granted capabilities of the runtime surface, not the agent kind.
   enforcement_point: Capability removal or withholding is the primary control on ungated surfaces; managed runtime gates are the primary control only where behaviorally validated.
-  fallback: If a surface cannot gate an authority and the authority cannot be removed or mediated outside the agent, stop and route the decision to Jason before using that surface for protected work.
+  fallback: If a surface cannot gate an authority and the authority cannot be removed or mediated outside the agent, stop and route the decision to human_owner before using that surface for protected work.
   residual_risk: Policy text alone cannot prevent an ungated surface from misusing a capability it actually holds.
 rules:
   - Classify every runtime surface by observed behavior, not documentation alone.
   - For each surface, record what the runtime injects, what it can gate, what mechanisms are known inert, what capabilities may be granted, and what authority is forbidden.
   - Do not bind agent kind to runtime surface; a kind may run on any surface whose tested gates and granted capabilities are sufficient for the authority being used.
   - Do not grant production or protected mutation authority to an ungated surface.
-  - Prefer removing or withholding mutation-capable tools, credentials, MCP servers, connector scopes, or skills over relying on prose.
+  - Prefer removing or withholding mutation-capable tools, credentials, external tool servers, connector scopes, or skills over relying on prose.
   - Treat capability removal below the policy layer as a hard control when the agent cannot reach a mutation-capable tool or credential.
   - Treat generated runtime artifacts as projections from canon, not authored policy sources.
   - Stamp every generated projection with source branch, canon_version, projection type, generator version, generated timestamp, and a do-not-edit marker.
@@ -35,7 +35,7 @@ forced_core:
     - Do not inline the full canon unless behavioral testing shows the precise walk directive fails under real work.
     - A forced core improves loading reliability; it is not an enforcement gate.
 known_surfaces:
-  - id: claude_cowork
+  - id: claude_workspace_ungated
     observed_on: 2026-07-11
     injects:
       - Workspace CLAUDE.md verbatim.
@@ -51,7 +51,7 @@ known_surfaces:
       - User or project settings-based permissions.
     permitted_capability_shape:
       - Read-only or externally mediated capabilities.
-      - Mutation-capable connectors, MCP servers, credentials, and skills must be withheld unless Jason explicitly accepts a named residual risk.
+      - Mutation-capable connectors, external tool servers, credentials, and skills must be withheld unless human_owner explicitly accepts a named residual risk.
     forbidden_authority:
       - Production mutation authority.
       - Protected control mutation authority.
@@ -113,10 +113,10 @@ auto_review:
   proposed_shape: deny_and_escalate_only
   allowed_behavior:
     - Deny sandbox-boundary crossings that match hard invariants.
-    - Escalate every other boundary crossing to Jason.
+    - Escalate every other boundary crossing to human_owner.
   forbidden_behavior:
     - Silently approve a boundary crossing.
-  reason: Curated execpolicy allowlists removed routine prompting without trading away Jason's oversight on novel boundary crossings.
+  reason: Curated execpolicy allowlists removed routine prompting without trading away human_owner's oversight on novel boundary crossings.
   required_test_before_recommendation: Behaviorally verify that a deny-and-escalate-only policy denies invariant violations and escalates nonmatching boundary crossings rather than approving them or blanket refusing them.
   limit: auto_review reviews boundary crossings only; it does not govern actions wholly inside the workspace.
 managed_hooks:

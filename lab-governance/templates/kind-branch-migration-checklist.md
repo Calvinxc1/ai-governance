@@ -2,7 +2,7 @@
 
 Use this checklist when aligning a workspace or repository to a target governance kind branch.
 
-This checklist is intentionally version-agnostic. Do not hard-code today's canon versions into downstream work. Read the target branch descriptor, target version log, or Jason's explicit instruction, then verify the migrated workspace records those current target values consistently.
+This checklist is intentionally version-agnostic. Do not hard-code today's canon versions into downstream work. Read the target branch descriptor, target version log, or human_owner's explicit instruction, then verify the migrated workspace records those current target values consistently.
 
 ## Target
 
@@ -34,7 +34,7 @@ This checklist is intentionally version-agnostic. Do not hard-code today's canon
 - Confirm `.governance/local/status.yaml` exists when the workspace participates in portable local governance status.
 - Confirm local status records the canonical agent name, active governance branch, active `canon_version`, and parent or generalized `canon_version` using the current target values.
 - Confirm local status records runtime surface, gate state, granted capability authority, repository trust state when applicable, managed requirements state when applicable, and projection state when applicable.
-- Confirm an ungated runtime surface has no production or protected mutation authority unless Jason explicitly accepted a named residual risk.
+- Confirm an ungated runtime surface has no production or protected mutation authority unless human_owner explicitly accepted a named residual risk.
 - Confirm any Codex workspace that relies on repo-local `.codex/config.toml` is trusted before relying on `developer_instructions`.
 - Confirm any generated runtime projection, Codex TOML artifact, Codex `.rules` file, or managed requirements artifact is current for the recorded source branch and `canon_version`.
 - Confirm workspace-local overlays, deviations, and notes remain local policy or local metadata rather than being folded into generalized branch policy.
@@ -43,7 +43,7 @@ This checklist is intentionally version-agnostic. Do not hard-code today's canon
 ## Path And Publication Boundaries
 
 - Confirm downstream workspaces do not rely on active `lab-governance/...` paths unless the workspace is intentionally the source governance repository.
-- Confirm a top-level `lab-governance/` tree is absent from downstream repositories unless Jason explicitly wants that repository to maintain generalized governance.
+- Confirm a top-level `lab-governance/` tree is absent from downstream repositories unless human_owner explicitly wants that repository to maintain generalized governance.
 - For intentionally local-only governance, confirm the local files are excluded from publication or commit through the workspace's chosen local mechanism.
 - Local-only fork governance may note that a workspace is an upstream fork and keep fork-specific rules local, but the actual fork-specific policy must live in that workspace's local governance files.
 
