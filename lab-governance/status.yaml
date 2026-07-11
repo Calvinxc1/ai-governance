@@ -4,7 +4,7 @@ canonical_agent_name: Governance Agent
 agent_kind: desktop_orchestrator
 active_governance_branch: baseline/factorio-modding-agent/main
 current_active_canon_version: baseline/factorio-modding-agent/main
-current_generalized_canon_version: baseline/coding-agent/1.5.0
+current_generalized_canon_version: baseline/coding-agent/main
 source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
 governance_source_commit: null
 runtime_surface: codex_cli
