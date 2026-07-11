@@ -249,3 +249,58 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Adds no-substitution gates for system-of-record connector mutations, explicit no-reprompt live-room initiation monitoring, wrong-path audit remediation guidance, and a local Governance Agent duty to generalize policy-failure reviews into recurrence-prevention recommendations.
+  - canon_version: enforcement-redesign-trunk/1.0.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: f060741df40ed1b8dfa519e4d8c48c84158a6d9f
+    date: 2026-07-09
+    bump: major
+    summary: Starts the secondary enforcement-redesign governance channel with enforcement buckets, outcome-plus-bounds live-room and policy-maintenance rules, simplified connector bounds, collaboration levels, task brief template, and legacy registry cleanup.
+  - canon_version: enforcement-redesign-trunk/1.1.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: 76d3a6ee68de5eb13fe6d813ad17c5a16edd88d9
+    previous_canon_version: enforcement-redesign-trunk/1.0.0
+    date: 2026-07-09
+    bump: minor
+    summary: Makes bootstrap and governance-update documentation preserve the secondary enforcement-redesign branch channel so experimental prompts update from experimental branches unless Jason explicitly redirects.
+  - canon_version: enforcement-redesign-trunk/1.2.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: 3497c87207d65400c511f660e37adb4ef21a943c
+    previous_canon_version: enforcement-redesign-trunk/1.1.0
+    date: 2026-07-09
+    bump: minor
+    summary: Adds an experimental-channel transition prompt for moving already-governed agents from the normal governance branch family to the secondary enforcement-redesign branch family.
+  - canon_version: enforcement-redesign-trunk/1.3.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: f64793769884c70307addfcde3e63084f2050fff
+    previous_canon_version: enforcement-redesign-trunk/1.2.0
+    date: 2026-07-10
+    bump: minor
+    summary: Adds request elicitation as a loadable-skill-backed intake gate, adds a tiny hard-invariant index, and populates the context-loaded Bucket A hard-invariant register with Jason-decided guarded domains.
+  - canon_version: enforcement-redesign-trunk/1.4.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: ca85bb7e70832d0cb492d63eb7d01e51aed6f5a5
+    previous_canon_version: enforcement-redesign-trunk/1.3.0
+    date: 2026-07-10
+    bump: minor
+    summary: Consolidates safety-transparency and durable-communication boundaries into execution control, policy maintenance, and inter-agent communication; moves Gmail and forge operational detail out of policy-line trunk boundaries; and trims trunk version-control guardrail detail for kind-level ownership.
+  - canon_version: enforcement-redesign-trunk/1.5.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: eda13f3356e5c705a7a12b409c394ac400079acf
+    previous_canon_version: enforcement-redesign-trunk/1.4.0
+    date: 2026-07-10
+    bump: minor
+    summary: Adds capability-routed policy files for Kanboard tracking, MCP maintenance, live-room-capable operation, relay-only live-room prompts, and outbound correspondence, while trimming those details from general workflow, communication, style, and boundary files.
+  - canon_version: enforcement-redesign-trunk/1.6.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk/main
+    introduced_by_commit: 647982ca8b9455902d22ca3dc22f1658ac448025
+    previous_canon_version: enforcement-redesign-trunk/1.5.0
+    date: 2026-07-11
+    bump: minor
+    summary: Records the repo-wide structural change that made `.governance/` a byte-identical Governance Agent operating layer, collapsed branch metadata and status into `lab-governance/`, renamed active policy endpoints to `/main`, and clarified bootstrap/init sourcing so downstream workspaces seed and update only from the selected branch's `lab-governance/` tree.
