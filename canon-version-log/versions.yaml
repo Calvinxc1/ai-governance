@@ -336,3 +336,11 @@ versions:
     date: 2026-07-11
     bump: patch
     summary: Aligns the uniform `.governance` agent-governance-update process with the lab-governance product by requiring status creation from the local-status template without a branch-metadata qualifier.
+  - canon_version: enforcement-redesign-trunk/1.7.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk/main
+    introduced_by_commit: 4ba779457d07405a3949c1505d8b7f97ff8df5d2
+    previous_canon_version: enforcement-redesign-trunk/1.6.4
+    date: 2026-07-11
+    bump: minor
+    summary: Adds runtime-surface authority governance, generated projection and validation requirements, Codex artifact classification, opt-in deny-and-escalate auto_review status, and workspace status fields for gate, trust, managed requirements, projection, and capability authority state.

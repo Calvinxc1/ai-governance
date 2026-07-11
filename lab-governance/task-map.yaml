@@ -3,6 +3,7 @@ default_load:
   - AGENTS.md
   - lab-governance/policies/universal.yaml
   - lab-governance/policies/enforcement-model.yaml
+  - lab-governance/policies/runtime-surface-adapter.yaml
   - lab-governance/policies/hard-invariant-index.yaml
 route_resolution:
   - Load default_load first.
@@ -14,6 +15,7 @@ route_resolution:
 route_groups:
   governance.enforcement:
     - lab-governance/policies/enforcement-model.yaml
+    - lab-governance/policies/runtime-surface-adapter.yaml
     - lab-governance/policies/hard-invariant-index.yaml
   execution.baseline:
     - lab-governance/policies/execution-control.yaml
