@@ -320,3 +320,11 @@ versions:
     date: 2026-07-11
     bump: patch
     summary: Makes governance initialization branch-neutral about always-load files so downstream workspaces follow the selected branch entrypoint instead of assuming enforcement-redesign hard-invariant files exist on every policy line.
+  - canon_version: enforcement-redesign-trunk/1.6.3
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk/main
+    introduced_by_commit: 5f332fb9168d207eae66ddacf0a7bbadc902b437
+    previous_canon_version: enforcement-redesign-trunk/1.6.2
+    date: 2026-07-11
+    bump: patch
+    summary: Aligns the lab-governance policy-maintenance process with the uniform `.governance` operating-layer rule, including repo-wide `.governance` propagation validation and `/main` policy-line trunk wording.
