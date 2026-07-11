@@ -256,22 +256,6 @@ versions:
     date: 2026-07-09
     bump: major
     summary: Starts the secondary enforcement-redesign governance channel with enforcement buckets, outcome-plus-bounds live-room and policy-maintenance rules, simplified connector bounds, collaboration levels, task brief template, and legacy registry cleanup.
-  - canon_version: enforcement-redesign-coding-agent/1.0.0
-    scope: enforcement-redesign-coding-agent
-    branch: enforcement-redesign/coding-agent
-    introduced_by_commit: 1c8753175dc16611b81785dcc1cea8bce41034b3
-    parent_canon_version: enforcement-redesign-trunk/1.0.0
-    date: 2026-07-09
-    bump: major
-    summary: Starts the secondary enforcement-redesign coding-agent channel and annotates commit, push, PR, branch, and forge mutations as hard invariants with enforcement points.
-  - canon_version: enforcement-redesign-factorio-modding-agent/1.0.0
-    scope: enforcement-redesign-factorio-modding-agent
-    branch: enforcement-redesign/factorio-modding-agent
-    introduced_by_commit: 126ae6919615b569af0b63a6c6cbdc114efad3ce
-    parent_canon_version: enforcement-redesign-coding-agent/1.0.0
-    date: 2026-07-09
-    bump: major
-    summary: Starts the secondary enforcement-redesign Factorio modding channel on top of the secondary coding-agent contract.
   - canon_version: enforcement-redesign-trunk/1.1.0
     scope: enforcement-redesign-trunk
     branch: enforcement-redesign/trunk
@@ -280,24 +264,6 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Makes bootstrap and governance-update documentation preserve the secondary enforcement-redesign branch channel so experimental prompts update from experimental branches unless Jason explicitly redirects.
-  - canon_version: enforcement-redesign-coding-agent/1.1.0
-    scope: enforcement-redesign-coding-agent
-    branch: enforcement-redesign/coding-agent
-    introduced_by_commit: ae2d129698fbad731c6f1f4fc833523f9a742297
-    previous_canon_version: enforcement-redesign-coding-agent/1.0.0
-    parent_canon_version: enforcement-redesign-trunk/1.1.0
-    date: 2026-07-09
-    bump: minor
-    summary: Propagates the experimental bootstrap branch-channel preservation rule into the secondary coding-agent branch.
-  - canon_version: enforcement-redesign-factorio-modding-agent/1.1.0
-    scope: enforcement-redesign-factorio-modding-agent
-    branch: enforcement-redesign/factorio-modding-agent
-    introduced_by_commit: 8ed9ec506a876152f289d0bdbc80edb314c7e32b
-    previous_canon_version: enforcement-redesign-factorio-modding-agent/1.0.0
-    parent_canon_version: enforcement-redesign-coding-agent/1.1.0
-    date: 2026-07-09
-    bump: minor
-    summary: Propagates the experimental bootstrap branch-channel preservation rule into the secondary Factorio modding branch.
   - canon_version: enforcement-redesign-trunk/1.2.0
     scope: enforcement-redesign-trunk
     branch: enforcement-redesign/trunk
@@ -306,33 +272,6 @@ versions:
     date: 2026-07-09
     bump: minor
     summary: Adds an experimental-channel transition prompt for moving already-governed agents from the normal governance branch family to the secondary enforcement-redesign branch family.
-  - canon_version: enforcement-redesign-coding-agent/1.2.0
-    scope: enforcement-redesign-coding-agent
-    branch: enforcement-redesign/coding-agent
-    introduced_by_commit: 6db8754ac074ba3899e297ca8cc30a2aea18e065
-    previous_canon_version: enforcement-redesign-coding-agent/1.1.0
-    parent_canon_version: enforcement-redesign-trunk/1.2.0
-    date: 2026-07-09
-    bump: minor
-    summary: Propagates the experimental-channel transition prompt into the secondary coding-agent branch.
-  - canon_version: enforcement-redesign-factorio-modding-agent/1.2.0
-    scope: enforcement-redesign-factorio-modding-agent
-    branch: enforcement-redesign/factorio-modding-agent
-    introduced_by_commit: ec806162ff1d58d39b83e85bc4612e894916d4c5
-    previous_canon_version: enforcement-redesign-factorio-modding-agent/1.1.0
-    parent_canon_version: enforcement-redesign-coding-agent/1.2.0
-    date: 2026-07-09
-    bump: minor
-    summary: Propagates the experimental-channel transition prompt into the secondary Factorio modding branch.
-  - canon_version: enforcement-redesign-coding-agent/1.3.0
-    scope: enforcement-redesign-coding-agent
-    branch: enforcement-redesign/coding-agent
-    introduced_by_commit: 0697ba84c448a1bf381fdd92c8df9fdd89595ed4
-    previous_canon_version: enforcement-redesign-coding-agent/1.2.0
-    parent_canon_version: enforcement-redesign-trunk/1.2.0
-    date: 2026-07-09
-    bump: minor
-    summary: Adds GitFlow deployment and hotfix runbooks as on-demand coding-agent target-branch paths, reduces their policy to outcomes and invariants, and standardizes target-branch gates, pull request head guards, block-on-outdated protection, and read-only repo deployment configuration.
   - canon_version: enforcement-redesign-trunk/1.3.0
     scope: enforcement-redesign-trunk
     branch: enforcement-redesign/trunk
@@ -341,24 +280,6 @@ versions:
     date: 2026-07-10
     bump: minor
     summary: Adds request elicitation as a loadable-skill-backed intake gate, adds a tiny hard-invariant index, and populates the context-loaded Bucket A hard-invariant register with Jason-decided guarded domains.
-  - canon_version: enforcement-redesign-coding-agent/1.4.0
-    scope: enforcement-redesign-coding-agent
-    branch: enforcement-redesign/coding-agent
-    introduced_by_commit: 00a0390601bf0fdffa03a8e7ed01994907560645
-    previous_canon_version: enforcement-redesign-coding-agent/1.3.0
-    parent_canon_version: enforcement-redesign-trunk/1.3.0
-    date: 2026-07-10
-    bump: minor
-    summary: Propagates trunk request elicitation, hard-invariant index, and hard-invariant register into the secondary coding-agent branch.
-  - canon_version: enforcement-redesign-factorio-modding-agent/1.3.0
-    scope: enforcement-redesign-factorio-modding-agent
-    branch: enforcement-redesign/factorio-modding-agent
-    introduced_by_commit: dcf0d3b1d28affc19b069fa50b64a2d5eb80ba39
-    previous_canon_version: enforcement-redesign-factorio-modding-agent/1.2.0
-    parent_canon_version: enforcement-redesign-coding-agent/1.4.0
-    date: 2026-07-10
-    bump: minor
-    summary: Propagates coding-agent request elicitation, hard-invariant index, and hard-invariant register into the secondary Factorio modding branch.
   - canon_version: enforcement-redesign-trunk/1.4.0
     scope: enforcement-redesign-trunk
     branch: enforcement-redesign/trunk
@@ -367,24 +288,6 @@ versions:
     date: 2026-07-10
     bump: minor
     summary: Consolidates safety-transparency and durable-communication boundaries into execution control, policy maintenance, and inter-agent communication; moves Gmail and forge operational detail out of policy-line trunk boundaries; and trims trunk version-control guardrail detail for kind-level ownership.
-  - canon_version: enforcement-redesign-coding-agent/1.5.0
-    scope: enforcement-redesign-coding-agent
-    branch: enforcement-redesign/coding-agent
-    introduced_by_commit: 29764f6e4ac163cced75da604b949c36a2854bc1
-    previous_canon_version: enforcement-redesign-coding-agent/1.4.0
-    parent_canon_version: enforcement-redesign-trunk/1.4.0
-    date: 2026-07-10
-    bump: minor
-    summary: Propagates trunk policy consolidation, folds code skepticism and documentation drift into coding-work, and moves version-control and forge guardrail detail into coding commit/push discipline.
-  - canon_version: enforcement-redesign-factorio-modding-agent/1.4.0
-    scope: enforcement-redesign-factorio-modding-agent
-    branch: enforcement-redesign/factorio-modding-agent
-    introduced_by_commit: 1912ccc7b4f11261d230e11cc5749a6a782d414f
-    previous_canon_version: enforcement-redesign-factorio-modding-agent/1.3.0
-    parent_canon_version: enforcement-redesign-coding-agent/1.5.0
-    date: 2026-07-10
-    bump: minor
-    summary: Propagates trunk and coding consolidation into Factorio while preserving Factorio-specific modding and release policies as the narrowest owner for mod lifecycle, changelog, portal, and staged release rules.
   - canon_version: enforcement-redesign-trunk/1.5.0
     scope: enforcement-redesign-trunk
     branch: enforcement-redesign/trunk
@@ -393,21 +296,11 @@ versions:
     date: 2026-07-10
     bump: minor
     summary: Adds capability-routed policy files for Kanboard tracking, MCP maintenance, live-room-capable operation, relay-only live-room prompts, and outbound correspondence, while trimming those details from general workflow, communication, style, and boundary files.
-  - canon_version: enforcement-redesign-coding-agent/1.6.0
-    scope: enforcement-redesign-coding-agent
-    branch: enforcement-redesign/coding-agent
-    introduced_by_commit: 42dba4aa8c672874aa3fa391a38c59479890309c
-    previous_canon_version: enforcement-redesign-coding-agent/1.5.0
-    parent_canon_version: enforcement-redesign-trunk/1.5.0
-    date: 2026-07-10
+  - canon_version: enforcement-redesign-trunk/1.6.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk/main
+    introduced_by_commit: 647982ca8b9455902d22ca3dc22f1658ac448025
+    previous_canon_version: enforcement-redesign-trunk/1.5.0
+    date: 2026-07-11
     bump: minor
-    summary: Propagates trunk capability-routed Kanboard, MCP maintenance, live-room, relay-only, and outbound-correspondence policies into the coding-agent branch.
-  - canon_version: enforcement-redesign-factorio-modding-agent/1.5.0
-    scope: enforcement-redesign-factorio-modding-agent
-    branch: enforcement-redesign/factorio-modding-agent
-    introduced_by_commit: 5d1f87411730c6fce01707b8a343d37df22465fb
-    previous_canon_version: enforcement-redesign-factorio-modding-agent/1.4.0
-    parent_canon_version: enforcement-redesign-coding-agent/1.6.0
-    date: 2026-07-10
-    bump: minor
-    summary: Propagates trunk and coding capability routes into Factorio while preserving Factorio-specific modding and release policy ownership.
+    summary: Records the repo-wide structural change that made `.governance/` a byte-identical Governance Agent operating layer, collapsed branch metadata and status into `lab-governance/`, renamed active policy endpoints to `/main`, and clarified bootstrap/init sourcing so downstream workspaces seed and update only from the selected branch's `lab-governance/` tree.

@@ -4,6 +4,8 @@ Purpose: give a new agent enough procedure to initialize governance before doing
 
 This document is a setup guide, not a replacement for policy. The operative contract remains the repository or workspace governance files the agent loads during initialization.
 
+For a downstream workspace, the seed and update source is always the selected branch's `lab-governance/` tree from Jason's `ai-governance` repository. This repository's `.governance/` tree is the Governance Agent's own uniform operating layer and must not be copied, merged, diffed against, or used as an external source for another workspace.
+
 ## Startup Order
 
 1. Find the workspace governance entrypoint.
@@ -84,11 +86,11 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
    First ask for the workspace's canonical agent name. If local status or a legacy registry row already exists, use it only as candidate evidence and ask Jason to confirm or correct the name before choosing a governance branch or kind.
 
-   Preserve the prompt's source policy line. If the bootstrap prompt came from a `baseline/<endpoint>/<version>` or `enforcement-redesign/<endpoint>/<version>` branch, choose the current mapped version branch for the intended agent kind within that same policy line unless Jason explicitly redirects the workspace to another policy line.
+   Preserve the prompt's source policy line. If the bootstrap prompt came from a `baseline/<endpoint>/main` or `enforcement-redesign/<endpoint>/main` branch, choose the current mapped `/main` endpoint branch for the intended agent kind within that same policy line unless Jason explicitly redirects the workspace to another policy line.
 
-2. Copy the branch-local governance picture into the workspace.
+2. Copy the selected branch's `lab-governance/` product into the workspace.
 
-   A governed workspace should have a local `.governance/` tree and an `AGENTS.md` entrypoint. Do not point ordinary workspace agents directly at this repository's `.governance/` tree unless Jason explicitly chooses a centralized mount model for that workspace.
+   A governed workspace should have a local `.governance/` tree and an `AGENTS.md` entrypoint seeded or updated from the selected branch's `lab-governance/` tree. Never seed or update a downstream workspace from this repository's `.governance/` tree. Do not point ordinary workspace agents directly at this repository's `.governance/` tree unless Jason explicitly chooses a centralized mount model for that workspace.
 
 3. Preserve the entrypoint contract.
 
@@ -126,6 +128,8 @@ lab-governance/branch-descriptor.yaml
 .governance/local/index.yaml
 lab-governance/status.yaml
 ```
+
+The downstream workspace's `.governance/` tree is its local seeded copy derived from the selected branch's `lab-governance/` product. It is not copied from this repository's `.governance/` operating layer.
 
 Kind branches may add:
 
