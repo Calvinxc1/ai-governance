@@ -1,6 +1,5 @@
 id: task_map
 default_load:
-  - AGENTS.md
   - .governance/policies/universal.yaml
   - .governance/policies/enforcement-model.yaml
   - .governance/policies/hard-invariant-index.yaml
