@@ -16,7 +16,6 @@ rules:
   - Before a destructive or externally visible connector mutation, verify task authorization, target identity, and duplicate or conflict state when the connector can inspect it.
   - When a requested or governing workflow requires a system-of-record connector operation, use that operation rather than substituting a lower-level or adjacent path that only appears to create the same end state.
   - If a required system-of-record mutation is unavailable or uncertain, stop for Jason approval rather than silently substituting another path.
-  - For locally developed MCPs, agents must document material connector friction and route it to the owning agent or repository.
   - Never write secrets, tokens, credentials, or keys into a committed file.
   - Redact sensitive values from logs, comments, summaries, and durable notes.
   - Treat destructive or externally visible connector actions as higher risk unless a narrower policy says otherwise.
