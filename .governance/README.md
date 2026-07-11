@@ -8,7 +8,7 @@ Committed governance files under `.governance/` are ratified by existence. Draft
 
 Use `task-map.yaml` as the explicit loading contract. It may define reusable route groups, but agents should still load only the groups and direct files named by selected routes instead of scanning policy folders.
 
-This directory is intentionally byte-identical across every branch in this repository. Branch, policy-line, kind, and version identity belongs outside `.governance`, primarily in `branch-governance/` for branch-local metadata and `lab-governance/` for the maintained generalized governance product where that tree exists.
+This directory is intentionally byte-identical across every branch in this repository. Branch, policy-line, kind, version, and maintained governance-product metadata belongs outside `.governance`, under `lab-governance/` where that tree exists.
 
 Do not put branch-specific canon versions, kind inheritance, or policy-line product differences under `.governance`. If a `.governance` change is ratified, propagate the exact `.governance` tree to every branch in the repository before calling the work complete.
 
