@@ -1,5 +1,7 @@
 schema: local_governance_status
 schema_version: 1
+status_scope: ai_governance_repository_source_branch
+propagation: do_not_copy_to_downstream
 canonical_agent_name: Governance Agent
 agent_kind: desktop_orchestrator
 active_governance_branch: baseline/trunk/main
@@ -11,5 +13,5 @@ runtime_surface: codex_cli
 code_authority: governance_maintenance_with_explicit_user_authorization
 last_verified_at: '2026-07-10'
 agent_declared_status: current
-notes: Baseline policy line. Branch path is the version anchor.
+notes: Source-branch maintainer status for this repository. Do not copy this status file to downstream workspaces; generate downstream status from lab-governance/templates/local-status.yaml.
 governance_source_branch: baseline/trunk/main

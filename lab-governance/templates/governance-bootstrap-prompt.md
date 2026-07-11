@@ -22,6 +22,8 @@ Governance source rule:
 
 Seed and update downstream workspaces only from the selected branch's `lab-governance/` tree. Never use this repository's `.governance/` tree as the source or an external reference for another workspace. In this repository, `.governance/` is the Governance Agent's own uniform operating layer.
 
+Do not copy the selected branch's concrete `lab-governance/status.yaml` into a downstream workspace. That file is source-branch maintainer status for this repository. A downstream workspace must create or update its own `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml`.
+
 Current branch mapping:
 
 ```text
@@ -49,6 +51,8 @@ Use the same policy line as the prompt source. If this prompt came from a `basel
 
 Seed or update this downstream workspace only from `lab-governance/` on the selected branch. Do not copy, merge, diff against, or otherwise use this repository's `.governance/` tree as a source for the downstream workspace. That `.governance/` tree is the Governance Agent's own operating layer, not the per-kind governance product.
 
+Do not copy the selected branch's concrete `lab-governance/status.yaml` into the downstream workspace. Treat it as source-branch maintainer metadata for this repository only. The downstream workspace's status file must be created or updated from `lab-governance/templates/local-status.yaml` and filled with locally attested downstream values.
+
 First, determine whether this workspace already has local governance:
 
 - If `AGENTS.md` and `.governance/` exist, treat this as a governed-agent update.
@@ -69,10 +73,10 @@ Then:
 
 1. Inspect or fetch `ai-governance`.
 2. Select the correct active governance branch for the agent within the prompt source policy line.
-3. Copy or merge the selected branch's `lab-governance/` product into the downstream workspace's local governance copy.
+3. Copy or merge the selected branch's `lab-governance/` product into the downstream workspace's local governance copy, excluding the selected branch's concrete `lab-governance/status.yaml`.
 4. Preserve local-only governance files unless Jason or explicit policy says to reconcile them.
 5. Ensure `.governance/local/index.yaml` exists, using `lab-governance/templates/local-index.yaml` as the loose starter shape when needed. Do not prescribe the rest of `.governance/local/`.
-6. Create or update `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml`.
+6. Create or update the downstream workspace's `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml`; do not reuse the source branch's status values.
 7. Re-read the downstream workspace's resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present. These are the files just seeded or updated in the downstream workspace, not this repository's `.governance/` files.
 8. Treat lab/canon governance as the base layer, loaded local governance as the workspace layer above it, and explicit one-shot overrides as the top layer for their declared operation.
 9. Compare local status, source branch descriptor, and any legacy self-stamp or registry evidence. Report conflicts instead of silently reconciling them.
