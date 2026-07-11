@@ -17,6 +17,6 @@ Repo-local governance, when present, is reached through `.governance/local/index
 
 General policy intended for lab propagation belongs in `lab-governance/`. Local governance needed for this repo's agents belongs in `.governance/`.
 
-For new agent setup and governed-agent updates, use the universal canonical prompt from literal branch `main` at root path `governance-bootstrap-prompt.md`. Endpoint-local prompt files are compatibility pointers only. The universal prompt requires an explicit target policy line, such as `baseline` or `enforcement-redesign`, before selecting the mapped `/main` endpoint for the target agent kind or mutating local governance. The legacy central registry is historical and non-authoritative.
+For new agent setup and governed-agent updates, use the universal canonical prompt from literal branch `main` at root path `governance-bootstrap-prompt.md`. Endpoint-local prompt files are compatibility pointers only. The universal prompt requires an explicit target policy line, such as `baseline` or `enforcement-redesign`, before selecting the mapped `/main` endpoint for the target agent kind or mutating local governance. In a downstream workspace, `.governance/` is the active local governance tree; this branch's `lab-governance/` tree is the source product used to seed or update it.
 
 For an already-governed workspace that should move from the baseline policy line to the experimental branch family, use `lab-governance/templates/experimental-channel-transition-prompt.md`.
