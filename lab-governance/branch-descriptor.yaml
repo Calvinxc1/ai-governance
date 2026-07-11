@@ -1,14 +1,14 @@
 id: branch_descriptor
 status: active
-branch: baseline/trunk/3.16.0
+branch: baseline/trunk/main
 kind: general
-canon_version: baseline/trunk/3.16.0
+canon_version: baseline/trunk/main
 narrative_blurb: Baseline trunk carries the general governance contract true of every
   agent kind.
 orientation:
-  consumes_layer: baseline/trunk/3.16.0
+  consumes_layer: baseline/trunk/main
   full_picture_branch: false
-  inheritance_model: Kind version branches merge baseline/trunk/3.16.0 down after
+  inheritance_model: Kind version branches merge baseline/trunk/main down after
     Jason ratifies baseline trunk changes.
   versioning_model: The versioned branch path is the active governance version; canon_version
     mirrors that branch path.

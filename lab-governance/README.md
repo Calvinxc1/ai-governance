@@ -20,6 +20,6 @@ Layout:
 - `lab-governance/templates/governance-bootstrap-prompt.md`: canonical prompt for first-time governance initialization and governed-agent updates.
 - `lab-governance/templates/kind-branch-migration-checklist.md`: version-agnostic checklist for adopting a target kind branch without hard-coding a particular canon version.
 - `lab-governance/templates/local-index.yaml`: loose pointer template for `.governance/local/index.yaml`; the local directory's internal structure remains workspace-owned.
-- `lab-governance/templates/local-status.yaml`: local status template for `.governance/local/status.yaml`; this is metadata, not a local policy body.
+- `lab-governance/templates/local-status.yaml`: local status template for `lab-governance/status.yaml`; this is metadata, not a local policy body.
 
 Kind branches add `lab-governance/branch-descriptor.yaml` and `lab-governance/kind-routes.yaml`. Trunk does not carry those files, so trunk merge-downs do not overwrite kind orientation or kind-specific routing.
