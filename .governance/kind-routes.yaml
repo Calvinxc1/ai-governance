@@ -2,7 +2,7 @@ id: kind_routes
 status: active
 kind: desktop_orchestrator
 default_load:
-  - .governance/branch-descriptor.yaml
+  - .governance/policies/desktop-role.yaml
 route_resolution:
   - Load default_load after the base task map default_load.
   - Select every kind route that matches the task shape.
