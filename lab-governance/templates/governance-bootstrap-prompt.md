@@ -28,10 +28,10 @@ baseline:
   factorio_modding_agent -> baseline/factorio-modding-agent/main
 
 enforcement-redesign:
-  general -> enforcement-redesign/trunk/1.3.0
-  coding_agent -> enforcement-redesign/coding-agent/1.4.0
-  desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/1.3.0
-  factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/1.3.0
+  general -> enforcement-redesign/trunk/main
+  coding_agent -> enforcement-redesign/coding-agent/main
+  desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/main
+  factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/main
 ```
 
 ## Prompt
