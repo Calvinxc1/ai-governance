@@ -33,6 +33,9 @@ guarded_domains:
   - id: sanctioned_change_channels
     domain: Mutating cluster components, deployment paths, GitOps-managed state, or other systems with a required system-of-record channel.
     full_policy: .governance/policies/hard-invariants.yaml
+  - id: runtime_surface_authority
+    domain: Granting production or protected mutation authority to a runtime surface without tested gates or capability removal.
+    full_policy: .governance/policies/hard-invariants.yaml
   - id: governance_integrity
     domain: Editing canon, changing policy process, weakening a never, or tuning down a hard invariant.
     full_policy: .governance/policies/hard-invariants.yaml
