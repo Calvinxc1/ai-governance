@@ -1,25 +1,30 @@
 id: branch_descriptor
 status: active
-branch: enforcement-redesign/desktop-orchestrator
+branch: enforcement-redesign/desktop-orchestrator/1.3.0
 kind: desktop_orchestrator
-canon_version: enforcement-redesign-desktop-orchestrator/1.3.0
+canon_version: enforcement-redesign/desktop-orchestrator/1.3.0
 parent:
-  branch: enforcement-redesign/trunk
-  canon_version: enforcement-redesign-trunk/1.3.0
-  summary: Secondary enforcement-redesign general contract true of every agent kind.
-narrative_blurb: Secondary enforcement-redesign desktop orchestrators inherit the enforcement-bucket model and specialize in cross-folder desktop work, person-to-person correspondence, canon-sensitive creative support, and active wellbeing judgment.
+  branch: enforcement-redesign/trunk/1.3.0
+  canon_version: enforcement-redesign/trunk/1.3.0
+  summary: Enforcement-redesign general contract true of every agent kind.
+narrative_blurb: Enforcement-redesign desktop orchestrators inherit the enforcement-bucket
+  model and specialize in cross-folder desktop work, person-to-person correspondence,
+  canon-sensitive creative support, and active wellbeing judgment.
 orientation:
-  consumes_layer: enforcement-redesign-desktop-orchestrator
+  consumes_layer: enforcement-redesign/desktop-orchestrator/1.3.0
   full_picture_branch: true
-  inheritance_model: enforcement-redesign/trunk is merged down into this branch after Jason ratifies secondary-channel trunk changes.
-  versioning_model: canon_version tracks the consumed secondary desktop-orchestrator governance contract, with parent.canon_version tracking the secondary trunk-general contract.
-  upward_signal_duty: File an upward Gitea issue when a desktop-orchestrator rule appears to generalize beyond desktop orchestration.
+  inheritance_model: enforcement-redesign/trunk/1.3.0 is merged down into this branch
+    after Jason ratifies enforcement-redesign trunk changes.
+  versioning_model: The versioned branch path is the active governance version; canon_version
+    mirrors that branch path.
+  upward_signal_duty: File an upward Gitea issue when a desktop-orchestrator rule
+    appears to generalize beyond desktop orchestration.
   upward_issue_target: ai-projects/ai-governance
   upward_issue_format:
-    title_prefix: "[upward]"
+    title_prefix: '[upward]'
     body_required:
-      - observed folder or session
-      - current local wording or behavior
-      - why it may generalize
-      - proposed target level
-      - proposed wording
+    - observed folder or session
+    - current local wording or behavior
+    - why it may generalize
+    - proposed target level
+    - proposed wording

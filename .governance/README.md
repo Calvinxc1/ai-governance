@@ -13,7 +13,7 @@ This directory intentionally duplicates governance rules that may also appear in
 - `.governance/` governs this repository's work.
 - `lab-governance/` is the generalized rule set maintained here for propagation to other agents and repositories.
 
-This secondary branch channel uses the enforcement-first redesign. Rules should be sorted into hard invariants, outcome-plus-bounds policies, or deliberately ungoverned cheap reversible work.
+This versioned policy-line branch uses the enforcement-first redesign. Rules should be sorted into hard invariants, outcome-plus-bounds policies, or deliberately ungoverned cheap reversible work.
 
 Hard invariants are surfaced through `policies/hard-invariant-index.yaml`, a tiny always-loaded guarded-domain index. Load the full register at `policies/hard-invariants.yaml` only when the intended action enters a guarded domain.
 
