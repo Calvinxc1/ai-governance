@@ -63,6 +63,7 @@ Before changing files, identify or ask for:
 - the target policy line: `baseline` or `enforcement-redesign`
 - the active governance branch selected from the branch mapping
 - the current local status path and versions, if present
+- any old branch names, old canon/version labels, missing modern status fields, or previous governance source paths
 - any legacy self-stamp or registry row that may provide candidate evidence only
 
 If the target policy line was not explicitly provided by Jason, the orchestrating agent, or a trusted local status record that Jason confirms, stop and ask:
@@ -71,7 +72,7 @@ If the target policy line was not explicitly provided by Jason, the orchestratin
 Which governance policy line should this workspace use: baseline or enforcement-redesign?
 ```
 
-If local status, a legacy self-stamp, or a legacy registry row names an agent, branch, or policy line, report it as candidate evidence and ask Jason or the orchestrating agent to confirm or correct it before mutating governance. Do not silently reconcile conflicting evidence.
+If local status, old branch names, old canon/version labels, missing modern status fields, a legacy self-stamp, or a legacy registry row names an agent, branch, or policy line, report it as candidate evidence and ask Jason or the orchestrating agent to confirm or correct it before mutating governance. Do not silently reconcile conflicting evidence. Treat obsolete branch names and old status shapes as migration evidence, not as authoritative blockers, unless they create a real policy-line, identity, or local-governance conflict.
 
 Then:
 
@@ -86,9 +87,10 @@ Then:
 9. Preserve local-only governance files unless Jason or explicit policy says to reconcile them.
 10. Ensure `.governance/local/index.yaml` exists, using `lab-governance/templates/local-index.yaml` as the loose starter shape when needed. Do not prescribe the rest of `.governance/local/`.
 11. Re-read the downstream workspace's resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present. These are the files just seeded or updated in the downstream workspace, not ai-governance's `.governance/` files.
-12. Treat lab/canon governance as the base layer, loaded local governance as the workspace layer above it, and explicit one-shot overrides as the top layer for their declared operation.
-13. Compare local status, source branch descriptor, and any legacy self-stamp or registry evidence. Report conflicts instead of silently reconciling them.
-14. Treat the legacy central registry as historical and non-authoritative. Do not submit a central registry attestation unless Jason explicitly requests legacy registry maintenance.
+12. Load every local governance file reachable from `.governance/local/index.yaml` and compare local governance against the newly seeded canonical governance for conflicts, duplicated rules, obsolete local overrides, and local rules that now overlap with canonical rules.
+13. Treat lab/canon governance as the base layer, loaded local governance as the workspace layer above it, and explicit one-shot overrides as the top layer for their declared operation. Local governance wins operationally over canonical governance unless Jason or explicit local policy says otherwise, but conflicts and redundancies must still be surfaced.
+14. Compare local status, source branch descriptor, old branch or version evidence, and any legacy self-stamp or registry evidence. Report conflicts instead of silently reconciling them.
+15. Treat the legacy central registry as historical and non-authoritative. Do not submit a central registry attestation unless Jason explicitly requests legacy registry maintenance.
 
 Do not directly edit `agent-registry/agents.yaml` unless Jason explicitly asks for legacy registry maintenance.
 
@@ -101,5 +103,6 @@ Close out with only:
 - local status path updated or created
 - local status declared state
 - legacy registry status, only if Jason explicitly requested legacy registry maintenance
+- local governance conflicts, redundancies, or obsolete overrides found during update
 - unresolved reconciliation items and their owners
 ````
