@@ -1,13 +1,29 @@
 id: branch_descriptor
 status: active
-branch: portable/trunk/main
-kind: general
-canon_version: portable/trunk/main
-narrative_blurb: Portable trunk carries the general governance
-  contract true of every agent kind.
+branch: portable/coding-agent/main
+kind: coding_agent
+canon_version: portable/coding-agent/main
+parent:
+  branch: portable/trunk/main
+  canon_version: portable/trunk/main
+  summary: Portable general contract true of every agent kind.
+narrative_blurb: Portable coding agents inherit the enforcement-bucket
+  model and add software engineering, coding-work, GitFlow, review, and commit discipline.
 orientation:
-  consumes_layer: portable/trunk/main
-  full_picture_branch: false
-  inheritance_model: Kind branches merge portable/trunk/main down after governance_owner ratifies portable trunk changes.
+  consumes_layer: portable/coding-agent/main
+  full_picture_branch: true
+  inheritance_model: portable/trunk/main is merged down into this branch
+    after human_owner ratifies portable trunk changes.
   versioning_model: The stable `/main` endpoint branch path is the active governance
     version; canon_version mirrors that branch path.
+  upward_signal_duty: File an upward source-governance issue when a coding-agent rule appears
+    to generalize beyond coding agents.
+  upward_issue_target: source_governance_repository
+  upward_issue_format:
+    title_prefix: '[upward]'
+    body_required:
+    - observed branch or repo
+    - current local wording or behavior
+    - why it may generalize
+    - proposed target level
+    - proposed wording
