@@ -9,7 +9,7 @@ It has two governance layers:
 
 The two trees intentionally duplicate governance rules. Drift between them is allowed when it is visible and intentional: `.governance/` governs this repository, while `lab-governance/` is the candidate general rule set for other agents and repos.
 
-This branch is part of the secondary enforcement-redesign governance channel. It experiments with an enforcement-first structure: hard invariants, outcome plus bounds, and deliberately ungoverned cheap reversible work.
+This branch is `enforcement-redesign/factorio-modding-agent/1.3.0`, a versioned branch in the `enforcement-redesign` policy line.
 
 Agents should start with `AGENTS.md`, then load local policy through `.governance/task-map.yaml` and any branch-local `.governance/kind-routes.yaml` file. The task map is the explicit loading contract: agents resolve route groups and direct route files from the map instead of inferring policy from folder names. When the task is to maintain the generalized rule set, compare the local copy against `lab-governance/` and update the appropriate tree explicitly.
 
@@ -17,6 +17,6 @@ Repo-local governance, when present, is reached through `.governance/local/index
 
 General policy intended for lab propagation belongs in `lab-governance/`. Local governance needed for this repo's agents belongs in `.governance/`.
 
-For new agent setup and governed-agent updates, use the canonical prompt at `lab-governance/templates/governance-bootstrap-prompt.md`. In this secondary branch channel, that prompt preserves the `enforcement-redesign/*` source channel so agents update from the experimental branch family rather than the normal branch family unless Jason explicitly redirects them. The legacy central registry is historical and non-authoritative.
+For new agent setup and governed-agent updates, use the canonical prompt at `lab-governance/templates/governance-bootstrap-prompt.md`. In this policy line, that prompt preserves the prompt source policy line and selects the current mapped version branch for the target agent kind unless Jason explicitly redirects it. The legacy central registry is historical and non-authoritative.
 
-For an already-governed workspace that should move from the normal governance branch family to the experimental branch family, use `lab-governance/templates/experimental-channel-transition-prompt.md`.
+For an already-governed workspace that should move from the baseline policy line to the experimental branch family, use `lab-governance/templates/experimental-channel-transition-prompt.md`.
