@@ -2,7 +2,7 @@
 
 Use this prompt when an already-governed agent should move from the baseline policy line to the `enforcement-redesign/<endpoint>/main` policy line.
 
-This prompt is for transition, not first-time bootstrap. If the workspace has no `AGENTS.md` and no `.governance/` tree, use `lab-governance/templates/governance-bootstrap-prompt.md` from the target enforcement-redesign branch instead.
+This prompt is for transition, not first-time bootstrap. If the workspace has no `AGENTS.md` and no `.governance/` tree, use `governance-bootstrap-prompt.md` from literal branch `main` instead.
 
 Transition downstream workspaces only from the selected target branch's `lab-governance/` tree. Never use this repository's `.governance/` tree as the source or an external reference for another workspace. Do not copy the target branch's concrete `lab-governance/status.yaml`; create or update downstream status from `lab-governance/templates/local-status.yaml`.
 
@@ -56,7 +56,7 @@ Then:
 
 1. Fetch or inspect `ai-governance`.
 2. Verify the target enforcement-redesign branch exists.
-3. Read the target branch's `AGENTS.md`, `lab-governance/branch-descriptor.yaml`, `lab-governance/governance-init.md`, and `lab-governance/templates/governance-bootstrap-prompt.md`.
+3. Read `governance-bootstrap-prompt.md` from literal branch `main`, then read the target branch's `AGENTS.md`, `lab-governance/branch-descriptor.yaml`, and `lab-governance/governance-init.md`.
 4. Copy or merge the target branch's `lab-governance/` product into this workspace, excluding the target branch's concrete `lab-governance/status.yaml`.
 5. Preserve workspace-local files under `.governance/local/` unless Jason or explicit policy says to reconcile them.
 6. Ensure `.governance/local/index.yaml` exists, using `lab-governance/templates/local-index.yaml` from the target branch when needed.
