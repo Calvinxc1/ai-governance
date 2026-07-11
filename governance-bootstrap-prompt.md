@@ -61,7 +61,7 @@ Two-tree model:
 - In the downstream workspace, `.governance/` is the active local governance copy the agent loads and obeys.
 - In `ai-governance`, the selected endpoint branch's `lab-governance/` tree is the source product used to seed or update that downstream `.governance/` copy.
 - Never use `ai-governance`'s own `.governance/` tree as the downstream source; it governs this repository's Governance Agent only.
-- `lab-governance/status.yaml` in the downstream workspace is local status metadata, not the active local policy tree.
+- `.governance/local/status.yaml` in the downstream workspace is local status metadata inside the active local governance tree.
 
 Before changing files, identify or ask for:
 
@@ -89,7 +89,7 @@ Then:
 5. Seed or update the downstream workspace's active `.governance/` tree only from the selected branch's `lab-governance/` source product.
 6. Do not copy, merge, diff against, or otherwise use the ai-governance repository's `.governance/` tree as a source for a downstream workspace. In ai-governance, `.governance/` is the Governance Agent's own uniform operating layer, not the per-kind governance product.
 7. Do not copy the selected branch's concrete `lab-governance/status.yaml` into the downstream workspace. Treat it as source-branch maintainer metadata for ai-governance only.
-8. Create or update the downstream workspace's `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml` and fill it with locally attested downstream values.
+8. Create or update the downstream workspace's `.governance/local/status.yaml` from `lab-governance/templates/local-status.yaml` and fill it with locally attested downstream values. Do not create a top-level `lab-governance/` tree in a downstream workspace solely to hold local status.
 9. Preserve local-only governance files unless Jason or explicit policy says to reconcile them.
 10. Ensure `.governance/local/index.yaml` exists, using `lab-governance/templates/local-index.yaml` as the loose starter shape when needed. Do not prescribe the rest of `.governance/local/`.
 11. Re-read the downstream workspace's resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present. These are the files just seeded or updated in the downstream workspace, not ai-governance's `.governance/` files.
