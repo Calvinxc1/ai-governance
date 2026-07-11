@@ -14,7 +14,7 @@ rules:
   - Agents must identify or ask for the target policy line before mutating local governance.
   - Agents must bootstrap or update from the current mapped `/main` endpoint branch for the confirmed target policy line and target agent kind unless Jason explicitly redirects to another branch.
   - The bootstrap/update process must seed and update the downstream workspace's active `.governance/` tree from the selected branch's `lab-governance/` source product, never from this repository's `.governance/` tree.
-  - The bootstrap/update process must not copy the selected source branch's concrete `lab-governance/status.yaml` into a downstream workspace. It must create or update downstream status from `lab-governance/templates/local-status.yaml`.
+  - The bootstrap/update process must not copy the selected source branch's concrete `lab-governance/status.yaml` into a downstream workspace. It must create or update downstream status at `.governance/local/status.yaml` from `lab-governance/templates/local-status.yaml`.
   - The bootstrap/update process must treat obsolete branch names, old canon/version labels, missing modern status fields, and previous governance source paths as migration evidence rather than authoritative blockers unless they create a real policy-line, identity, or local-governance conflict.
   - The bootstrap/update process must review local governance reachable from `.governance/local/index.yaml` after updating canonical governance and surface conflicts, duplicated rules, obsolete local overrides, and local rules that now overlap with canonical rules.
   - Local governance wins operationally over canonical governance unless Jason or explicit local policy says otherwise, but conflicts and redundancies must still be surfaced.
@@ -30,7 +30,7 @@ prompt_contract:
   - Fetch or inspect the ai-governance Gitea repository.
   - Copy or merge the correct selected-branch `lab-governance/` source product into the downstream workspace's active `.governance/` tree, excluding the selected source branch's concrete `lab-governance/status.yaml`.
   - Preserve local-only governance files unless the prompt explicitly instructs reconciliation.
-  - Create or update `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml`.
+  - Create or update `.governance/local/status.yaml` from `lab-governance/templates/local-status.yaml`. The downstream status file lives inside the workspace's active governance tree under `local/`, which a canon refresh preserves. Do not create a top-level `lab-governance/` tree in a downstream workspace solely to hold local status.
   - Validate loaded canon versions after update.
   - Compare the new policy state against the local status file and old branch, version, or source-path evidence.
   - Compare local governance against the updated canonical governance and report conflicts, redundancies, and obsolete overrides.
@@ -61,4 +61,4 @@ failure_rules:
   - If local status conflicts with source governance state or old branch, version, or source-path evidence, the conflict must be reported rather than silently reconciled.
   - If local governance conflicts with updated canonical governance, preserve the local governance operationally, report the conflict or redundancy, and ask Jason or the orchestrating agent before weakening or removing the local rule.
 acceptance:
-  - The bootstrap/update is locally complete when the local governance copy and `lab-governance/status.yaml` reflect the selected source commit as far as locally attested values allow, and local governance conflicts or redundancies have been reported.
+  - The bootstrap/update is locally complete when the local governance copy and `.governance/local/status.yaml` reflect the selected source commit as far as locally attested values allow, and local governance conflicts or redundancies have been reported.
