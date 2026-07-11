@@ -2,11 +2,13 @@
 
 This repository stores Jason's AI agent governance. The `main` branch is only a routing branch: it explains the branch structure and points to the active governance branches. It also carries the repo-local `.governance/` copy that should remain available across branches.
 
-Active governance is stored on versioned branches shaped as:
+Active governance is stored on stable endpoint branches shaped as:
 
 ```text
-<policy-line>/<endpoint>/<version>
+<policy-line>/<endpoint>/main
 ```
+
+The final `main` segment is the current active endpoint for that policy line and agent kind. Older version endpoint branches are not retained as active branch targets.
 
 Policy lines:
 
