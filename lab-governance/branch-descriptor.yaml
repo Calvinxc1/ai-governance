@@ -1,8 +1,8 @@
 id: branch_descriptor
 status: active
-branch: baseline/factorio-modding-agent/1.1.0
+branch: baseline/factorio-modding-agent/main
 kind: factorio_modding_agent
-canon_version: baseline/factorio-modding-agent/1.1.0
+canon_version: baseline/factorio-modding-agent/main
 parent:
   branch: baseline/coding-agent/1.5.0
   canon_version: baseline/coding-agent/1.5.0
@@ -12,7 +12,7 @@ narrative_blurb: Baseline Factorio modding agents inherit coding-agent disciplin
   and add Factorio lifecycle, prototype, dependency, release, changelog, and local
   workflow/status rules.
 orientation:
-  consumes_layer: baseline/factorio-modding-agent/1.1.0
+  consumes_layer: baseline/factorio-modding-agent/main
   full_picture_branch: true
   inheritance_model: baseline/coding-agent/1.5.0 is merged down into this branch after
     Jason ratifies baseline coding-agent or trunk changes.
