@@ -38,11 +38,11 @@ This document is a setup guide, not a replacement for policy. The operative cont
    What canonical agent name should I use for this workspace?
    ```
 
-   If `.governance/local/status.yaml`, a legacy self-stamp, or a legacy registry row already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
+   If `lab-governance/status.yaml`, a legacy self-stamp, or a legacy registry row already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
 
 7. Check local governance status.
 
-   Read `.governance/local/status.yaml` when present. This is the universal local status path for a governed workspace. It records the agent's canonical name, kind, active governance branch, current active canon version, current generalized canon version, source, and locally attested status.
+   Read `lab-governance/status.yaml` when present. This is the universal local status path for a governed workspace. It records the agent's canonical name, kind, active governance branch, current active canon version, current generalized canon version, source, and locally attested status.
 
    If the file is missing during initialization or update, create it from `lab-governance/templates/local-status.yaml`. Fill only locally attested values and use `null` for unknowns. Legacy self-stamps such as `.governance/local/version-stamp.yaml` may be used as input, but the local status file is the authoritative portable report.
 
@@ -96,7 +96,7 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
 4. Create or update the local status file.
 
-   Ensure `.governance/local/status.yaml` exists. Start from `lab-governance/templates/local-status.yaml`. Fill only locally attested values. Use `null` rather than invented data.
+   Ensure `lab-governance/status.yaml` exists. Start from `lab-governance/templates/local-status.yaml`. Fill only locally attested values. Use `null` rather than invented data.
 
 5. Create or preserve the local governance index.
 
@@ -118,13 +118,13 @@ The normal local workspace shape is:
 AGENTS.md
 .governance/README.md
 .governance/task-map.yaml
-.governance/branch-descriptor.yaml
+lab-governance/branch-descriptor.yaml
 .governance/policies/universal.yaml
 .governance/policies/*.yaml
 .governance/processes/*.yaml
 .governance/overrides/*.yaml
 .governance/local/index.yaml
-.governance/local/status.yaml
+lab-governance/status.yaml
 ```
 
 Kind branches may add:
@@ -158,7 +158,7 @@ Governance is initialized when all of the following are true:
 - The agent has loaded `AGENTS.md` and the always-load policy.
 - Additional policy was loaded only through the task map and any kind route.
 - Local governance was loaded through `.governance/local/index.yaml` when present.
-- The agent has checked `.governance/local/status.yaml` and reconciled it against source governance state when possible.
+- The agent has checked `lab-governance/status.yaml` and reconciled it against source governance state when possible.
 - Any version mismatch was reported using the minimal startup version rule.
 - The agent can name the active canon version it believes it is consuming, or can clearly state that the value is unknown.
 - The agent has not written secrets into governance files.

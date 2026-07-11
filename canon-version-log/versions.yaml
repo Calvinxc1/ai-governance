@@ -168,7 +168,7 @@ versions:
     previous_canon_version: trunk/3.5.0
     date: 2026-07-05
     bump: minor
-    summary: Decommissions central registry attestations as the default live status mechanism and establishes `.governance/local/status.yaml` as the portable local governance status report.
+    summary: Decommissions central registry attestations as the default live status mechanism and establishes `lab-governance/status.yaml` as the portable local governance status report.
   - canon_version: trunk/3.7.0
     scope: trunk
     branch: trunk
