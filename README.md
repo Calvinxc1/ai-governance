@@ -9,7 +9,7 @@ It distinguishes two governance areas:
 
 The split is intentional: `lab-governance/` is the portable source product, while downstream `.governance/` trees are local copies plus workspace-specific overlays.
 
-This branch is `portable/trunk/main`, a stable `/main` endpoint in the `portable` policy line.
+This branch is `portable/desktop-orchestrator/main`, a stable `/main` endpoint in the `portable` policy line.
 
 Agents should start with `AGENTS.md`, then load policy through `lab-governance/task-map.yaml` and any branch-local `lab-governance/kind-routes.yaml` file. The task map is the explicit loading contract: agents resolve route groups and direct route files from the map instead of inferring policy from folder names.
 

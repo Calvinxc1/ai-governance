@@ -1,0 +1,11 @@
+id: kind_routes
+status: active
+kind: desktop_orchestrator
+default_load:
+  - lab-governance/branch-descriptor.yaml
+route_resolution:
+  - Load default_load after the base task map default_load.
+  - This portable endpoint declares no desktop-specific route groups.
+  - Use the base task map for all routing unless local governance adds desktop-specific policy.
+route_groups: {}
+routes: {}
