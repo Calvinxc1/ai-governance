@@ -17,6 +17,9 @@ rules:
   - Run at least one confirmation pass even when there are no material questions.
   - Ask only the one to three questions whose answers would change what the agent does.
   - If no question would change the action, state that there are no material questions and ask for goal confirmation.
+  - Before the first non-read-only action after request discussion, perform an explicit final action verification with Jason unless Jason's immediately preceding message is the approval of that verification.
+  - Final action verification must name the intended actions, affected systems or files, expected risk tier, and validation plan.
+  - If discussion, investigation, or planning materially changes the action scope after an earlier confirmation, run a new final action verification before acting.
   - Default to aggressive use per agent.
   - Tune the gate only downward over time for a request class when repeated interrogation of that class fails to change the resulting action.
   - Do not tune the gate upward without Jason.
@@ -27,4 +30,5 @@ completion_evidence:
   - One-line goal reflection.
   - Either one to three material questions or an explicit statement that there are no material questions.
   - Jason's confirmation, adjustment, or refutation before action.
+  - Final action verification immediately before non-read-only action, or a note that Jason's immediately preceding message approved that verification.
   - Preflight fields included when execution-control requires them.
