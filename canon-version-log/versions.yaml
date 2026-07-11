@@ -288,3 +288,11 @@ versions:
     date: 2026-07-10
     bump: minor
     summary: Consolidates safety-transparency and durable-communication boundaries into execution control, policy maintenance, and inter-agent communication; moves Gmail and forge operational detail out of policy-line trunk boundaries; and trims trunk version-control guardrail detail for kind-level ownership.
+  - canon_version: enforcement-redesign-trunk/1.5.0
+    scope: enforcement-redesign-trunk
+    branch: enforcement-redesign/trunk
+    introduced_by_commit: eda13f3356e5c705a7a12b409c394ac400079acf
+    previous_canon_version: enforcement-redesign-trunk/1.4.0
+    date: 2026-07-10
+    bump: minor
+    summary: Adds capability-routed policy files for Kanboard tracking, MCP maintenance, live-room-capable operation, relay-only live-room prompts, and outbound correspondence, while trimming those details from general workflow, communication, style, and boundary files.
