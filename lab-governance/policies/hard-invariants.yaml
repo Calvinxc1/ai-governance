@@ -64,6 +64,13 @@ invariants:
     fallback: Prose rule requiring read-only inspection over raw mutation paths unless Jason explicitly authorizes a named bypass.
     residual_risk: Real deployment-agent-local governance debt remains where shell-capable agents can use raw `kubectl apply` or equivalent mutation paths outside the sanctioned channel.
     tracked_debt: Deployment-agent-local raw cluster mutation remains insufficiently capability-mediated until a hard gate or mediated interface exists.
+  - id: runtime_surface_authority
+    status: mixed_with_residual
+    invariant: Ungated runtime surfaces may not hold production or protected mutation authority.
+    enforcement_point: Capability removal or withholding of mutation-capable connectors, MCP servers, credentials, and skills on ungated surfaces; managed requirements and sandbox gates on behaviorally validated gated surfaces.
+    fallback: If authority cannot be removed, mediated outside the agent, or gated by a tested runtime control, stop and route the decision to Jason before using that surface for protected work.
+    residual_risk: A surface that actually holds mutation capability can still misuse it when no runtime or substrate gate blocks the action; policy text alone is not an adequate recurring control.
+    related_policy: lab-governance/policies/runtime-surface-adapter.yaml
   - id: governance_integrity
     status: capability_enforced
     invariant: Never edit canon outside the policy maintenance process, and never weaken, remove, or tune down a hard invariant without Jason's ratification.
