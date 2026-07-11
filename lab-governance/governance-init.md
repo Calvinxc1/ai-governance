@@ -6,14 +6,14 @@ This document is a setup guide, not a replacement for policy. The operative cont
 
 For a downstream workspace, the seed and update source is always the selected branch's `lab-governance/` tree from Jason's `ai-governance` repository. This repository's `.governance/` tree is the Governance Agent's own uniform operating layer and must not be copied, merged, diffed against, or used as an external source for another workspace.
 
-Do not copy this repository's concrete `lab-governance/status.yaml` into a downstream workspace. That file is source-branch maintainer status for this repository. Downstream workspaces create or update their own `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml`.
+Do not copy this repository's concrete `lab-governance/status.yaml` into a downstream workspace. That file is source-branch maintainer status for this repository. Downstream workspaces create or update their own `.governance/local/status.yaml` from `lab-governance/templates/local-status.yaml`.
 
 ## Two-Tree Update Model
 
 - In a downstream workspace, `.governance/` is the active local governance tree the agent loads and obeys.
 - In `ai-governance`, the selected endpoint branch's `lab-governance/` tree is the source product used to seed or update that downstream `.governance/` tree.
 - Never use `ai-governance`'s own `.governance/` tree as the downstream source. It governs this repository's Governance Agent only.
-- `lab-governance/status.yaml` in the downstream workspace is local status metadata, not the active local policy tree.
+- `.governance/local/status.yaml` in the downstream workspace is local status metadata inside the active local governance tree.
 
 ## Startup Order
 
@@ -49,11 +49,11 @@ Do not copy this repository's concrete `lab-governance/status.yaml` into a downs
    What canonical agent name should I use for this workspace?
    ```
 
-   If `lab-governance/status.yaml` already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
+   If `.governance/local/status.yaml` already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
 
 7. Check local governance status.
 
-   Read `lab-governance/status.yaml` when present. This is the universal local status path for a governed workspace. It records the agent's canonical name, kind, active governance branch, current active canon version, current generalized canon version, source, runtime surface, granted authority, and locally attested status.
+   Read `.governance/local/status.yaml` when present. This is the universal local status path for a governed workspace. It records the agent's canonical name, kind, active governance branch, current active canon version, current generalized canon version, source, runtime surface, granted authority, and locally attested status.
 
    If the file is missing during initialization or update, create it from `lab-governance/templates/local-status.yaml`. Fill only locally attested values and use `null` for unknowns. The local status file is the authoritative portable report.
 
@@ -109,7 +109,7 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
 2. Copy the selected branch's `lab-governance/` product into the workspace.
 
-   A governed workspace should have a local `.governance/` tree and an `AGENTS.md` entrypoint seeded or updated from the selected branch's `lab-governance/` tree. Never seed or update a downstream workspace from this repository's `.governance/` tree. Exclude the selected source branch's concrete `lab-governance/status.yaml`; downstream status is generated from the status template and filled with locally attested values. Do not point ordinary workspace agents directly at this repository's `.governance/` tree unless Jason explicitly chooses a centralized mount model for that workspace.
+   A governed workspace should have a local `.governance/` tree and an `AGENTS.md` entrypoint seeded or updated from the selected branch's `lab-governance/` tree. Never seed or update a downstream workspace from this repository's `.governance/` tree. Exclude the selected source branch's concrete `lab-governance/status.yaml`; downstream status is generated at `.governance/local/status.yaml` from the status template and filled with locally attested values. Do not point ordinary workspace agents directly at this repository's `.governance/` tree unless Jason explicitly chooses a centralized mount model for that workspace.
 
 3. Preserve the entrypoint contract.
 
@@ -117,7 +117,7 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
 4. Create or update the local status file.
 
-   Ensure `lab-governance/status.yaml` exists. Start from `lab-governance/templates/local-status.yaml`. Fill only locally attested values for the downstream workspace. Use `null` rather than invented data, and do not reuse this repository's source-branch status values.
+   Ensure `.governance/local/status.yaml` exists. Start from `lab-governance/templates/local-status.yaml`. Fill only locally attested values for the downstream workspace. Use `null` rather than invented data, and do not reuse this repository's source-branch status values. Do not create a top-level `lab-governance/` tree in a downstream workspace solely to hold local status.
 
 5. Record runtime surface and capability authority.
 
@@ -155,7 +155,7 @@ lab-governance/branch-descriptor.yaml
 .governance/processes/*.yaml
 .governance/overrides/*.yaml
 .governance/local/index.yaml
-lab-governance/status.yaml
+.governance/local/status.yaml
 ```
 
 The downstream workspace's `.governance/` tree is its local seeded copy derived from the selected branch's `lab-governance/` product. It is not copied from this repository's `.governance/` operating layer.
@@ -188,7 +188,7 @@ Governance is initialized when all of the following are true:
 - The agent has loaded `AGENTS.md` and the always-load policy.
 - Additional policy was loaded only through the task map and any kind route.
 - Local governance was loaded through `.governance/local/index.yaml` when present.
-- The agent has checked `lab-governance/status.yaml` and reconciled it against source governance state when possible.
+- The agent has checked `.governance/local/status.yaml` and reconciled it against source governance state when possible.
 - The agent has recorded or explicitly marked unknown the active runtime surface, gate state, granted capability authority, repository trust state when applicable, managed requirements state when applicable, and projection state when applicable.
 - Any protected authority on an ungated runtime surface has been removed, externally mediated, or routed to Jason before use.
 - Any repo-local Codex `developer_instructions` dependency is backed by verified repository trust.

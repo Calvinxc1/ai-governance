@@ -16,4 +16,4 @@ Local deviations must be:
 
 The canonical deviation list is `deviations.yaml`.
 
-`index.yaml` is the loose local-governance pointer. Branch-local status belongs outside `.governance`, under `lab-governance/status.yaml` when present. Other local files are repository-owned and should not be inferred as lab-wide structure.
+`index.yaml` is the loose local-governance pointer. In this repository, source-branch maintainer status belongs outside `.governance`, under `lab-governance/status.yaml` when present. Downstream workspace local status belongs at `.governance/local/status.yaml`. Other local files are repository-owned and should not be inferred as lab-wide structure.

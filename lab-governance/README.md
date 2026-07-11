@@ -28,7 +28,7 @@ Layout:
 - `lab-governance/templates/experimental-channel-transition-prompt.md`: prompt for moving an already-governed workspace from the baseline policy line to the `enforcement-redesign/<endpoint>/main` policy line.
 - `lab-governance/templates/kind-branch-migration-checklist.md`: version-agnostic checklist for adopting a target kind branch without hard-coding a particular canon version.
 - `lab-governance/templates/local-index.yaml`: loose pointer template for `.governance/local/index.yaml`; the local directory's internal structure remains workspace-owned.
-- `lab-governance/templates/local-status.yaml`: local status template for downstream `lab-governance/status.yaml`; this is metadata, not a local policy body.
+- `lab-governance/templates/local-status.yaml`: local status template for downstream `.governance/local/status.yaml`; this is metadata, not a local policy body.
 - `lab-governance/status.yaml`: source-branch maintainer status for this repository. Do not copy this concrete file into downstream workspaces; generate downstream status from `lab-governance/templates/local-status.yaml`.
 - `lab-governance/templates/task-brief.md`: standard brief shape for objective, definition of done, bounds, risk, budget, and stopping condition.
 
