@@ -9,7 +9,7 @@ It has two governance areas:
 
 The split is intentional: `.governance/` governs this repository's local agent behavior, while `lab-governance/` is the product this repository maintains for propagation to other agents and repositories.
 
-This branch is `enforcement-redesign/coding-agent/main`, a stable `/main` endpoint in the `enforcement-redesign` policy line.
+This branch is `enforcement-redesign/trunk/main`, a stable `/main` endpoint in the `enforcement-redesign` policy line.
 
 Agents should start with `AGENTS.md`, then load local policy through `.governance/task-map.yaml` and any branch-local `.governance/kind-routes.yaml` file. The task map is the explicit loading contract: agents resolve route groups and direct route files from the map instead of inferring policy from folder names. When the task is to maintain the generalized rule set, compare the local copy against `lab-governance/` and update the appropriate tree explicitly.
 
@@ -17,7 +17,6 @@ Repo-local governance, when present, is reached through `.governance/local/index
 
 General policy intended for lab propagation belongs in `lab-governance/`. Local governance needed for this repo's agents belongs in `.governance/`.
 
-
-For new agent setup and governed-agent updates, use the universal canonical prompt from literal branch `main` at root path `governance-bootstrap-prompt.md`. Endpoint-local prompt files are compatibility pointers only. The universal prompt requires an explicit target policy line, such as `baseline` or `enforcement-redesign`, before selecting the mapped `/main` endpoint for the target agent kind or mutating local governance. The legacy central registry is historical and non-authoritative.
+For new agent setup and governed-agent updates, use the universal canonical prompt from literal branch `main` at root path `governance-bootstrap-prompt.md`. Endpoint-local prompt files are compatibility pointers only. The universal prompt requires an explicit target policy line, such as `baseline` or `enforcement-redesign`, before selecting the mapped `/main` endpoint for the target agent kind or mutating local governance. In a downstream workspace, `.governance/` is the active local governance tree; this branch's `lab-governance/` tree is the source product used to seed or update it.
 
 For an already-governed workspace that should move from the baseline policy line to the experimental branch family, use `lab-governance/templates/experimental-channel-transition-prompt.md`.

@@ -22,7 +22,7 @@ Layout:
 - `lab-governance/processes/`: meta-governance and operating processes.
 - `lab-governance/skills/`: loadable skill sources that implement governance behavior in runtimes that support skills.
 - `lab-governance/overrides/`: temporary exception log and its schema.
-- `lab-governance/templates/`: reusable setup templates, including the local governance status template, loose local index template, legacy self-stamp template, and bootstrap compatibility pointer.
+- `lab-governance/templates/`: reusable setup templates, including the local governance status template, loose local index template, and bootstrap compatibility pointer.
 - `lab-governance/templates/governance-bootstrap-prompt.md`: compatibility pointer to the root-level universal canonical bootstrap prompt on literal branch `main`.
 - `lab-governance/templates/experimental-channel-transition-prompt.md`: prompt for moving an already-governed workspace from the baseline policy line to the `enforcement-redesign/<endpoint>/main` policy line.
 - `lab-governance/templates/kind-branch-migration-checklist.md`: version-agnostic checklist for adopting a target kind branch without hard-coding a particular canon version.
