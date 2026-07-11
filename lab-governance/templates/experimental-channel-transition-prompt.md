@@ -1,8 +1,10 @@
 # Enforcement-Redesign Policy-Line Transition Prompt
 
-Use this prompt when an already-governed agent should move from the baseline policy line to the `enforcement-redesign/<endpoint>/<version>` policy line.
+Use this prompt when an already-governed agent should move from the baseline policy line to the `enforcement-redesign/<endpoint>/main` policy line.
 
 This prompt is for transition, not first-time bootstrap. If the workspace has no `AGENTS.md` and no `.governance/` tree, use `lab-governance/templates/governance-bootstrap-prompt.md` from the target enforcement-redesign branch instead.
+
+Transition downstream workspaces only from the selected target branch's `lab-governance/` tree. Never use this repository's `.governance/` tree as the source or an external reference for another workspace. Do not copy the target branch's concrete `lab-governance/status.yaml`; create or update downstream status from `lab-governance/templates/local-status.yaml`.
 
 Target branch mapping:
 
@@ -24,7 +26,7 @@ Use Jason's `ai-governance` repository as the source:
 gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
 ```
 
-This is an enforcement-redesign policy-line transition. Do not update from `baseline/<endpoint>/<version>` branches unless Jason explicitly cancels or redirects the transition.
+This is an enforcement-redesign policy-line transition. Do not update from `baseline/<endpoint>/main` branches unless Jason explicitly cancels or redirects the transition.
 
 First, inspect the current local governance state without changing files:
 
@@ -55,11 +57,11 @@ Then:
 1. Fetch or inspect `ai-governance`.
 2. Verify the target enforcement-redesign branch exists.
 3. Read the target branch's `AGENTS.md`, `lab-governance/branch-descriptor.yaml`, `lab-governance/governance-init.md`, and `lab-governance/templates/governance-bootstrap-prompt.md`.
-4. Copy or merge the target branch-local governance picture into this workspace.
+4. Copy or merge the target branch's `lab-governance/` product into this workspace, excluding the target branch's concrete `lab-governance/status.yaml`.
 5. Preserve workspace-local files under `.governance/local/` unless Jason or explicit policy says to reconcile them.
 6. Ensure `.governance/local/index.yaml` exists, using `lab-governance/templates/local-index.yaml` from the target branch when needed.
-7. Update `lab-governance/status.yaml` so it records the target branch, target active canon version, target generalized canon version, source repository, source branch, source commit when known, verification date, and any unresolved reconciliation notes.
-8. Re-read the resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/policies/enforcement-model.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present.
+7. Create or update this workspace's `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml` so it records the target branch, target active canon version, target generalized canon version, source repository, source branch, source commit when known, verification date, and any unresolved reconciliation notes.
+8. Re-read this workspace's resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/policies/enforcement-model.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present. These are this workspace's seeded files, not this repository's `.governance/` files.
 9. Compare the pre-transition status, new local status, target branch descriptor, and any legacy self-stamp or registry evidence. Report conflicts instead of silently reconciling them.
 10. Treat the legacy central registry as historical and non-authoritative. Do not submit a central registry attestation unless Jason explicitly requests legacy registry maintenance.
 
