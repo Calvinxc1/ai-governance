@@ -10,6 +10,11 @@ current_generalized_canon_version: enforcement-redesign/trunk/main
 source_repository_or_path: gitea.infra.newedenhomestead.net:ai-projects/ai-governance.git
 governance_source_commit: null
 runtime_surface: codex_cli
+runtime_surface_gate_state: null
+granted_capability_authority: null
+repository_trust_state: null
+managed_requirements_state: null
+projection_state: null
 code_authority: governance_maintenance_with_explicit_user_authorization
 last_verified_at: '2026-07-10'
 agent_declared_status: current
