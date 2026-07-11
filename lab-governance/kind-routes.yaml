@@ -3,6 +3,7 @@ status: active
 kind: desktop_orchestrator
 default_load:
   - lab-governance/branch-descriptor.yaml
+  - lab-governance/policies/gmail-boundary.yaml
 route_resolution:
   - Load default_load after the base task map default_load.
   - Select every kind route that matches the task shape.
@@ -12,14 +13,14 @@ route_groups:
   desktop.role:
     - lab-governance/policies/desktop-role.yaml
   desktop.correspondence:
-    - lab-governance/policies/correspondence-voice.yaml
+    - lab-governance/policies/style.yaml
   desktop.creative:
-    - lab-governance/policies/creative-canon.yaml
+    - lab-governance/policies/desktop-role.yaml
+    - lab-governance/policies/knowledge-model.yaml
   desktop.wellbeing:
-    - lab-governance/policies/active-wellbeing.yaml
+    - lab-governance/policies/engagement-posture.yaml
   desktop.co_work_sync:
     - lab-governance/policies/desktop-role.yaml
-    - lab-governance/policies/safety-transparency.yaml
     - lab-governance/policies/workflow-auditability.yaml
     - lab-governance/policies/co-work-sync.yaml
 routes:

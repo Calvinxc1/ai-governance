@@ -7,10 +7,10 @@ This prompt is for transition, not first-time bootstrap. If the workspace has no
 Target branch mapping:
 
 ```text
-general -> enforcement-redesign/trunk/1.3.0
-coding_agent -> enforcement-redesign/coding-agent/1.4.0
-desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/1.3.0
-factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/1.3.0
+general -> enforcement-redesign/trunk/1.4.0
+coding_agent -> enforcement-redesign/coding-agent/1.5.0
+desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/1.4.0
+factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/1.4.0
 ```
 
 ## Prompt
@@ -44,10 +44,10 @@ Confirm or ask for:
 Target enforcement-redesign branch mapping:
 
 ```text
-general -> enforcement-redesign/trunk/1.3.0
-coding_agent -> enforcement-redesign/coding-agent/1.4.0
-desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/1.3.0
-factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/1.3.0
+general -> enforcement-redesign/trunk/1.4.0
+coding_agent -> enforcement-redesign/coding-agent/1.5.0
+desktop_orchestrator -> enforcement-redesign/desktop-orchestrator/1.4.0
+factorio_modding_agent -> enforcement-redesign/factorio-modding-agent/1.4.0
 ```
 
 Then:
