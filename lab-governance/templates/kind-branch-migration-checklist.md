@@ -20,7 +20,7 @@ This checklist is intentionally version-agnostic. Do not hard-code today's canon
 
 ## Canon Governance
 
-- Confirm `.governance/branch-descriptor.yaml` matches the selected target branch and target `canon_version`.
+- Confirm `lab-governance/branch-descriptor.yaml` matches the selected target branch and target `canon_version`.
 - Confirm the branch descriptor records the target branch's current parent branch and parent `canon_version`, when applicable.
 - Confirm `.governance/task-map.yaml` routes to workspace-local `.governance/...` paths.
 - Confirm `.governance/kind-routes.yaml` exists when the target branch uses kind routing.
@@ -31,7 +31,7 @@ This checklist is intentionally version-agnostic. Do not hard-code today's canon
 ## Local Governance
 
 - Confirm `.governance/local/index.yaml` exists as the local governance pointer when the workspace has local status, workflow facts, or deviations.
-- Confirm `.governance/local/status.yaml` exists when the workspace participates in portable local governance status.
+- Confirm `lab-governance/status.yaml` exists when the workspace participates in portable local governance status.
 - Confirm local status records the canonical agent name, active governance branch, active `canon_version`, and parent or generalized `canon_version` using the current target values.
 - Confirm workspace-local workflow facts, deviations, and notes remain local policy or local metadata rather than being folded into generalized branch policy.
 - Confirm local workflow facts are filled from the current workspace, not copied from another repository.

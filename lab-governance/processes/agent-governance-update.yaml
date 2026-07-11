@@ -10,7 +10,7 @@ rules:
   - Agents must not improvise governance initialization or update mechanics when the canonical bootstrap/update prompt is available.
   - The prompt path is the source of truth for initialization and update instructions, including branch selection, local status updates, and reconciliation reporting.
   - The prompt's source policy line is part of the source of truth. If the prompt came from a `baseline/<endpoint>/<version>` or `enforcement-redesign/<endpoint>/<version>` branch, bootstrap or update from the current mapped version branch for the target agent kind within that same policy line unless Jason explicitly redirects to another policy line.
-  - The bootstrap/update process must preserve `.governance/local/status.yaml` as the portable local governance status report.
+  - The bootstrap/update process must preserve `lab-governance/status.yaml` as the portable local governance status report.
   - Completing the prompt does not imply that the legacy central registry has been updated.
   - The prompt must require live feedback about local status changes, branch selection, canon-version changes, and any reconciliation that remains unresolved.
   - The central registry loop is decommissioned as the default live status mechanism; agents must not submit registry attestations unless Jason explicitly requests legacy registry maintenance.
@@ -26,7 +26,7 @@ prompt_contract:
   - Fetch or inspect the ai-governance Gitea repository.
   - Copy or merge the correct governance source into the local agent workspace.
   - Preserve local-only governance files unless the prompt explicitly instructs reconciliation.
-  - Create or update `.governance/local/status.yaml`.
+  - Create or update `lab-governance/status.yaml`.
   - Validate loaded canon versions after update.
   - Compare the new policy state against the local status file and any legacy self-stamp or registry evidence.
   - Provide live reconciliation feedback before and after local mutation.
@@ -50,5 +50,5 @@ failure_rules:
   - If local status cannot be created or updated, the agent must report the exact file or permission failure.
   - If local status conflicts with a legacy self-stamp, legacy registry row, or source governance state, the conflict must be reported rather than silently reconciled.
 acceptance:
-  - The bootstrap/update is locally complete when the local governance copy and `.governance/local/status.yaml` reflect the selected source commit as far as locally attested values allow.
+  - The bootstrap/update is locally complete when the local governance copy and `lab-governance/status.yaml` reflect the selected source commit as far as locally attested values allow.
   - Legacy registry maintenance is complete only when Jason explicitly requested it and the requested registry action has been performed or declined with rationale.
