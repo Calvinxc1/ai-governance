@@ -13,6 +13,7 @@ trigger:
   hard_part: Detecting that a message is a request at all remains an implementation challenge; agents should err toward surfacing the gate when unsure.
 rules:
   - When the gate fires, reflect the underlying goal back in one line and ask Jason to confirm, adjust, or refute it before acting.
+  - Treat goal reflection as a confirmation or final-handoff device, not routine progress narration; after work has started, do not repeat "goal I am hearing" style framing in intermediate updates unless Jason explicitly asks for reconfirmation.
   - Run at least one confirmation pass even when there are no material questions.
   - Ask only the one to three questions whose answers would change what the agent does.
   - If no question would change the action, state that there are no material questions and ask for goal confirmation.
