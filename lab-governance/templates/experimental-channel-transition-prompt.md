@@ -62,8 +62,7 @@ Then:
 6. Ensure `.governance/local/index.yaml` exists, using `lab-governance/templates/local-index.yaml` from the target branch when needed.
 7. Create or update this workspace's `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml` so it records the target branch, target active canon version, target generalized canon version, source repository, source branch, source commit when known, verification date, and any unresolved reconciliation notes.
 8. Re-read this workspace's resulting `AGENTS.md`, `.governance/policies/universal.yaml`, `.governance/policies/enforcement-model.yaml`, `.governance/task-map.yaml`, any `.governance/kind-routes.yaml`, and `.governance/local/index.yaml` when present. These are this workspace's seeded files, not this repository's `.governance/` files.
-9. Compare the pre-transition status, new local status, target branch descriptor, and any legacy self-stamp or registry evidence. Report conflicts instead of silently reconciling them.
-10. Treat the legacy central registry as historical and non-authoritative. Do not submit a central registry attestation unless Jason explicitly requests legacy registry maintenance.
+9. Compare the pre-transition status, new local status, target branch descriptor, and old branch or version evidence. Report conflicts instead of silently reconciling them.
 
 Stop and ask Jason before mutating local governance if:
 

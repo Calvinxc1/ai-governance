@@ -8,6 +8,13 @@ For a downstream workspace, the seed and update source is always the selected br
 
 Do not copy this repository's concrete `lab-governance/status.yaml` into a downstream workspace. That file is source-branch maintainer status for this repository. Downstream workspaces create or update their own `lab-governance/status.yaml` from `lab-governance/templates/local-status.yaml`.
 
+## Two-Tree Update Model
+
+- In a downstream workspace, `.governance/` is the active local governance tree the agent loads and obeys.
+- In `ai-governance`, the selected endpoint branch's `lab-governance/` tree is the source product used to seed or update that downstream `.governance/` tree.
+- Never use `ai-governance`'s own `.governance/` tree as the downstream source. It governs this repository's Governance Agent only.
+- `lab-governance/status.yaml` in the downstream workspace is local status metadata, not the active local policy tree.
+
 ## Startup Order
 
 1. Find the workspace governance entrypoint.
@@ -42,13 +49,13 @@ Do not copy this repository's concrete `lab-governance/status.yaml` into a downs
    What canonical agent name should I use for this workspace?
    ```
 
-   If `lab-governance/status.yaml`, a legacy self-stamp, or a legacy registry row already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
+   If `lab-governance/status.yaml` already names a canonical agent, report that value and ask Jason to confirm or correct it. Do not infer the canonical name from the repository name, hostname, model backend, task role, or prior chat label.
 
 7. Check local governance status.
 
    Read `lab-governance/status.yaml` when present. This is the universal local status path for a governed workspace. It records the agent's canonical name, kind, active governance branch, current active canon version, current generalized canon version, source, and locally attested status.
 
-   If the file is missing during initialization or update, create it from `lab-governance/templates/local-status.yaml`. Fill only locally attested values and use `null` for unknowns. Legacy self-stamps such as `.governance/local/version-stamp.yaml` may be used as input, but the local status file is the authoritative portable report.
+   If the file is missing during initialization or update, create it from `lab-governance/templates/local-status.yaml`. Fill only locally attested values and use `null` for unknowns. The local status file is the authoritative portable report.
 
 8. Apply the startup version rule.
 
@@ -86,7 +93,7 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
 1. Identify the intended agent kind and source branch.
 
-   First ask for the workspace's canonical agent name. If local status or a legacy registry row already exists, use it only as candidate evidence and ask Jason to confirm or correct the name before choosing a governance branch or kind.
+   First ask for the workspace's canonical agent name. If local status already exists, use it only as candidate evidence and ask Jason to confirm or correct the name before choosing a governance branch or kind.
 
    Use the target policy line explicitly named by Jason, the orchestrating agent, or confirmed local status. If the target policy line is missing or disputed, ask whether the workspace should use `baseline` or `enforcement-redesign` before changing files. Then choose the current mapped `/main` endpoint branch for the intended agent kind within that confirmed policy line unless Jason explicitly redirects the workspace to another branch.
 
@@ -108,11 +115,11 @@ Use this sequence when an agent workspace does not yet have a local governance c
 
 6. Reconcile local status with source governance state.
 
-   Compare local status with the selected source branch descriptor, old branch or version evidence, and any legacy self-stamp. If records disagree, do not silently choose one. Treat obsolete branch names and old status shapes as migration evidence rather than authoritative blockers unless they create a real policy-line, identity, or local-governance conflict. Mark the local status as `behind`, `drifted`, or `unknown` as appropriate, then route the decision to Jason through the active human liaison.
+   Compare local status with the selected source branch descriptor and old branch or version evidence. If records disagree, do not silently choose one. Treat obsolete branch names and old status shapes as migration evidence rather than authoritative blockers unless they create a real policy-line, identity, or local-governance conflict. Mark the local status as `behind`, `drifted`, or `unknown` as appropriate, then route the decision to Jason through the active human liaison.
 
 7. Review local governance conflicts.
 
-   After seeding or updating base governance, load every local governance file reachable from `.governance/local/index.yaml` and compare local governance against the newly seeded canonical governance. Surface conflicts, duplicated rules, obsolete local overrides, and local rules that now overlap with canonical rules. Local governance wins operationally over canonical governance unless Jason or explicit local policy says otherwise, but conflicts and redundancies must still be reported.
+   After seeding or updating base governance into the downstream `.governance/` tree, load every local governance file reachable from `.governance/local/index.yaml` and compare local governance against the newly seeded canonical governance. Surface conflicts, duplicated rules, obsolete local overrides, and local rules that now overlap with canonical rules. Local governance wins operationally over canonical governance unless Jason or explicit local policy says otherwise, but conflicts and redundancies must still be reported.
 
 8. Confirm no secrets were introduced.
 
@@ -147,13 +154,10 @@ This `ai-governance` repository also maintains:
 
 ```text
 lab-governance/
-agent-registry/
 canon-version-log/
 ```
 
 Ordinary downstream repositories should not infer that they need to maintain those generalized governance maintenance trees locally.
-
-`agent-registry/` is retained only as a non-authoritative historical artifact. It is not the live status mechanism for governed workspaces.
 
 ## Task Briefs
 
@@ -181,7 +185,7 @@ Stop and ask before substantive work when:
 - No governance entrypoint can be found.
 - The Jason-settled canonical agent name is missing or disputed.
 - The active branch, kind, or target canon version is ambiguous.
-- Local status, legacy self-stamp, and source governance state disagree.
+- Local status and source governance state disagree.
 - Local governance conflicts with updated canonical governance in a way that changes whether the agent may act.
 - A policy conflict changes whether the agent may act.
 - The requested task depends on accepting a draft governance rule as ratified.
