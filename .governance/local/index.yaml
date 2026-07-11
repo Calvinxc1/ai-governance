@@ -1,5 +1,0 @@
-local_governance:
-  load:
-    - .governance/local/status.yaml
-  notes:
-    - main is a lightweight repository landing branch, not an active policy branch.
