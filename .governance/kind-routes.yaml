@@ -1,58 +1,56 @@
 id: kind_routes
 status: active
-kind: factorio_modding_agent
+kind: desktop_orchestrator
 default_load:
-  - .governance/branch-descriptor.yaml
+  - .governance/policies/desktop-role.yaml
 route_resolution:
   - Load default_load after the base task map default_load.
   - Select every kind route that matches the task shape.
   - For each selected kind route, load every file in the named groups plus every direct file listed under files.
   - Do not infer kind policy loading from folder names; route_groups and routes are the explicit kind loading contract.
 route_groups:
-  coding.planning:
-    - .governance/policies/plan-mode.yaml
-  coding.substantive:
-    - .governance/policies/code-skepticism.yaml
-    - .governance/policies/documentation-drift.yaml
-  coding.git:
-    - .governance/policies/gitflow.yaml
-    - .governance/policies/commit-push-discipline.yaml
-  coding.review:
-    - .governance/policies/code-review.yaml
-  factorio.mod_work:
-    - .governance/policies/factorio-modding.yaml
-    - .governance/policies/factorio-release.yaml
+  desktop.role:
+    - .governance/policies/desktop-role.yaml
+  desktop.correspondence:
+    - .governance/policies/style.yaml
+    - .governance/policies/outbound-correspondence.yaml
+  desktop.creative:
+    - .governance/policies/desktop-role.yaml
+    - .governance/policies/knowledge-model.yaml
+  desktop.wellbeing:
+    - .governance/policies/engagement-posture.yaml
+  desktop.co_work_sync:
+    - .governance/policies/desktop-role.yaml
+    - .governance/policies/workflow-auditability.yaml
+    - .governance/policies/co-work-sync.yaml
+  desktop.gmail:
+    - .governance/policies/gmail-boundary.yaml
 routes:
-  discussion_or_planning:
+  planning_session:
     groups:
-      - coding.planning
+      - desktop.role
     files: []
-  substantive_work:
+  correspondence_session:
     groups:
-      - coding.substantive
-      - factorio.mod_work
+      - desktop.correspondence
     files: []
-  git_work:
+  gmail_session:
     groups:
-      - coding.git
+      - desktop.gmail
     files: []
-  code_review:
+  creative_session:
     groups:
-      - coding.review
-      - factorio.mod_work
+      - desktop.creative
     files: []
-  factorio_mod_work:
+  wellbeing_sensitive_session:
     groups:
-      - coding.substantive
-      - factorio.mod_work
+      - desktop.wellbeing
     files: []
-  factorio_release_work:
+  substantive_orchestration:
     groups:
-      - coding.git
-      - factorio.mod_work
+      - desktop.role
     files: []
-  factorio_review:
+  co_work_sync:
     groups:
-      - coding.review
-      - factorio.mod_work
+      - desktop.co_work_sync
     files: []
